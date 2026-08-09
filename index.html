@@ -3,11 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EKHO Comunicaciones — Contenido, diseño y automatización para pymes</title>
-<meta name="description" content="Un equipo de personas, apoyado en inteligencia artificial, trabajando cada pieza con vos. Contenido para redes, diseño web y automatización para pymes y emprendedores.">
+
+<title>Agencia de comunicación digital en Argentina | EKHO</title>
+<meta name="description" content="Gestión de redes sociales, diseño web y automatizaciones de comunicación para pymes y emprendedores de toda Argentina. Conocé EKHO.">
+<link rel="canonical" href="https://www.ekhocomunicaciones.com.ar/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0F0610">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="EKHO Comunicaciones">
+<meta property="og:title" content="Agencia de comunicación digital en Argentina | EKHO">
+<meta property="og:description" content="Gestión de redes sociales, diseño web y automatizaciones de comunicación para pymes y emprendedores de toda Argentina. Conocé EKHO.">
+<meta property="og:url" content="https://www.ekhocomunicaciones.com.ar/">
+<meta property="og:image" content="https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agencia de comunicación digital en Argentina | EKHO">
+<meta name="twitter:description" content="Gestión de redes sociales, diseño web y automatizaciones de comunicación para pymes y emprendedores de toda Argentina. Conocé EKHO.">
+
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/ekho-iso.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,22 +34,23 @@
 <!-- NAV -->
 <header class="nav-wrap">
   <div class="nav">
-    <a href="#top" class="nav-logo" aria-label="EKHO Comunicaciones, inicio">
-      <img src="assets/ekho-logo-blanco.png" alt="EKHO Comunicaciones">
+    <a href="#inicio" class="nav-logo" aria-label="EKHO Comunicaciones — ir al inicio">
+      <img src="assets/ekho-logo-blanco.png" width="1226" height="367" alt="EKHO Comunicaciones, agencia de comunicación digital">
     </a>
 
     <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
-      <a href="#trabajo">Nuestro trabajo</a>
       <a href="#planes">Planes</a>
-      <a href="#faq">Preguntas</a>
-      <a class="btn btn-accent nav-cta-mobile" href="#contacto">Contactanos</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn-accent nav-cta-mobile" href="#contacto">Contanos qué necesitás</a>
     </nav>
 
-    <a class="btn btn-accent nav-cta" href="#contacto">Contactanos <span class="arrow">↗</span></a>
+    <a class="btn btn-accent nav-cta" href="#contacto">Contanos qué necesitás <span class="arrow" aria-hidden="true">↗</span></a>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -40,29 +58,21 @@
 
 <main id="main">
 
-  <!-- HERO -->
-  <section id="top" class="hero">
+  <!-- 2. HERO -->
+  <section id="inicio" class="hero">
     <div class="container">
-      <span class="pill reveal">¡Hola! <span class="pill-wave" aria-hidden="true">👋</span></span>
+      <p class="pill reveal">Contenido · Diseño web · Automatizaciones de comunicación</p>
 
       <h1 class="hero-title reveal">
-        Somos <span class="accent">EKHO</span>,<br>
-        tu socio en <span class="accent">comunicación</span>
+        Agencia de <span class="accent">comunicación digital</span> para pymes y emprendedores de toda Argentina
       </h1>
 
-      <div class="hero-stage">
-        <aside class="hero-side hero-side--left reveal">
-          <svg class="quote-icon" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V13.5C0 5.8 4.9.7 13.5 0v4.9C8.9 5.7 6.6 8.4 6.4 12H13.5V24H0Zm18.5 0V13.5C18.5 5.8 23.4.7 32 0v4.9C27.4 5.7 25.1 8.4 24.9 12H32V24H18.5Z"/></svg>
-          <p>Un equipo de personas, apoyado en inteligencia artificial, trabajando cada pieza con vos.</p>
-          <div class="side-stat">
-            <strong>3</strong>
-            <span>líneas de servicio</span>
-          </div>
-        </aside>
+      <p class="hero-tagline reveal">Tu marca tiene algo para decir. Hagamos que se escuche.</p>
 
-        <div class="hero-visual">
+      <div class="hero-stage">
+        <div class="hero-visual reveal">
           <div class="hero-disc" aria-hidden="true">
-            <svg class="hero-waves" viewBox="0 0 400 400">
+            <svg class="hero-waves" viewBox="0 0 400 400" focusable="false">
               <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2">
                 <circle cx="200" cy="200" r="60"/>
                 <circle cx="200" cy="200" r="95"/>
@@ -71,229 +81,208 @@
               </g>
             </svg>
           </div>
-          <img class="hero-iso" src="assets/ekho-iso.png" alt="Isologo de EKHO: la letra E formada por ondas de eco">
-          <svg class="hero-arrow" viewBox="0 0 120 80" aria-hidden="true">
-            <path d="M4 4C40 6 92 18 104 56" fill="none" stroke="#0F0610" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 9"/>
-            <path d="M96 40 104 58 86 62" fill="none" stroke="#0F0610" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <img class="hero-iso" src="assets/ekho-iso.png" width="268" height="285" alt="Isologotipo de EKHO Comunicaciones: la letra E formada por ondas de sonido">
         </div>
-
-        <aside class="hero-side hero-side--right reveal">
-          <div class="side-tools" aria-hidden="true">
-            <span>IG</span><span>Meta</span><span>WA</span><span>n8n</span>
-          </div>
-          <strong class="side-title">Contenido, diseño<br>y automatización</strong>
-          <span class="side-sub">Buenos Aires — atención remota a todo el país</span>
-        </aside>
       </div>
+
+      <p class="hero-lead reveal">En EKHO creamos contenido para redes sociales, diseñamos páginas web y desarrollamos automatizaciones de comunicación para que tu negocio se muestre mejor, responda con mayor agilidad y aproveche mejor su tiempo.</p>
 
       <div class="hero-actions reveal">
-        <a href="#trabajo" class="btn btn-dark">Nuestro trabajo <span class="arrow">↗</span></a>
-        <a href="#contacto" class="btn btn-accent">Pedir presupuesto</a>
+        <a href="#contacto" class="btn btn-accent">Quiero impulsar mi marca</a>
+        <a href="#servicios" class="btn btn-dark">Conocer los servicios <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="section">
+  <!-- 3. PRESENTACIÓN -->
+  <section id="nosotros" class="section">
     <div class="container">
-      <div class="panel panel--dark reveal">
-        <div class="panel-head">
-          <h2>Nuestros <span class="accent">servicios</span></h2>
-          <p>Soluciones a medida en tres líneas de trabajo. Nada de plantillas genéricas: todo se arma con vos, según tu rubro.</p>
-        </div>
-
-        <div class="svc-grid">
-          <article class="svc-card">
-            <div class="svc-top">
-              <h3>EKHO Social</h3>
-              <a href="#planes" class="circle-btn" aria-label="Ver planes de EKHO Social">↗</a>
-            </div>
-            <div class="svc-art">
-              <div class="mock mock--feed">
-                <span class="mock-bar" style="--h:45%"></span>
-                <span class="mock-bar" style="--h:75%"></span>
-                <span class="mock-bar" style="--h:55%"></span>
-                <span class="mock-bar" style="--h:90%"></span>
-                <span class="mock-bar" style="--h:65%"></span>
-              </div>
-            </div>
-            <p>Posteos, video y pauta en Meta, con calendario y copys a medida de tu rubro.</p>
-          </article>
-
-          <article class="svc-card svc-card--featured">
-            <div class="svc-top">
-              <h3>EKHO Diseño</h3>
-              <a href="#contacto" class="circle-btn" aria-label="Cotizar mi web">↗</a>
-            </div>
-            <div class="svc-art">
-              <div class="mock mock--web">
-                <span class="mock-line" style="width:70%"></span>
-                <span class="mock-line" style="width:45%"></span>
-                <span class="mock-block"></span>
-              </div>
-            </div>
-            <p>Webs institucionales de hasta 2 páginas, construidas con código + IA.</p>
-          </article>
-
-          <article class="svc-card">
-            <div class="svc-top">
-              <h3>EKHO Automatización</h3>
-              <a href="#contacto" class="circle-btn" aria-label="Agendar diagnóstico">↗</a>
-            </div>
-            <div class="svc-art">
-              <div class="mock mock--flow">
-                <span class="node"></span><span class="wire"></span>
-                <span class="node node--accent"></span><span class="wire"></span>
-                <span class="node"></span>
-              </div>
-            </div>
-            <p>Automatizaciones con IA: WhatsApp, n8n y más, de diagnóstico a mantenimiento.</p>
-          </article>
-        </div>
+      <div class="intro reveal">
+        <h2>Soluciones de comunicación digital pensadas para tu negocio</h2>
+        <p>Trabajamos con pymes, profesionales y emprendedores de toda Argentina para transformar ideas, necesidades y objetivos en soluciones concretas.</p>
+        <p>Nos involucramos en cada proyecto para entender tu negocio, tu público y la forma en la que querés comunicarte. No trabajamos con respuestas automáticas ni fórmulas iguales para todos.</p>
+        <p>Incorporamos herramientas de inteligencia artificial para agilizar procesos y optimizar tareas internas. Pero detrás de cada proyecto encontrás personas que escuchan, proponen, crean, revisan y ajustan con vos.</p>
+        <p class="intro-claim">Ideas con criterio. Soluciones que hacen avanzar tu negocio.</p>
       </div>
     </div>
   </section>
 
-  <!-- PROCESO / TIMELINE -->
-  <section id="proceso" class="section">
-    <div class="container">
-      <h2 class="section-title reveal">Cómo <span class="accent">trabajamos</span></h2>
-      <p class="section-sub reveal">La IA acelera. Las personas siguen decidiendo cada pieza.</p>
-
-      <div class="timeline">
-        <div class="tl-row reveal">
-          <div class="tl-left">
-            <h4>La IA acelera</h4>
-            <span>Herramienta interna</span>
-          </div>
-          <div class="tl-mark" aria-hidden="true"><i></i></div>
-          <div class="tl-right">
-            <h4>Entregas en la mitad de tiempo</h4>
-            <p>Usamos inteligencia artificial para trabajar más rápido que un proceso 100% manual, sin perder personalización.</p>
-          </div>
-        </div>
-
-        <div class="tl-row reveal">
-          <div class="tl-left">
-            <h4>Las personas deciden</h4>
-            <span>Trato directo</span>
-          </div>
-          <div class="tl-mark" aria-hidden="true"><i></i></div>
-          <div class="tl-right">
-            <h4>Hablás siempre con alguien real</h4>
-            <p>Revisás y ajustás cada pieza junto al equipo, mes a mes. Nada se publica sin que lo veas antes.</p>
-          </div>
-        </div>
-
-        <div class="tl-row reveal">
-          <div class="tl-left">
-            <h4>A tu medida</h4>
-            <span>Sin plantillas</span>
-          </div>
-          <div class="tl-mark" aria-hidden="true"><i></i></div>
-          <div class="tl-right">
-            <h4>Calendario y guiones según tu rubro</h4>
-            <p>Armamos el calendario, los guiones y las piezas con vos — no salen de una plantilla genérica.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POR QUE ELEGIRNOS -->
-  <section id="porque" class="section">
+  <!-- 4. PROPUESTA DE VALOR -->
+  <section id="propuesta" class="section">
     <div class="container">
       <div class="panel panel--mist why reveal">
         <div class="why-visual" aria-hidden="true">
           <div class="why-disc">
-            <img src="assets/ekho-iso.png" alt="">
+            <img src="assets/ekho-iso.png" width="268" height="285" alt="" loading="lazy">
           </div>
           <span class="dots dots--a"></span>
           <span class="dots dots--b"></span>
         </div>
 
         <div class="why-copy">
-          <h2>¿Por qué elegir <span class="accent">EKHO</span>?</h2>
-          <p>Vos seguís al mando de tu marca. Nosotros ponemos el equipo y la velocidad. Trabajamos con pymes que quieren que su marca se sienta cercana y humana.</p>
+          <h2>Tu negocio no necesita hacer más por hacer</h2>
+          <p>Necesita una comunicación que tenga sentido, una presencia digital profesional y herramientas que simplifiquen la relación con sus clientes.</p>
+          <p class="why-kicker">En EKHO podemos ayudarte a:</p>
           <ul class="check-list">
-            <li>Calendario y piezas a medida de tu rubro, no plantillas genéricas</li>
-            <li>Un mismo equipo te acompaña mes a mes</li>
-            <li>Entregas en la mitad de tiempo de un proceso 100% manual</li>
+            <li>Mantener activas tus redes sociales sin improvisar cada semana.</li>
+            <li>Crear contenido alineado con la identidad de tu marca.</li>
+            <li>Presentar tus productos o servicios de manera clara.</li>
+            <li>Tener una página web profesional.</li>
+            <li>Responder consultas y enviar información con mayor agilidad.</li>
+            <li>Organizar el seguimiento de potenciales clientes.</li>
+            <li>Encontrar soluciones adaptadas al momento de tu negocio.</li>
           </ul>
-          <a href="#contacto" class="btn btn-outline">Pedir presupuesto</a>
+          <a href="#contacto" class="btn btn-outline">Encontrá la solución para tu negocio</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NUESTRO TRABAJO -->
-  <section id="trabajo" class="section">
+  <!-- 5. SERVICIOS -->
+  <section id="servicios" class="section">
     <div class="container">
-      <div class="row-head reveal">
-        <h2>Así se ve una pieza<br>pensada <span class="accent">mes a mes</span> con vos</h2>
-        <a href="#contacto" class="btn btn-accent">Quiero lo mismo <span class="arrow">↗</span></a>
-      </div>
+      <div class="panel panel--dark reveal">
+        <div class="panel-head">
+          <h2>Servicios de comunicación digital para empresas y emprendedores</h2>
+          <p>Podés contratar cada servicio por separado o combinarlos según las necesidades de tu marca.</p>
+        </div>
 
-      <div class="work-grid">
-        <article class="work-card reveal">
-          <div class="work-art work-art--calendar">
-            <div class="cal-grid" aria-hidden="true">
-              <i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i>
-              <i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i>
-              <i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i>
+        <div class="svc-grid">
+          <article class="svc-card">
+            <div class="svc-top">
+              <h3>EKHO Social</h3>
+              <span class="circle-btn" aria-hidden="true">↗</span>
             </div>
-            <span class="circle-btn circle-btn--sm" aria-hidden="true">↗</span>
-          </div>
-          <div class="work-tags"><span>Instagram</span><span>Facebook</span></div>
-          <h3>Calendario de redes</h3>
-          <p>Carruseles, posteos y reels planificados por mes.</p>
-        </article>
+            <p class="svc-sub">Gestión de redes sociales para empresas y emprendedores</p>
+            <p>Creamos contenido pensado para tu marca, tu público y tus objetivos. Cada mes construimos con vos el calendario, los temas y las ideas de contenido.</p>
+            <p>No se trata de llenar el feed por llenar. Buscamos que cada publicación tenga una intención: mostrar, explicar, conectar o vender.</p>
+            <p class="svc-kicker">Según el plan contratado, el servicio puede incluir:</p>
+            <ul class="dot-list">
+              <li>Diseño de imágenes y carruseles.</li>
+              <li>Redacción de copys.</li>
+              <li>Calendario mensual de contenido.</li>
+              <li>Ideas de guion para videos.</li>
+              <li>Publicación en Instagram y Facebook.</li>
+              <li>Gestión de comentarios y mensajes.</li>
+              <li>Edición de videos cortos.</li>
+              <li>Gestión de campañas publicitarias en Meta.</li>
+            </ul>
+            <a href="#planes" class="btn btn-light btn-block">Ver planes de redes sociales</a>
+          </article>
 
-        <article class="work-card reveal">
-          <div class="work-art work-art--web">
-            <div class="web-mock" aria-hidden="true">
-              <span class="wm-bar"></span>
-              <span class="wm-hero"></span>
-              <span class="wm-line" style="width:60%"></span>
-              <span class="wm-line" style="width:40%"></span>
+          <article class="svc-card svc-card--featured">
+            <div class="svc-top">
+              <h3>EKHO Design</h3>
+              <span class="circle-btn" aria-hidden="true">↗</span>
             </div>
-            <span class="circle-btn circle-btn--sm" aria-hidden="true">↗</span>
-          </div>
-          <div class="work-tags"><span>Código + IA</span><span>Responsive</span></div>
-          <h3>Webs institucionales</h3>
-          <p>Landings y sitios de hasta 2 páginas, sin plantillas.</p>
-        </article>
+            <p class="svc-sub">Diseño de páginas web para presentar mejor tu negocio</p>
+            <p>Diseñamos landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca.</p>
+            <p>Trabajamos la estructura, el diseño y los textos para que quienes visiten tu página entiendan qué hacés, qué ofrecés y cómo pueden contactarte.</p>
+            <p class="svc-kicker">Este servicio es ideal para emprendimientos, profesionales y pymes que necesitan:</p>
+            <ul class="dot-list">
+              <li>Lanzar su primera página web.</li>
+              <li>Renovar una web desactualizada.</li>
+              <li>Presentar sus servicios de manera profesional.</li>
+              <li>Centralizar consultas y vías de contacto.</li>
+              <li>Crear una landing page para una campaña o lanzamiento.</li>
+            </ul>
+            <a href="#contacto" class="btn btn-light btn-block">Quiero una página web</a>
+            <p class="svc-note">Trabajamos con landing pages y webs institucionales. Los proyectos con ecommerce, mayor cantidad de páginas o funcionalidades especiales se cotizan de manera personalizada.</p>
+          </article>
 
-        <article class="work-card reveal">
-          <div class="work-art work-art--auto">
-            <div class="flow-mock" aria-hidden="true">
-              <span class="fm-node">WA</span>
-              <span class="fm-wire"></span>
-              <span class="fm-node fm-node--accent">n8n</span>
-              <span class="fm-wire"></span>
-              <span class="fm-node">CRM</span>
+          <article class="svc-card">
+            <div class="svc-top">
+              <h3>EKHO Automatización</h3>
+              <span class="circle-btn" aria-hidden="true">↗</span>
             </div>
-            <span class="circle-btn circle-btn--sm" aria-hidden="true">↗</span>
-          </div>
-          <div class="work-tags"><span>WhatsApp</span><span>n8n</span></div>
-          <h3>Automatizaciones</h3>
-          <p>Flujos para la operación diaria de tu negocio.</p>
-        </article>
+            <p class="svc-sub">Automatizaciones para comunicar y responder mejor</p>
+            <p>Diseñamos automatizaciones aplicadas a la comunicación de tu negocio para que puedas responder consultas, enviar información y hacer seguimiento de potenciales clientes de una manera más ágil y ordenada.</p>
+            <p class="svc-kicker">Podemos ayudarte a automatizar acciones como:</p>
+            <ul class="dot-list">
+              <li>Respuestas iniciales a consultas frecuentes.</li>
+              <li>Envío de información o presupuestos.</li>
+              <li>Formularios de contacto y derivación de consultas.</li>
+              <li>Seguimiento de potenciales clientes.</li>
+              <li>Mensajes de confirmación y recordatorios.</li>
+              <li>Registro y organización de los datos recibidos.</li>
+              <li>Integraciones simples entre WhatsApp, formularios, correo electrónico y otras herramientas de comunicación.</li>
+            </ul>
+            <p>Antes de implementar una solución, analizamos cómo se comunican actualmente tus clientes con tu negocio y definimos qué conviene automatizar sin perder el trato humano.</p>
+            <a href="#contacto" class="btn btn-light btn-block">Quiero mejorar la atención de mi negocio</a>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FILOSOFIA -->
-  <section class="section">
+  <!-- 6. DIFERENCIAL -->
+  <section id="diferencial" class="section">
     <div class="container">
-      <div class="panel panel--dark philosophy reveal">
-        <span class="eyebrow">Nuestra filosofía</span>
-        <svg class="big-quote" viewBox="0 0 32 24" aria-hidden="true"><path d="M0 24V13.5C0 5.8 4.9.7 13.5 0v4.9C8.9 5.7 6.6 8.4 6.4 12H13.5V24H0Zm18.5 0V13.5C18.5 5.8 23.4.7 32 0v4.9C27.4 5.7 25.1 8.4 24.9 12H32V24H18.5Z"/></svg>
-        <blockquote>
-          Trabajamos con pymes que quieren que su marca se sienta <span class="accent">cercana y humana</span> — lo contrario a las cuentas saturadas de imágenes genéricas de IA que hoy inundan las redes.
-        </blockquote>
-        <cite>Equipo EKHO — Comunicaciones</cite>
+      <h2 class="section-title reveal">Una agencia digital que empieza por <span class="accent">escuchar tu negocio</span></h2>
+      <p class="section-sub reveal">Hoy existen muchas herramientas para crear contenido, diseñar una web o automatizar una respuesta. El verdadero desafío es saber qué necesita tu negocio y cómo implementarlo correctamente.</p>
+      <p class="section-sub reveal">Por eso, en EKHO no empezamos por una fórmula ni por una herramienta. Empezamos por escucharte.</p>
+
+      <ul class="diff-grid">
+        <li class="reveal">Hablás con un equipo real.</li>
+        <li class="reveal">Participás del proceso.</li>
+        <li class="reveal">Revisamos cada entrega con vos.</li>
+        <li class="reveal">Adaptamos las soluciones a tu negocio.</li>
+        <li class="reveal">Cuidamos la coherencia entre cada idea y tu marca.</li>
+        <li class="reveal">Utilizamos la tecnología con un objetivo concreto.</li>
+        <li class="reveal">Automatizamos sin perder el trato humano.</li>
+      </ul>
+
+      <p class="diff-claim reveal">No buscamos hacer más por hacer. Buscamos crear soluciones que tengan sentido para vos.</p>
+    </div>
+  </section>
+
+  <!-- 7. CÓMO TRABAJAMOS -->
+  <section id="proceso" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Un proceso simple, claro y <span class="accent">acompañado</span></h2>
+
+      <div class="timeline">
+        <div class="tl-row reveal">
+          <div class="tl-left"><span class="tl-step">Paso 1</span></div>
+          <div class="tl-mark" aria-hidden="true"><i></i></div>
+          <div class="tl-right">
+            <h3>Nos contás qué necesitás</h3>
+            <p>Conversamos sobre tu negocio, tus objetivos y el punto en el que estás hoy.</p>
+          </div>
+        </div>
+
+        <div class="tl-row reveal">
+          <div class="tl-left"><span class="tl-step">Paso 2</span></div>
+          <div class="tl-mark" aria-hidden="true"><i></i></div>
+          <div class="tl-right">
+            <h3>Diseñamos una propuesta</h3>
+            <p>Definimos el servicio, el alcance y la forma de trabajo más conveniente para tu proyecto.</p>
+          </div>
+        </div>
+
+        <div class="tl-row reveal">
+          <div class="tl-left"><span class="tl-step">Paso 3</span></div>
+          <div class="tl-mark" aria-hidden="true"><i></i></div>
+          <div class="tl-right">
+            <h3>Creamos con vos</h3>
+            <p>Desarrollamos la solución manteniendo instancias de revisión, intercambio y ajustes.</p>
+          </div>
+        </div>
+
+        <div class="tl-row reveal">
+          <div class="tl-left"><span class="tl-step">Paso 4</span></div>
+          <div class="tl-mark" aria-hidden="true"><i></i></div>
+          <div class="tl-right">
+            <h3>Medimos y mejoramos</h3>
+            <p>Cuando el servicio lo requiere, analizamos lo realizado y buscamos nuevas oportunidades de mejora.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="note note--center reveal">Todos nuestros servicios pueden desarrollarse de manera remota, por lo que trabajamos con marcas y empresas de cualquier punto de Argentina.</p>
+
+      <div class="center-action reveal">
+        <a href="#contacto" class="btn btn-accent">Empecemos a trabajar</a>
       </div>
     </div>
   </section>
@@ -301,188 +290,486 @@
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Contenido para redes ✦ Diseño web ✦ Automatización con IA ✦ Instagram ✦ Meta Ads ✦ WhatsApp ✦ n8n ✦</span>
-      <span>Contenido para redes ✦ Diseño web ✦ Automatización con IA ✦ Instagram ✦ Meta Ads ✦ WhatsApp ✦ n8n ✦</span>
+      <span>Gestión de redes sociales ✦ Diseño de páginas web ✦ Automatización de comunicaciones ✦</span>
+      <span>Gestión de redes sociales ✦ Diseño de páginas web ✦ Automatización de comunicaciones ✦</span>
     </div>
   </div>
 
-  <!-- PLANES -->
+  <!-- 8. PLANES -->
   <section id="planes" class="section">
     <div class="container">
-      <h2 class="section-title reveal">Planes de <span class="accent">EKHO Social</span></h2>
-      <p class="section-sub reveal">Elegí el ritmo que necesita tu marca. Los valores se cotizan según tu rubro.</p>
+      <h2 class="section-title reveal">Elegí cuánto espacio <span class="accent">querés ocupar</span></h2>
+      <p class="section-sub reveal">Vos elegís el volumen de contenido. Nosotros te ayudamos a definir cómo aprovecharlo.</p>
 
       <div class="plans">
         <div class="plan reveal">
           <span class="plan-tag">Para empezar a hacerte oír</span>
-          <h3>Basic</h3>
+          <h3>EKHO Basic</h3>
+          <p class="plan-price">Desde <strong>$280.000</strong> por mes</p>
           <ul class="check-list">
-            <li>Hasta 8 posteos/mes (imagen única o carrusel) para Instagram y Facebook</li>
-            <li>Redacción de copys incluida</li>
-            <li>Calendario de contenido a medida del rubro</li>
-            <li>Publicación de posteos incluida</li>
-            <li>Respuesta a comentarios: lunes a viernes, 9 a 18 hs</li>
+            <li>Hasta 10 publicaciones mensuales.</li>
+            <li>Imágenes únicas o carruseles.</li>
+            <li>Contenido para Instagram y Facebook.</li>
+            <li>Redacción de copys.</li>
+            <li>Calendario mensual de contenido.</li>
+            <li>Ideas de guion adaptadas al rubro.</li>
+            <li>Publicación de posteos.</li>
+            <li>Respuesta a comentarios y mensajes de lunes a viernes, de 9 a 18 h.</li>
           </ul>
-          <a href="#contacto" class="btn btn-outline btn-block">Consultar valor</a>
+          <a href="#contacto" class="btn btn-outline btn-block">Elegir Basic</a>
         </div>
 
         <div class="plan plan--featured reveal">
           <span class="plan-badge">Más elegido</span>
           <span class="plan-tag">Para sostener el ritmo</span>
-          <h3>Plus</h3>
+          <h3>EKHO Plus</h3>
+          <p class="plan-price">Desde <strong>$345.000</strong> por mes</p>
           <ul class="check-list">
-            <li>Hasta 15 posteos/mes (imagen única o carrusel) para Instagram y Facebook</li>
-            <li>Redacción de copys incluida</li>
-            <li>Calendario de contenido a medida del rubro</li>
-            <li>Publicación de posteos incluida</li>
-            <li>Respuesta a comentarios: lunes a sábado, 9 a 18 hs</li>
+            <li>Hasta 15 publicaciones mensuales.</li>
+            <li>Imágenes únicas o carruseles.</li>
+            <li>Contenido para Instagram y Facebook.</li>
+            <li>Redacción de copys.</li>
+            <li>Calendario mensual de contenido.</li>
+            <li>Ideas de guion adaptadas al rubro.</li>
+            <li>Publicación de posteos.</li>
+            <li>Respuesta a comentarios y mensajes de lunes a sábado, de 9 a 18 h.</li>
           </ul>
-          <a href="#contacto" class="btn btn-accent btn-block">Consultar valor</a>
+          <a href="#contacto" class="btn btn-accent btn-block">Elegir Plus</a>
         </div>
 
         <div class="plan reveal">
           <span class="plan-tag">Para ocupar todo el espacio</span>
-          <h3>Total</h3>
+          <h3>EKHO Total</h3>
+          <p class="plan-price">Desde <strong>$505.000</strong> por mes</p>
           <ul class="check-list">
-            <li>Hasta 20 posteos/mes (imagen única o carrusel) para Instagram y Facebook</li>
-            <li>2 videos cortos/mes incluidos (edición básica)</li>
-            <li>Calendario de contenido a medida del rubro</li>
-            <li>Publicación de posteos incluida</li>
-            <li>Respuesta a comentarios: todos los días, 9 a 18 hs</li>
+            <li>Hasta 20 publicaciones mensuales.</li>
+            <li>Imágenes únicas o carruseles.</li>
+            <li>Contenido para Instagram y Facebook.</li>
+            <li>Redacción de copys.</li>
+            <li>Calendario mensual de contenido.</li>
+            <li>Ideas de guion adaptadas al rubro.</li>
+            <li>Dos videos cortos mensuales con edición básica.</li>
+            <li>Publicación de posteos.</li>
+            <li>Respuesta a comentarios y mensajes todos los días, de 9 a 18 h.</li>
           </ul>
-          <a href="#contacto" class="btn btn-outline btn-block">Consultar valor</a>
+          <a href="#contacto" class="btn btn-outline btn-block">Elegir Total</a>
         </div>
       </div>
 
-      <p class="plans-note reveal">¿Preferís recibir el material y subirlo vos mismo? Todos los planes están disponibles en versión "solo contenido" (sin publicación ni respuesta a comentarios), con descuento. Add-ons: filmación y edición de video, gestión de pauta en Meta.</p>
+      <div class="notes-block reveal">
+        <h3 class="notes-title">Aclaraciones sobre los planes</h3>
+        <p class="note">¿Preferís publicar y responder los mensajes desde tu cuenta? Todos los planes están disponibles en modalidad solo contenido, con un 15 % de descuento.</p>
+        <p class="note">Los valores publicados corresponden al alcance base de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de cada cuenta.</p>
+        <p class="note">Los cupos de publicaciones se renuevan cada mes y no son acumulables.</p>
+      </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- 9. SERVICIOS ADICIONALES -->
+  <section id="adicionales" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Sumá lo que <span class="accent">tu marca necesite</span></h2>
+
+      <div class="duo-grid">
+        <article class="duo-card reveal">
+          <h3>Filmación y edición de videos</h3>
+          <p>Producimos videos cortos para mostrar productos, presentar servicios, crear reels o publicar en TikTok.</p>
+          <p class="note">Las producciones que requieran mayor complejidad, locaciones, actores o recursos especiales se cotizan de manera personalizada.</p>
+        </article>
+
+        <article class="duo-card reveal">
+          <h3>Publicidad en Meta</h3>
+          <p>Creamos, segmentamos y optimizamos campañas publicitarias para Instagram y Facebook.</p>
+          <p class="note">La gestión de las campañas y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se abona directamente a Meta desde la cuenta del cliente.</p>
+        </article>
+      </div>
+
+      <div class="center-action reveal">
+        <a href="#contacto" class="btn btn-accent">Consultar por un servicio adicional</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. DISEÑO DE PÁGINAS WEB -->
+  <section id="web" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Una página web adaptada al <span class="accent">momento de tu negocio</span></h2>
+
+      <div class="duo-grid">
+        <article class="duo-card reveal">
+          <h3>Web Express</h3>
+          <p>Una landing page de una sola página para presentar tu negocio, explicar tus servicios y centralizar las consultas.</p>
+          <p>Es ideal si necesitás una presencia digital clara, rápida y profesional.</p>
+          <a href="#contacto" class="btn btn-outline">Consultar por Web Express</a>
+        </article>
+
+        <article class="duo-card reveal">
+          <h3>Web Institucional</h3>
+          <p>Una web de hasta dos páginas para desarrollar con mayor profundidad tu propuesta, tus servicios y la información de contacto.</p>
+          <p>Es ideal para marcas que necesitan una presentación institucional más completa.</p>
+          <a href="#contacto" class="btn btn-outline">Consultar por Web Institucional</a>
+        </article>
+      </div>
+
+      <div class="notes-block reveal">
+        <p class="note">Cada página web se cotiza de manera personalizada según su alcance, cantidad de secciones y funcionalidades.</p>
+        <p class="note">Los valores no incluyen dominio ni hosting. Los proyectos con ecommerce, más páginas o funcionalidades especiales se cotizan por separado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. AUTOMATIZACIONES -->
+  <section id="automatizaciones" class="section">
+    <div class="container">
+      <div class="panel panel--dark reveal">
+        <div class="panel-head">
+          <h2>La tecnología acompaña la conversación. No la reemplaza.</h2>
+          <p>Analizamos cómo ingresan, se responden y se organizan las consultas de tu negocio para detectar oportunidades de mejora.</p>
+        </div>
+
+        <div class="auto-grid">
+          <article class="auto-card">
+            <span class="auto-num" aria-hidden="true">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Revisamos los canales que utilizás, las consultas que recibís y las tareas repetitivas que forman parte de la atención y el seguimiento comercial.</p>
+          </article>
+          <article class="auto-card">
+            <span class="auto-num" aria-hidden="true">02</span>
+            <h3>Desarrollo</h3>
+            <p>Implementamos automatizaciones simples para responder consultas iniciales, enviar información, derivar mensajes, registrar contactos o realizar seguimientos.</p>
+          </article>
+          <article class="auto-card">
+            <span class="auto-num" aria-hidden="true">03</span>
+            <h3>Acompañamiento</h3>
+            <p>Probamos el funcionamiento, realizamos los ajustes necesarios y ofrecemos mantenimiento cuando la solución lo requiere.</p>
+          </article>
+        </div>
+
+        <div class="auto-foot">
+          <p class="note note--onDark">Cada proyecto se cotiza de manera personalizada según los canales, las integraciones y el alcance de la automatización.</p>
+          <p class="note note--onDark">Nuestras soluciones están enfocadas en la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones operativas complejas.</p>
+          <a href="#contacto" class="btn btn-accent">Contanos qué querés automatizar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. CTA DE CIERRE -->
+  <section id="cierre" class="section">
+    <div class="container">
+      <div class="cta-block reveal">
+        <h2>Tu negocio ya tiene una voz.<br><span class="accent">Es momento de hacerla llegar más lejos.</span></h2>
+        <p>Contanos en qué etapa está tu marca y qué necesitás resolver. Te ayudamos a encontrar el servicio adecuado para avanzar.</p>
+        <p class="cta-sub">Trabajamos de manera remota con pymes, profesionales y emprendedores de toda Argentina.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-accent">Contanos tu proyecto</a>
+          <a href="https://wa.me/5491149154309?text=Hola%20EKHO!%20Quiero%20consultar%20por%20sus%20servicios." target="_blank" rel="noopener" class="btn btn-dark">Hablar por WhatsApp <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. FORMULARIO -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="panel panel--mist form-panel reveal">
+        <div class="form-intro">
+          <h2>Hablemos de tu proyecto</h2>
+          <p>Completá el formulario y contanos brevemente qué necesitás. Nos vamos a comunicar con vos para conocer mejor tu negocio y orientarte.</p>
+          <ul class="form-contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6.2 8-6.2"/></svg>
+              <a href="mailto:info@ekho.com.ar">info@ekho.com.ar</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M4 20l1.4-4.2A8 8 0 0 1 4 12"/></svg>
+              <a href="https://wa.me/5491149154309" target="_blank" rel="noopener">+54 9 11 4915-4309</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="fields">
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input type="text" id="f-nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-marca">Marca o empresa</label>
+              <input type="text" id="f-marca" name="marca" autocomplete="organization" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Correo electrónico</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-whatsapp">WhatsApp</label>
+              <input type="tel" id="f-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" required>
+            </div>
+            <div class="field">
+              <label for="f-provincia">Provincia</label>
+              <input type="text" id="f-provincia" name="provincia" autocomplete="address-level1" required>
+            </div>
+            <div class="field">
+              <label for="f-servicio">¿Qué servicio te interesa?</label>
+              <select id="f-servicio" name="servicio" required>
+                <option value="Gestión de redes sociales">Gestión de redes sociales</option>
+                <option value="Diseño de página web">Diseño de página web</option>
+                <option value="Automatización de comunicaciones">Automatización de comunicaciones</option>
+                <option value="Quiero combinar servicios">Quiero combinar servicios</option>
+                <option value="Todavía no estoy seguro/a">Todavía no estoy seguro/a</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="f-proyecto">Contanos sobre tu proyecto</label>
+              <textarea id="f-proyecto" name="proyecto" rows="4" required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent btn-block">Enviar consulta</button>
+          <p class="microcopy">Al enviar el formulario, aceptás que nos comuniquemos con vos para responder tu consulta.</p>
+          <p class="form-msg" id="form-msg" role="status">¡Gracias! Recibimos tu consulta y nos vamos a comunicar con vos a la brevedad.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. PREGUNTAS FRECUENTES -->
   <section id="faq" class="section">
     <div class="container">
-      <h2 class="section-title reveal">Preguntas <span class="accent">frecuentes</span></h2>
+      <h2 class="section-title reveal">Preguntas frecuentes sobre nuestros <span class="accent">servicios digitales</span></h2>
 
       <div class="faq reveal">
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Qué incluye cada plan de EKHO Social?</span><i class="faq-i">+</i></button>
-          <div class="faq-a"><p>Cada plan incluye redacción de copys, calendario a medida del rubro y publicación de los posteos. La cantidad de piezas y el horario de respuesta a comentarios varían según el plan elegido.</p></div>
+          <button class="faq-q" aria-expanded="false"><span>¿Trabajan con clientes de toda Argentina?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>Sí. Nuestros servicios se desarrollan de manera remota, por lo que podemos trabajar con pymes, profesionales y emprendedores de cualquier provincia del país.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Puedo recibir el contenido y publicarlo yo mismo?</span><i class="faq-i">+</i></button>
-          <div class="faq-a"><p>Sí. Todos los planes están disponibles en versión "solo contenido" (sin publicación ni respuesta a comentarios), con descuento sobre el valor del plan completo.</p></div>
+          <button class="faq-q" aria-expanded="false"><span>¿Los contenidos se crean específicamente para mi marca?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>Sí. El calendario, los temas, los copys y las piezas visuales se desarrollan de acuerdo con tu negocio, tu público y tus objetivos.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿La web incluye hosting y dominio?</span><i class="faq-i">+</i></button>
-          <div class="faq-a"><p>No, el hosting y el dominio los maneja el cliente directamente. Nosotros nos encargamos del diseño y desarrollo del sitio.</p></div>
+          <button class="faq-q" aria-expanded="false"><span>¿Qué incluye la gestión de redes sociales?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>El alcance depende del plan contratado. Puede incluir planificación mensual, diseño de publicaciones, redacción de copys, ideas para videos, publicación del contenido y gestión de comentarios y mensajes.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Cómo funciona el proceso de automatización?</span><i class="faq-i">+</i></button>
-          <div class="faq-a"><p>Arranca con un diagnóstico de tus procesos, seguido del desarrollo de la automatización (WhatsApp, n8n u otras integraciones) y un mantenimiento continuo una vez en marcha.</p></div>
+          <button class="faq-q" aria-expanded="false"><span>¿Puedo contratar solamente la creación del contenido?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>Sí. Todos los planes de EKHO Social tienen una modalidad de solo contenido, sin publicación ni gestión de comentarios y mensajes, con un 15 % de descuento.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Puedo cambiar de plan más adelante?</span><i class="faq-i">+</i></button>
-          <div class="faq-a"><p>Sí, podés subir o bajar de plan cuando lo necesites según el ritmo que le quieras dar a tus redes.</p></div>
+          <button class="faq-q" aria-expanded="false"><span>¿Los videos están incluidos?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>El plan EKHO Total incluye dos videos cortos mensuales con edición básica. También podés contratar filmación y edición como un servicio adicional.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Necesito tener las redes ya creadas?</span><i class="faq-i">+</i></button>
-          <div class="faq-a"><p>No es un requisito. Si estás empezando, te ayudamos a definir la línea gráfica y el calendario desde cero.</p></div>
+          <button class="faq-q" aria-expanded="false"><span>¿La inversión en publicidad está incluida?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>No. La gestión de la campaña y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se paga directamente a Meta desde la cuenta del cliente.</p></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="section">
-    <div class="container">
-      <div class="cta-block reveal">
-        <h2>¿Tenés una marca para hacer sonar?<br><span class="accent">Conversemos</span></h2>
-        <p>Contanos un poco sobre tu negocio y te respondemos con una propuesta a medida — sin vueltas ni plantillas genéricas.</p>
-
-        <form class="cta-form" id="contact-form" novalidate>
-          <div class="cta-field">
-            <label class="sr-only" for="f-email">Tu email</label>
-            <input type="email" id="f-email" name="email" placeholder="Escribí tu email" required>
-            <button type="submit" class="btn btn-accent">Escribinos</button>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Los planes de redes sociales tienen un valor fijo?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a">
+            <p>Los valores publicados corresponden al alcance inicial de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de la cuenta.</p>
+            <p>Antes de comenzar, te enviamos una propuesta con el alcance y el valor correspondiente.</p>
           </div>
-          <p class="form-msg" id="form-msg" role="status">¡Gracias! Recibimos tus datos y te contactamos a la brevedad.</p>
-        </form>
-
-        <ul class="trust">
-          <li>Trato directo con una persona real</li>
-          <li>Calendario a medida de tu rubro</li>
-          <li>Nada se publica sin que lo veas</li>
-        </ul>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Cuánto cuesta una página web?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>Cada proyecto se cotiza de manera personalizada según la cantidad de secciones, el contenido y las funcionalidades necesarias.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Las páginas web incluyen dominio y hosting?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>No. El dominio y el hosting son contratados y administrados directamente por el cliente. Podemos orientarte durante el proceso.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Desarrollan tiendas online?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>Las propuestas Web Express y Web Institucional no incluyen ecommerce. Si necesitás una tienda online o funcionalidades especiales, podemos evaluar el proyecto y preparar una cotización personalizada.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Qué tareas de comunicación se pueden automatizar?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a">
+            <p>Podemos automatizar respuestas iniciales, envío de información o presupuestos, confirmaciones, recordatorios, registro de contactos, derivación de consultas y seguimientos comerciales simples.</p>
+            <p>Primero analizamos cada caso para definir qué conviene automatizar y qué debería continuar en manos de una persona.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿EKHO automatiza procesos internos complejos?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>No. Nuestras automatizaciones están enfocadas en mejorar la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones administrativas, financieras u operativas complejas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Una automatización reemplaza la atención humana?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a">
+            <p>No. El objetivo es agilizar las tareas repetitivas y organizar mejor las consultas, no eliminar el contacto humano.</p>
+            <p>Definimos qué respuestas pueden automatizarse y en qué momento la conversación debe continuar con una persona.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span>¿Trabajan únicamente con inteligencia artificial?</span><i class="faq-i" aria-hidden="true">+</i></button>
+          <div class="faq-a"><p>No. La inteligencia artificial es una de las herramientas que incorporamos para agilizar ciertos procesos. La estrategia, la creatividad, la revisión y el acompañamiento están a cargo de personas.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- 15. FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="panel panel--dark footer-panel">
-      <div class="footer-top">
-        <h2>Armemos juntos<br>tu <span class="accent">propuesta</span></h2>
-        <a href="https://wa.me/5491149154309?text=Hola%20EKHO!%20Quiero%20info%20sobre%20sus%20servicios." target="_blank" rel="noopener" class="btn btn-accent">WhatsApp <span class="arrow">↗</span></a>
-      </div>
-
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/ekho-logo-blanco.png" alt="EKHO Comunicaciones">
-          <p>Contenido, diseño y automatización para pymes y emprendedores — un equipo de personas, apoyado en inteligencia artificial.</p>
+          <img src="assets/ekho-logo-blanco.png" width="1226" height="367" alt="EKHO Comunicaciones" loading="lazy">
+          <p>Agencia de comunicación digital para pymes, profesionales y emprendedores de toda Argentina.</p>
+          <p class="footer-claim">Ideas con criterio. Soluciones que hacen avanzar tu negocio.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-h">Servicios</h2>
+          <ul>
+            <li><a href="#servicios">Gestión de redes sociales</a></li>
+            <li><a href="#web">Diseño de páginas web</a></li>
+            <li><a href="#automatizaciones">Automatización de comunicaciones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-h">Contacto</h2>
+          <ul>
+            <li><a href="https://wa.me/5491149154309" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/ekhocomunicaciones" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="mailto:info@ekho.com.ar">Correo electrónico</a></li>
+          </ul>
           <div class="socials">
-            <a href="https://wa.me/5491149154309" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M4 20l1.4-4.2A8 8 0 0 1 4 12"/></svg>
+            <a href="https://wa.me/5491149154309" target="_blank" rel="noopener" aria-label="WhatsApp de EKHO Comunicaciones">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M4 20l1.4-4.2A8 8 0 0 1 4 12"/></svg>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+            <a href="https://www.instagram.com/ekhocomunicaciones" target="_blank" rel="noopener" aria-label="Instagram de EKHO Comunicaciones">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M9 10.5v6M9 8v.01M15 16.5v-3.3c0-1.2-.7-2-1.9-2-.9 0-1.5.5-1.9 1.1"/></svg>
+            <a href="mailto:info@ekho.com.ar" aria-label="Correo electrónico de EKHO Comunicaciones">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 6.5 8 6.2 8-6.2"/></svg>
             </a>
           </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="#servicios">EKHO Social</a></li>
-            <li><a href="#servicios">EKHO Diseño</a></li>
-            <li><a href="#servicios">EKHO Automatización</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Empresa</h4>
-          <ul>
-            <li><a href="#proceso">Cómo trabajamos</a></li>
-            <li><a href="#trabajo">Nuestro trabajo</a></li>
-            <li><a href="#planes">Planes</a></li>
-            <li><a href="#faq">Preguntas frecuentes</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="mailto:info@ekho.com.ar">info@ekho.com.ar</a></li>
-            <li><a href="https://wa.me/5491149154309" target="_blank" rel="noopener">+54 9 11 4915-4309</a></li>
-            <li>Buenos Aires, Argentina</li>
-            <li>Atención remota a todo el país</li>
-          </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>© 2026 EKHO Comunicaciones. Todos los derechos reservados.</span>
-        <span>Armemos juntos tu propuesta</span>
+        <span>Los valores publicados son orientativos y pueden ajustarse según el alcance y las necesidades de cada proyecto.</span>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.ekhocomunicaciones.com.ar/#organizacion",
+      "name": "EKHO Comunicaciones",
+      "description": "Agencia de comunicación digital para pymes, profesionales y emprendedores de toda Argentina. Gestión de redes sociales, diseño de páginas web y automatización de comunicaciones.",
+      "url": "https://www.ekhocomunicaciones.com.ar/",
+      "logo": "https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png",
+      "image": "https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png",
+      "email": "info@ekho.com.ar",
+      "telephone": "+5491149154309",
+      "slogan": "Ideas con criterio. Soluciones que hacen avanzar tu negocio.",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "sameAs": ["https://www.instagram.com/ekhocomunicaciones"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de comunicación digital",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EKHO Social — Gestión de redes sociales",
+              "description": "Gestión de redes sociales para empresas y emprendedores: calendario mensual, diseño de publicaciones, redacción de copys, publicación y gestión de comentarios y mensajes."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EKHO Design — Diseño de páginas web",
+              "description": "Diseño de landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EKHO Automatización — Automatización de comunicaciones",
+              "description": "Automatizaciones aplicadas a la comunicación: respuestas iniciales, envío de información, derivación de consultas y seguimiento de potenciales clientes."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Gestión de redes sociales para empresas y emprendedores",
+      "serviceType": "Gestión de redes sociales",
+      "provider": { "@id": "https://www.ekhocomunicaciones.com.ar/#organizacion" },
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "EKHO Basic",
+          "description": "Hasta 10 publicaciones mensuales para Instagram y Facebook, redacción de copys, calendario mensual, publicación de posteos y respuesta a comentarios y mensajes de lunes a viernes, de 9 a 18 h.",
+          "price": "280000",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "EKHO Plus",
+          "description": "Hasta 15 publicaciones mensuales para Instagram y Facebook, redacción de copys, calendario mensual, publicación de posteos y respuesta a comentarios y mensajes de lunes a sábado, de 9 a 18 h.",
+          "price": "345000",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "EKHO Total",
+          "description": "Hasta 20 publicaciones mensuales para Instagram y Facebook, dos videos cortos mensuales con edición básica, publicación de posteos y respuesta a comentarios y mensajes todos los días, de 9 a 18 h.",
+          "price": "505000",
+          "priceCurrency": "ARS",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Trabajan con clientes de toda Argentina?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nuestros servicios se desarrollan de manera remota, por lo que podemos trabajar con pymes, profesionales y emprendedores de cualquier provincia del país." } },
+        { "@type": "Question", "name": "¿Los contenidos se crean específicamente para mi marca?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. El calendario, los temas, los copys y las piezas visuales se desarrollan de acuerdo con tu negocio, tu público y tus objetivos." } },
+        { "@type": "Question", "name": "¿Qué incluye la gestión de redes sociales?", "acceptedAnswer": { "@type": "Answer", "text": "El alcance depende del plan contratado. Puede incluir planificación mensual, diseño de publicaciones, redacción de copys, ideas para videos, publicación del contenido y gestión de comentarios y mensajes." } },
+        { "@type": "Question", "name": "¿Puedo contratar solamente la creación del contenido?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todos los planes de EKHO Social tienen una modalidad de solo contenido, sin publicación ni gestión de comentarios y mensajes, con un 15 % de descuento." } },
+        { "@type": "Question", "name": "¿Los videos están incluidos?", "acceptedAnswer": { "@type": "Answer", "text": "El plan EKHO Total incluye dos videos cortos mensuales con edición básica. También podés contratar filmación y edición como un servicio adicional." } },
+        { "@type": "Question", "name": "¿La inversión en publicidad está incluida?", "acceptedAnswer": { "@type": "Answer", "text": "No. La gestión de la campaña y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se paga directamente a Meta desde la cuenta del cliente." } },
+        { "@type": "Question", "name": "¿Los planes de redes sociales tienen un valor fijo?", "acceptedAnswer": { "@type": "Answer", "text": "Los valores publicados corresponden al alcance inicial de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de la cuenta. Antes de comenzar, te enviamos una propuesta con el alcance y el valor correspondiente." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta una página web?", "acceptedAnswer": { "@type": "Answer", "text": "Cada proyecto se cotiza de manera personalizada según la cantidad de secciones, el contenido y las funcionalidades necesarias." } },
+        { "@type": "Question", "name": "¿Las páginas web incluyen dominio y hosting?", "acceptedAnswer": { "@type": "Answer", "text": "No. El dominio y el hosting son contratados y administrados directamente por el cliente. Podemos orientarte durante el proceso." } },
+        { "@type": "Question", "name": "¿Desarrollan tiendas online?", "acceptedAnswer": { "@type": "Answer", "text": "Las propuestas Web Express y Web Institucional no incluyen ecommerce. Si necesitás una tienda online o funcionalidades especiales, podemos evaluar el proyecto y preparar una cotización personalizada." } },
+        { "@type": "Question", "name": "¿Qué tareas de comunicación se pueden automatizar?", "acceptedAnswer": { "@type": "Answer", "text": "Podemos automatizar respuestas iniciales, envío de información o presupuestos, confirmaciones, recordatorios, registro de contactos, derivación de consultas y seguimientos comerciales simples. Primero analizamos cada caso para definir qué conviene automatizar y qué debería continuar en manos de una persona." } },
+        { "@type": "Question", "name": "¿EKHO automatiza procesos internos complejos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Nuestras automatizaciones están enfocadas en mejorar la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones administrativas, financieras u operativas complejas." } },
+        { "@type": "Question", "name": "¿Una automatización reemplaza la atención humana?", "acceptedAnswer": { "@type": "Answer", "text": "No. El objetivo es agilizar las tareas repetitivas y organizar mejor las consultas, no eliminar el contacto humano. Definimos qué respuestas pueden automatizarse y en qué momento la conversación debe continuar con una persona." } },
+        { "@type": "Question", "name": "¿Trabajan únicamente con inteligencia artificial?", "acceptedAnswer": { "@type": "Answer", "text": "No. La inteligencia artificial es una de las herramientas que incorporamos para agilizar ciertos procesos. La estrategia, la creatividad, la revisión y el acompañamiento están a cargo de personas." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="script.js" defer></script>
 </body>
 </html>
