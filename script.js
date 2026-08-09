@@ -1,4 +1,4 @@
-// Nav móvil
+// --- Nav móvil ---
 const navToggle = document.getElementById("nav-toggle");
 const navLinks = document.getElementById("nav-links");
 
@@ -14,17 +14,38 @@ navLinks?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-// FAQ acordeón (un solo ítem abierto a la vez)
+// --- Reveal al scrollear ---
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, i) => {
+        if (!entry.isIntersecting) return;
+        // Escalona los elementos que entran juntos
+        entry.target.style.transitionDelay = `${Math.min(i * 90, 270)}ms`;
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+  );
+  revealItems.forEach((el) => observer.observe(el));
+} else {
+  revealItems.forEach((el) => el.classList.add("is-in"));
+}
+
+// --- FAQ acordeón (uno abierto a la vez) ---
 document.querySelectorAll(".faq-item").forEach((item) => {
-  const question = item.querySelector(".faq-question");
-  const answer = item.querySelector(".faq-answer");
+  const question = item.querySelector(".faq-q");
+  const answer = item.querySelector(".faq-a");
 
   question.addEventListener("click", () => {
     const isOpen = question.getAttribute("aria-expanded") === "true";
 
-    document.querySelectorAll(".faq-question").forEach((q) => {
+    document.querySelectorAll(".faq-q").forEach((q) => {
       q.setAttribute("aria-expanded", "false");
-      q.closest(".faq-item").querySelector(".faq-answer").style.maxHeight = null;
+      q.closest(".faq-item").querySelector(".faq-a").style.maxHeight = null;
     });
 
     if (!isOpen) {
@@ -34,7 +55,7 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-// Formulario de contacto: sin backend todavía, solo confirma la recepción en pantalla
+// --- Formulario: sin backend todavía, confirma en pantalla ---
 const contactForm = document.getElementById("contact-form");
 
 contactForm?.addEventListener("submit", (e) => {
