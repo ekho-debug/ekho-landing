@@ -22,13 +22,14 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* `clip` en vez de `hidden`: recorta el marquee rotado sin romper el nav sticky */
+html,body{overflow-x:clip}
 body{
   margin:0;
   font-family:var(--body);
   color:var(--graphite);
   background:var(--white);
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
 }
 h1,h2,h3,h4{font-family:var(--display);color:var(--ink);margin:0;line-height:1.1}
 p{margin:0}
