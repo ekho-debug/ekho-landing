@@ -227,22 +227,13 @@ section[id]{scroll-margin-top:104px}
 /* Dos columnas: texto a la izquierda, ilustración a la derecha */
 .intro-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
 .intro{max-width:none;margin:0;text-align:left;display:flex;flex-direction:column;gap:18px}
-.intro-visual img{width:100%;height:auto}
+.intro-visual img{width:80%;height:auto;margin-inline:auto}
 .intro h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;margin-bottom:6px}
 .intro p{font-size:16px;line-height:1.7}
 /* `.intro p` es más específico: hay que repetir el tamaño del kicker */
 .intro .section-kicker{font-size:clamp(13px,1.25vw,15px);line-height:1.35}
 /* Justificado, con guionado para que no queden huecos grandes entre palabras */
 .intro-text{text-align:justify;hyphens:auto}
-.intro-claim{
-  font-family:var(--display);font-size:clamp(16px,1.7vw,19px);font-weight:700;
-  color:var(--ink);margin-top:12px;
-}
-/* Subrayado magenta debajo del eslogan */
-.intro-claim::after{
-  content:"";display:block;width:108px;height:4px;border-radius:99px;
-  background:var(--accent);margin-top:16px;
-}
 
 /* ---------- PROPUESTA DE VALOR ---------- */
 .why{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
