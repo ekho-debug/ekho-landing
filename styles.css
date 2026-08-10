@@ -531,10 +531,37 @@ body.modal-open{overflow:hidden}
 .modal .notes-title{font-size:16px}
 
 /* Opciones web dentro del modal */
-.modal .duo-grid{margin-top:26px;grid-template-columns:repeat(2,1fr);max-width:none;margin-inline:0}
+.modal .duo-grid{margin-top:24px;grid-template-columns:repeat(2,1fr);gap:22px;max-width:none;margin-inline:0;align-items:stretch}
 .duo-sub{font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--accent);line-height:1.35}
-.modal .duo-card{gap:12px}
+.modal .duo-card{
+  height:100%;gap:12px;padding:22px;
+  border:1px solid rgba(15,6,16,.1);border-radius:var(--r-card);
+  box-shadow:0 10px 30px -24px rgba(15,6,16,.4);
+}
+.modal .duo-card:hover{transform:none;box-shadow:0 16px 36px -24px rgba(15,6,16,.45)}
+/* El botón queda al fondo aunque los textos midan distinto */
 .modal .duo-card .btn{align-self:stretch;margin-top:auto}
+/* Ilustración decorativa: misma altura en las dos tarjetas, sin recortes */
+.duo-ilu{display:block;border-radius:var(--r-sm);overflow:hidden;margin-bottom:6px}
+.duo-ilu svg{display:block;width:100%;height:auto}
+
+/* Emblema del encabezado */
+.modal-emblema{
+  width:56px;height:56px;flex-shrink:0;border-radius:16px;
+  background:var(--accent-pale);color:var(--accent);
+  display:grid;place-items:center;
+}
+.modal-emblema svg{width:28px;height:28px}
+/* Emblema y textos juntos a la izquierda; la ✕ queda a la derecha */
+#modal-web .modal-head{gap:16px}
+#modal-web .modal-head-txt{margin-right:auto}
+#modal-web .modal-close{border-color:rgba(255,0,145,.55);color:var(--accent)}
+#modal-web .modal-close:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* Variante gris del bloque de aclaraciones, con el ícono en contorno */
+.aclaraciones--gris{background:var(--mist);border-color:rgba(15,6,16,.1)}
+.aclaraciones--gris .aclaraciones-icono{background:transparent;border:1.6px solid var(--accent);color:var(--accent)}
+.aclaraciones--gris .aclaraciones-txt{border-left-color:rgba(15,6,16,.12)}
 
 /* Pasos de automatización dentro del modal */
 .pasos-grid{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
@@ -561,6 +588,9 @@ body.modal-open{overflow:hidden}
   .modal .plan .btn{padding:16px 26px;font-size:15px}
   /* Un beneficio por línea para que no se comprima */
   .modal-incluye .check-list{grid-template-columns:1fr}
+  /* El emblema se achica para no empujar al título contra la ✕ */
+  .modal-emblema{width:44px;height:44px;border-radius:13px}
+  .modal-emblema svg{width:22px;height:22px}
   /* La línea divisoria vertical pasa a ser horizontal */
   .aclaraciones{grid-template-columns:1fr;gap:18px;padding:22px 20px}
   .aclaraciones-txt{padding-left:0;padding-top:18px;border-left:0;border-top:1px solid rgba(255,0,145,.25)}

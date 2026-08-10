@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=19">
+<link rel="stylesheet" href="styles.css?v=20">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -570,11 +570,17 @@
 
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-web-titulo" aria-describedby="modal-web-sub">
     <div class="modal-head">
+      <span class="modal-emblema" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.5" y="4" width="19" height="13" rx="2.2"/><path d="M2.5 8h19"/>
+          <path d="m13.6 20.5 6.4-6.4a1.7 1.7 0 0 0-2.4-2.4l-6.4 6.4-.6 3 3-.6Z"/>
+        </svg>
+      </span>
       <div class="modal-head-txt">
         <h2 id="modal-web-titulo">Diseño de páginas web</h2>
         <p id="modal-web-sub">Una página web adaptada al momento de tu negocio</p>
       </div>
-      <button type="button" class="modal-close" data-close aria-label="Cerrar la ventana de diseño web">
+      <button type="button" class="modal-close" data-close aria-label="Cerrar opciones de diseño web">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
@@ -584,14 +590,52 @@
 
       <div class="duo-grid">
         <article class="duo-card">
+          <span class="duo-ilu" aria-hidden="true">
+            <svg viewBox="0 0 320 170" role="presentation" focusable="false">
+              <rect x="18" y="16" width="284" height="140" rx="16" fill="#FDE9F5"/>
+              <circle cx="268" cy="118" r="11" fill="#F9A8D4"/>
+              <path d="M250 22c18 26 20 60 6 84" stroke="#F472B6" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <g fill="#FBCFE8"><circle cx="30" cy="96" r="2"/><circle cx="40" cy="96" r="2"/><circle cx="50" cy="96" r="2"/><circle cx="30" cy="106" r="2"/><circle cx="40" cy="106" r="2"/><circle cx="50" cy="106" r="2"/><circle cx="30" cy="116" r="2"/><circle cx="40" cy="116" r="2"/><circle cx="50" cy="116" r="2"/></g>
+              <rect x="62" y="12" width="196" height="146" rx="9" fill="#fff" stroke="#F5D0E6"/>
+              <path d="M62 21a9 9 0 0 1 9-9h178a9 9 0 0 1 9 9v8H62z" fill="#FCE7F3"/>
+              <g fill="#F472B6"><circle cx="76" cy="20.5" r="2.6"/><circle cx="86" cy="20.5" r="2.6"/><circle cx="96" cy="20.5" r="2.6"/></g>
+              <rect x="74" y="40" width="82" height="52" rx="7" fill="#FBCFE8"/>
+              <circle cx="96" cy="58" r="7" fill="#F472B6"/>
+              <path d="m80 88 16-18 13 14 9-8 12 12z" fill="#F472B6"/>
+              <rect x="166" y="44" width="80" height="7" rx="3.5" fill="#FBCFE8"/>
+              <rect x="166" y="57" width="62" height="7" rx="3.5" fill="#FBCFE8"/>
+              <rect x="166" y="74" width="46" height="16" rx="8" fill="#EC4899"/>
+              <g fill="#FCE7F3"><rect x="74" y="104" width="52" height="26" rx="6"/><rect x="134" y="104" width="52" height="26" rx="6"/><rect x="194" y="104" width="52" height="26" rx="6"/></g>
+              <g fill="#EFEFEF"><rect x="74" y="138" width="52" height="5" rx="2.5"/><rect x="134" y="138" width="52" height="5" rx="2.5"/><rect x="194" y="138" width="52" height="5" rx="2.5"/></g>
+            </svg>
+          </span>
           <h3>Web Express</h3>
           <p class="duo-sub">Una presencia digital clara, rápida y profesional</p>
           <p>Una landing page de una sola página para presentar tu negocio, explicar tus servicios y centralizar las consultas.</p>
           <p>Es ideal si necesitás empezar a mostrar tu propuesta de manera profesional sin desarrollar un sitio de gran extensión.</p>
-          <button type="button" class="btn btn-outline btn-block" data-servicio="Diseño de página web" data-detalle="Web Express" data-campo="f-web" data-etiqueta="Opción seleccionada">Consultar por Web Express</button>
+          <button type="button" class="btn btn-accent btn-block" data-servicio="Diseño de página web" data-detalle="Web Express" data-campo="f-web" data-etiqueta="Opción seleccionada">Consultar por Web Express</button>
         </article>
 
         <article class="duo-card">
+          <span class="duo-ilu" aria-hidden="true">
+            <svg viewBox="0 0 320 170" role="presentation" focusable="false">
+              <rect x="18" y="16" width="284" height="140" rx="16" fill="#FDE9F5"/>
+              <circle cx="272" cy="118" r="11" fill="#F9A8D4"/>
+              <path d="M252 24c17 25 19 58 6 82" stroke="#F472B6" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <defs><pattern id="rayas-inst" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="3" height="7" fill="#FBCFE8"/></pattern></defs>
+              <circle cx="48" cy="92" r="30" fill="url(#rayas-inst)"/>
+              <rect x="70" y="12" width="196" height="146" rx="9" fill="#fff" stroke="#F5D0E6"/>
+              <path d="M70 21a9 9 0 0 1 9-9h178a9 9 0 0 1 9 9v8H70z" fill="#FCE7F3"/>
+              <g fill="#F472B6"><circle cx="84" cy="20.5" r="2.6"/><circle cx="94" cy="20.5" r="2.6"/><circle cx="104" cy="20.5" r="2.6"/></g>
+              <rect x="82" y="40" width="72" height="42" rx="7" fill="#FBCFE8"/>
+              <g fill="#F472B6"><path d="M118 48l16 9h-32z"/><rect x="106" y="60" width="4" height="13"/><rect x="116" y="60" width="4" height="13"/><rect x="126" y="60" width="4" height="13"/><rect x="102" y="75" width="32" height="4" rx="1.5"/></g>
+              <g fill="#FBCFE8"><rect x="164" y="44" width="86" height="6" rx="3"/><rect x="164" y="56" width="86" height="6" rx="3"/><rect x="164" y="68" width="60" height="6" rx="3"/></g>
+              <rect x="82" y="92" width="72" height="52" rx="7" fill="#FBCFE8"/>
+              <path d="m90 138 18-20 14 15 10-9 14 14z" fill="#F472B6"/>
+              <g fill="#FBCFE8"><rect x="164" y="94" width="60" height="6" rx="3"/><rect x="164" y="106" width="60" height="6" rx="3"/><rect x="164" y="118" width="44" height="6" rx="3"/></g>
+              <g><circle cx="238" cy="97" r="4" fill="#F472B6"/><circle cx="238" cy="112" r="4" fill="#F9A8D4"/><circle cx="238" cy="127" r="4" fill="#FBCFE8"/></g>
+            </svg>
+          </span>
           <h3>Web Institucional</h3>
           <p class="duo-sub">Una presentación más completa para tu marca</p>
           <p>Una web de hasta dos páginas para desarrollar con mayor profundidad tu propuesta, tus servicios y la información de contacto.</p>
@@ -600,10 +644,17 @@
         </article>
       </div>
 
-      <div class="notes-block">
-        <h3 class="notes-title">Aclaraciones</h3>
-        <p class="note">Cada página web se cotiza de manera personalizada según su alcance, cantidad de secciones y funcionalidades.</p>
-        <p class="note">Los valores no incluyen dominio ni hosting. Los proyectos con ecommerce, más páginas o funcionalidades especiales se cotizan por separado.</p>
+      <div class="aclaraciones aclaraciones--gris">
+        <div class="aclaraciones-head">
+          <span class="aclaraciones-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 11v5M12 7.6v.01"/></svg>
+          </span>
+          <h3>Aclaraciones</h3>
+        </div>
+        <div class="aclaraciones-txt">
+          <p>Cada página web se cotiza de manera personalizada según su alcance, cantidad de secciones y funcionalidades.</p>
+          <p>Los valores no incluyen dominio ni hosting. Los proyectos con ecommerce, más páginas o funcionalidades especiales se cotizan por separado.</p>
+        </div>
       </div>
     </div>
   </div>
