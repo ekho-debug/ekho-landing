@@ -184,30 +184,44 @@ section[id]{scroll-margin-top:104px}
   position:absolute;top:100%;left:-1.5%;width:103%;height:210px;
   transform-origin:top center;
   transform:rotateX(72deg);
-  background:linear-gradient(180deg,#b9bec7 0%,#dee1e7 12%,#eef0f4 42%,#dcdfe5 72%,#c2c7d0 100%);
-  border-radius:3px 3px 12px 12px;
-  box-shadow:0 0 0 1px rgba(15,6,16,.10), inset 0 1px 0 rgba(255,255,255,.7);
+  /* Gris espacial como la referencia, no plateado */
+  background:linear-gradient(180deg,#55585f 0%,#43464d 16%,#383b42 46%,#2d3036 78%,#212429 100%);
+  border-radius:3px 3px 13px 13px;
+  box-shadow:0 0 0 1px rgba(15,6,16,.5), inset 0 1px 0 rgba(255,255,255,.16);
 }
 /* Bisagra: franja oscura donde el teclado se une a la tapa */
 .laptop-deck::before{
-  content:"";position:absolute;left:6%;right:6%;top:0;height:9px;
-  background:linear-gradient(180deg,#6d727c,rgba(109,114,124,0));
-  border-radius:3px 3px 0 0;
+  content:"";position:absolute;left:5%;right:5%;top:0;height:11px;
+  background:linear-gradient(180deg,#16181c,rgba(22,24,28,0));
+}
+/* Muesca para abrir la tapa */
+.laptop-deck::after{
+  content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;
+  width:13%;height:7px;border-radius:8px 8px 0 0;background:rgba(15,6,16,.45);
 }
 .deck-keys{
-  position:absolute;left:6.5%;right:6.5%;top:12%;height:44%;
-  border-radius:5px;
-  background:#23262c;
+  position:absolute;left:8%;right:8%;top:13%;height:42%;
+  border-radius:4px;
+  background:#131519;
   background-image:
-    repeating-linear-gradient(90deg,rgba(255,255,255,.22) 0 5.1%,transparent 5.1% 6.25%),
-    repeating-linear-gradient(180deg,rgba(255,255,255,.20) 0 13.5%,transparent 13.5% 16.6%);
-  box-shadow:inset 0 0 0 1px rgba(15,6,16,.45);
+    repeating-linear-gradient(90deg,#3d4149 0 4.6%,#15171b 4.6% 5.9%),
+    repeating-linear-gradient(180deg,#3d4149 0 12.5%,#15171b 12.5% 16%);
+  background-blend-mode:lighten;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.55), inset 0 2px 5px rgba(0,0,0,.5);
 }
+/* Rejillas de parlante a los costados del teclado */
+.deck-keys::before,.deck-keys::after{
+  content:"";position:absolute;top:0;bottom:0;width:5.5%;
+  background-image:radial-gradient(rgba(255,255,255,.16) 22%,transparent 24%);
+  background-size:3px 3px;
+}
+.deck-keys::before{left:-7.5%}
+.deck-keys::after{right:-7.5%}
 .deck-pad{
-  position:absolute;left:50%;transform:translateX(-50%);bottom:12%;
-  width:29%;height:30%;border-radius:7px;
-  background:linear-gradient(180deg,#e9ebef,#d3d7de);
-  box-shadow:inset 0 0 0 1px rgba(15,6,16,.13);
+  position:absolute;left:50%;transform:translateX(-50%);bottom:11%;
+  width:30%;height:31%;border-radius:6px;
+  background:linear-gradient(180deg,#4b4e56,#3a3d44);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.12), inset 0 1px 3px rgba(0,0,0,.4);
 }
 
 /* --- Mini sitio dentro de la pantalla --- */
