@@ -105,17 +105,15 @@ section[id]{scroll-margin-top:104px}
 .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
 .hero-copy{max-width:560px}
 
-.pill{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:var(--display);font-size:12.5px;font-weight:600;
-  background:var(--accent-pale);color:var(--accent-dark);
-  padding:9px 20px;border-radius:999px;
+.hero-kicker{
+  font-family:var(--display);font-size:clamp(17px,1.7vw,21px);font-weight:600;
+  color:var(--accent-dark);line-height:1.35;letter-spacing:0;
 }
-.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
-
-.hero-title{margin-top:22px;font-size:clamp(30px,3.9vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1.06}
-.hero-tagline{margin-top:18px;font-family:var(--display);font-size:clamp(17px,1.7vw,21px);font-weight:600;color:var(--ink);line-height:1.35}
-.hero-lead{margin-top:16px;max-width:520px;font-size:15.5px;line-height:1.7}
+.hero-title{
+  margin-top:16px;font-family:var(--display);color:var(--ink);
+  font-size:clamp(30px,3.9vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1.06;
+}
+.hero-lead{margin-top:20px;max-width:520px;font-size:15.5px;line-height:1.7}
 .hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 .btn .arrow{transition:transform .22s ease}
 .btn:hover .arrow{transform:translateX(3px)}
@@ -128,38 +126,71 @@ section[id]{scroll-margin-top:104px}
 .blob--2{width:66%;aspect-ratio:1;right:-8%;bottom:-6%;background:radial-gradient(circle at 60% 40%,var(--accent-pale),rgba(255,0,145,.18));filter:blur(28px);opacity:.7}
 
 /* Los adornos flotan por delante de la notebook, como en la referencia */
-.orb,.gem,.dot-deco{position:absolute;z-index:2;pointer-events:none}
+.orb,.gem{position:absolute;z-index:2;pointer-events:none}
 .orb{border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff,var(--accent-soft) 42%,var(--accent-dark));box-shadow:0 12px 26px -8px rgba(214,29,132,.6)}
 .orb--1{width:54px;height:54px;left:-3%;top:20%;animation:float 7s ease-in-out infinite}
 .orb--2{width:32px;height:32px;right:-1%;bottom:24%;animation:float 9s ease-in-out infinite .9s}
 .gem{
-  width:46px;height:46px;left:5%;bottom:7%;border-radius:13px;
+  width:46px;height:46px;left:-3%;bottom:14%;border-radius:13px;
   background:linear-gradient(140deg,var(--accent-pale),var(--accent));
   box-shadow:0 14px 28px -10px rgba(214,29,132,.55);
   animation:floatGem 8s ease-in-out infinite .4s;
-}
-.dot-deco{
-  right:1%;top:0;width:88px;height:72px;opacity:.5;
-  background-image:radial-gradient(var(--accent) 1.6px,transparent 1.6px);background-size:12px 12px;
 }
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
 @keyframes floatGem{0%,100%{transform:rotate(26deg) translateY(0)}50%{transform:rotate(26deg) translateY(-13px)}}
 
 .laptop{position:relative;z-index:1;width:88%;max-width:530px;transform:perspective(1500px) rotateY(-9deg) rotateX(3deg)}
+
+/* Tapa: canto de aluminio claro + cuerpo oscuro, marco fino y mentón más alto */
 .laptop-lid{
-  position:relative;background:linear-gradient(160deg,#26262e,#101015);
-  border-radius:16px 16px 8px 8px;padding:14px 14px 18px;
-  box-shadow:0 45px 90px -35px rgba(15,6,16,.6), inset 0 0 0 1px rgba(255,255,255,.07);
+  position:relative;
+  background:linear-gradient(168deg,#4a4a55 0%,#26262e 14%,#17171d 55%,#0e0e13 100%);
+  border-radius:13px 13px 5px 5px;
+  padding:9px 9px 17px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.10),
+    inset 0 1px 0 rgba(255,255,255,.22),
+    0 34px 70px -30px rgba(15,6,16,.62);
 }
-.laptop-cam{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:#44444e}
+.laptop-cam{
+  position:absolute;top:3.5px;left:50%;transform:translateX(-50%);
+  width:4px;height:4px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#5c5c68,#212128);
+}
+/* Reflejo diagonal sobre el vidrio */
+.laptop-glare{
+  position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(112deg,rgba(255,255,255,.17) 0%,rgba(255,255,255,.06) 20%,rgba(255,255,255,0) 44%);
+}
+/* Sombra de contacto contra el piso */
+.laptop-shadow{
+  position:absolute;left:5%;right:5%;bottom:-14px;height:26px;z-index:-1;
+  background:radial-gradient(ellipse at 50% 40%,rgba(15,6,16,.36),rgba(15,6,16,0) 72%);
+  filter:blur(7px);
+}
 /* container-type + unidades cqw: el mockup escala igual a cualquier ancho */
 .laptop-screen{position:relative;container-type:inline-size;aspect-ratio:16/10;border-radius:7px;overflow:hidden;background:var(--ink)}
+/* Base: trapecio (más ancha al frente) con brillo de aluminio y canto delantero */
 .laptop-base{
-  position:relative;width:114%;margin-left:-7%;height:16px;
-  background:linear-gradient(180deg,#dcdee4,#9ea3ad);
-  clip-path:polygon(6.2% 0,93.8% 0,100% 100%,0 100%);
+  position:relative;width:116%;margin-left:-8%;height:17px;
+  background:linear-gradient(180deg,#f0f2f5 0%,#d3d7de 26%,#b0b5bf 58%,#8d939e 88%,#787e89 100%);
+  clip-path:polygon(6.9% 0,93.1% 0,100% 100%,0 100%);
 }
-.laptop-notch{position:absolute;left:50%;top:0;transform:translateX(-50%);width:15%;height:5px;border-radius:0 0 6px 6px;background:#8d929c}
+.laptop-base::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
+  background:linear-gradient(180deg,rgba(15,6,16,0),rgba(15,6,16,.3));
+}
+/* Muesca para abrir la tapa */
+.laptop-notch{
+  position:absolute;left:50%;top:0;transform:translateX(-50%);
+  width:13%;height:6px;border-radius:0 0 8px 8px;
+  background:linear-gradient(180deg,#6f757f,#9ba1ab);
+}
+.laptop-foot{
+  display:block;width:116%;margin-left:-8%;height:3px;
+  background:linear-gradient(180deg,rgba(15,6,16,.32),rgba(15,6,16,0));
+  border-radius:0 0 7px 7px;
+}
 
 /* --- Mini sitio dentro de la pantalla --- */
 .mini{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--ink)}
@@ -478,7 +509,8 @@ section[id]{scroll-margin-top:104px}
   .footer-bottom span:last-child{text-align:left}
 }
 
-@media (max-width:860px){
+/* El menú horizontal se parte en dos líneas por debajo de ~1080px */
+@media (max-width:1080px){
   .nav-links{
     position:absolute;top:74px;left:0;right:0;
     background:var(--ink);border-radius:26px;padding:22px;
@@ -488,7 +520,9 @@ section[id]{scroll-margin-top:104px}
   .nav-cta-mobile{display:inline-flex}
   .nav-cta{display:none}
   .nav-toggle{display:flex;margin-left:auto}
+}
 
+@media (max-width:860px){
   .tl-row{grid-template-columns:1fr;gap:6px;padding:20px 0;border-bottom:1px solid rgba(15,6,16,.09)}
   .tl-left{text-align:left}
   .tl-mark{display:none}
@@ -500,7 +534,7 @@ section[id]{scroll-margin-top:104px}
 
 @media (max-width:640px){
   /* Los adornos flotantes compiten con la notebook en pantallas chicas */
-  .orb,.gem,.dot-deco{display:none}
+  .orb,.gem{display:none}
   .hero-visual{min-height:0}
   .laptop{width:100%;transform:none}
 }
