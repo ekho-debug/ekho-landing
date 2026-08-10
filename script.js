@@ -73,6 +73,88 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
+// --- Modal de planes ---
+const modal = document.getElementById("modal-planes");
+
+if (modal) {
+  const modalBox = modal.querySelector(".modal-box");
+  const foco = "a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex='-1'])";
+  let disparador = null;
+
+  const abrirModal = (trigger) => {
+    disparador = trigger;
+    // Compensa el ancho de la barra de scroll para que la landing no salte
+    const barra = window.innerWidth - document.documentElement.clientWidth;
+    if (barra > 0) document.body.style.paddingRight = barra + "px";
+    document.body.classList.add("modal-open");
+    modal.hidden = false;
+    (modalBox.querySelector(".modal-close") || modalBox).focus();
+  };
+
+  const cerrarModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    document.body.style.paddingRight = "";
+    if (disparador) disparador.focus();
+    disparador = null;
+  };
+
+  document.querySelectorAll("[data-open-planes]").forEach((btn) => {
+    btn.addEventListener("click", () => abrirModal(btn));
+  });
+
+  modal.querySelectorAll("[data-close-planes]").forEach((btn) => {
+    btn.addEventListener("click", cerrarModal);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (modal.hidden) return;
+
+    if (e.key === "Escape") {
+      cerrarModal();
+      return;
+    }
+
+    // Mantiene el foco dentro del modal
+    if (e.key === "Tab") {
+      const focusables = [...modalBox.querySelectorAll(foco)].filter(
+        (el) => el.offsetParent !== null
+      );
+      if (!focusables.length) return;
+      const primero = focusables[0];
+      const ultimo = focusables[focusables.length - 1];
+
+      if (e.shiftKey && document.activeElement === primero) {
+        e.preventDefault();
+        ultimo.focus();
+      } else if (!e.shiftKey && document.activeElement === ultimo) {
+        e.preventDefault();
+        primero.focus();
+      }
+    }
+  });
+
+  // Elegir un plan: lo guarda, cierra y lleva al formulario
+  modal.querySelectorAll("[data-plan]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const plan = btn.dataset.plan;
+      const campoPlan = document.getElementById("f-plan");
+      const servicio = document.getElementById("f-servicio");
+      const aviso = document.getElementById("plan-elegido");
+
+      if (campoPlan) campoPlan.value = plan;
+      if (servicio) servicio.value = "Gestión de redes sociales";
+      if (aviso) {
+        aviso.querySelector("strong").textContent = plan;
+        aviso.hidden = false;
+      }
+
+      cerrarModal();
+      document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
 // --- Formulario: sin backend todavía, confirma en pantalla ---
 const contactForm = document.getElementById("contact-form");
 

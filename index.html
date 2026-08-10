@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -42,7 +42,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
-      <a href="#planes">Planes</a>
+      <button type="button" class="nav-link-btn" data-open-planes>Planes</button>
       <a href="#faq">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
       <a class="btn btn-accent nav-cta-mobile" href="#contacto">Contanos qué necesitás</a>
@@ -120,9 +120,8 @@
     <div class="container">
       <div class="intro reveal">
         <h2>Soluciones de comunicación digital pensadas para tu negocio</h2>
-        <p>Trabajamos con pymes, profesionales y emprendedores de toda Argentina para transformar ideas, necesidades y objetivos en soluciones concretas.</p>
-        <p>Nos involucramos en cada proyecto para entender tu negocio, tu público y la forma en la que querés comunicarte. No trabajamos con respuestas automáticas ni fórmulas iguales para todos.</p>
-        <p>Incorporamos herramientas de inteligencia artificial para agilizar procesos y optimizar tareas internas. Pero detrás de cada proyecto encontrás personas que escuchan, proponen, crean, revisan y ajustan con vos.</p>
+        <p>Trabajamos con pymes, profesionales y emprendedores de toda Argentina para transformar sus objetivos en soluciones concretas de comunicación digital.</p>
+        <p>Nos involucramos en cada proyecto para entender tu negocio, tu público y la forma en la que querés comunicarte. Incorporamos tecnología e inteligencia artificial para agilizar el trabajo, siempre con personas que escuchan, crean, revisan y ajustan con vos.</p>
         <p class="intro-claim">Ideas con criterio. Soluciones que hacen avanzar tu negocio.</p>
       </div>
     </div>
@@ -145,13 +144,11 @@
           <p>Necesita una comunicación que tenga sentido, una presencia digital profesional y herramientas que simplifiquen la relación con sus clientes.</p>
           <p class="why-kicker">En EKHO podemos ayudarte a:</p>
           <ul class="check-list">
-            <li>Mantener activas tus redes sociales sin improvisar cada semana.</li>
-            <li>Crear contenido alineado con la identidad de tu marca.</li>
-            <li>Presentar tus productos o servicios de manera clara.</li>
-            <li>Tener una página web profesional.</li>
-            <li>Responder consultas y enviar información con mayor agilidad.</li>
-            <li>Organizar el seguimiento de potenciales clientes.</li>
-            <li>Encontrar soluciones adaptadas al momento de tu negocio.</li>
+            <li>Mantener activas tus redes sociales.</li>
+            <li>Crear contenido alineado con tu marca.</li>
+            <li>Presentar profesionalmente tus servicios.</li>
+            <li>Tener una página web clara y moderna.</li>
+            <li>Agilizar la atención y el seguimiento de consultas.</li>
           </ul>
           <a href="#contacto" class="btn btn-outline">Encontrá la solución para tu negocio</a>
         </div>
@@ -174,21 +171,10 @@
               <h3>EKHO Social</h3>
               <span class="circle-btn" aria-hidden="true">↗</span>
             </div>
-            <p class="svc-sub">Gestión de redes sociales para empresas y emprendedores</p>
-            <p>Creamos contenido pensado para tu marca, tu público y tus objetivos. Cada mes construimos con vos el calendario, los temas y las ideas de contenido.</p>
-            <p>No se trata de llenar el feed por llenar. Buscamos que cada publicación tenga una intención: mostrar, explicar, conectar o vender.</p>
-            <p class="svc-kicker">Según el plan contratado, el servicio puede incluir:</p>
-            <ul class="dot-list">
-              <li>Diseño de imágenes y carruseles.</li>
-              <li>Redacción de copys.</li>
-              <li>Calendario mensual de contenido.</li>
-              <li>Ideas de guion para videos.</li>
-              <li>Publicación en Instagram y Facebook.</li>
-              <li>Gestión de comentarios y mensajes.</li>
-              <li>Edición de videos cortos.</li>
-              <li>Gestión de campañas publicitarias en Meta.</li>
-            </ul>
-            <a href="#planes" class="btn btn-light btn-block">Ver planes de redes sociales</a>
+            <p class="svc-sub">Gestión de redes sociales</p>
+            <p>Planificamos y creamos contenido alineado con tu marca, tu público y tus objetivos.</p>
+            <p>El servicio puede incluir diseño, redacción de copys, publicación, gestión de consultas y edición de videos, según el plan elegido.</p>
+            <button type="button" class="btn btn-light btn-block" data-open-planes>Ver planes de redes sociales</button>
           </article>
 
           <article class="svc-card svc-card--featured">
@@ -196,19 +182,10 @@
               <h3>EKHO Design</h3>
               <span class="circle-btn" aria-hidden="true">↗</span>
             </div>
-            <p class="svc-sub">Diseño de páginas web para presentar mejor tu negocio</p>
+            <p class="svc-sub">Diseño de páginas web</p>
             <p>Diseñamos landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca.</p>
-            <p>Trabajamos la estructura, el diseño y los textos para que quienes visiten tu página entiendan qué hacés, qué ofrecés y cómo pueden contactarte.</p>
-            <p class="svc-kicker">Este servicio es ideal para emprendimientos, profesionales y pymes que necesitan:</p>
-            <ul class="dot-list">
-              <li>Lanzar su primera página web.</li>
-              <li>Renovar una web desactualizada.</li>
-              <li>Presentar sus servicios de manera profesional.</li>
-              <li>Centralizar consultas y vías de contacto.</li>
-              <li>Crear una landing page para una campaña o lanzamiento.</li>
-            </ul>
-            <a href="#contacto" class="btn btn-light btn-block">Quiero una página web</a>
-            <p class="svc-note">Trabajamos con landing pages y webs institucionales. Los proyectos con ecommerce, mayor cantidad de páginas o funcionalidades especiales se cotizan de manera personalizada.</p>
+            <p>Trabajamos la estructura, el diseño y los textos para que tus clientes entiendan qué ofrecés y cómo contactarte.</p>
+            <a href="#web" class="btn btn-light btn-block">Conocer las opciones web</a>
           </article>
 
           <article class="svc-card">
@@ -216,20 +193,10 @@
               <h3>EKHO Automatización</h3>
               <span class="circle-btn" aria-hidden="true">↗</span>
             </div>
-            <p class="svc-sub">Automatizaciones para comunicar y responder mejor</p>
-            <p>Diseñamos automatizaciones aplicadas a la comunicación de tu negocio para que puedas responder consultas, enviar información y hacer seguimiento de potenciales clientes de una manera más ágil y ordenada.</p>
-            <p class="svc-kicker">Podemos ayudarte a automatizar acciones como:</p>
-            <ul class="dot-list">
-              <li>Respuestas iniciales a consultas frecuentes.</li>
-              <li>Envío de información o presupuestos.</li>
-              <li>Formularios de contacto y derivación de consultas.</li>
-              <li>Seguimiento de potenciales clientes.</li>
-              <li>Mensajes de confirmación y recordatorios.</li>
-              <li>Registro y organización de los datos recibidos.</li>
-              <li>Integraciones simples entre WhatsApp, formularios, correo electrónico y otras herramientas de comunicación.</li>
-            </ul>
-            <p>Antes de implementar una solución, analizamos cómo se comunican actualmente tus clientes con tu negocio y definimos qué conviene automatizar sin perder el trato humano.</p>
-            <a href="#contacto" class="btn btn-light btn-block">Quiero mejorar la atención de mi negocio</a>
+            <p class="svc-sub">Automatizaciones de comunicación</p>
+            <p>Creamos soluciones simples para responder consultas, enviar información y organizar el seguimiento de potenciales clientes.</p>
+            <p>Integramos canales como WhatsApp, formularios y correo electrónico sin perder el trato humano.</p>
+            <a href="#automatizaciones" class="btn btn-light btn-block">Mejorar mi atención</a>
           </article>
         </div>
       </div>
@@ -246,11 +213,8 @@
       <ul class="diff-grid">
         <li class="reveal">Hablás con un equipo real.</li>
         <li class="reveal">Participás del proceso.</li>
-        <li class="reveal">Revisamos cada entrega con vos.</li>
-        <li class="reveal">Adaptamos las soluciones a tu negocio.</li>
-        <li class="reveal">Cuidamos la coherencia entre cada idea y tu marca.</li>
+        <li class="reveal">Creamos soluciones adaptadas a tu negocio.</li>
         <li class="reveal">Utilizamos la tecnología con un objetivo concreto.</li>
-        <li class="reveal">Automatizamos sin perder el trato humano.</li>
       </ul>
 
       <p class="diff-claim reveal">No buscamos hacer más por hacer. Buscamos crear soluciones que tengan sentido para vos.</p>
@@ -315,76 +279,6 @@
       <span>Gestión de redes sociales ✦ Diseño de páginas web ✦ Automatización de comunicaciones ✦</span>
     </div>
   </div>
-
-  <!-- 8. PLANES -->
-  <section id="planes" class="section">
-    <div class="container">
-      <h2 class="section-title reveal">Elegí cuánto espacio <span class="accent">querés ocupar</span></h2>
-      <p class="section-sub reveal">Vos elegís el volumen de contenido. Nosotros te ayudamos a definir cómo aprovecharlo.</p>
-
-      <div class="plans">
-        <div class="plan reveal">
-          <span class="plan-tag">Para empezar a hacerte oír</span>
-          <h3>EKHO Basic</h3>
-          <p class="plan-price">Desde <strong>$280.000</strong> por mes</p>
-          <ul class="check-list">
-            <li>Hasta 10 publicaciones mensuales.</li>
-            <li>Imágenes únicas o carruseles.</li>
-            <li>Contenido para Instagram y Facebook.</li>
-            <li>Redacción de copys.</li>
-            <li>Calendario mensual de contenido.</li>
-            <li>Ideas de guion adaptadas al rubro.</li>
-            <li>Publicación de posteos.</li>
-            <li>Respuesta a comentarios y mensajes de lunes a viernes, de 9 a 18 h.</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline btn-block">Elegir Basic</a>
-        </div>
-
-        <div class="plan plan--featured reveal">
-          <span class="plan-badge">Más elegido</span>
-          <span class="plan-tag">Para sostener el ritmo</span>
-          <h3>EKHO Plus</h3>
-          <p class="plan-price">Desde <strong>$345.000</strong> por mes</p>
-          <ul class="check-list">
-            <li>Hasta 15 publicaciones mensuales.</li>
-            <li>Imágenes únicas o carruseles.</li>
-            <li>Contenido para Instagram y Facebook.</li>
-            <li>Redacción de copys.</li>
-            <li>Calendario mensual de contenido.</li>
-            <li>Ideas de guion adaptadas al rubro.</li>
-            <li>Publicación de posteos.</li>
-            <li>Respuesta a comentarios y mensajes de lunes a sábado, de 9 a 18 h.</li>
-          </ul>
-          <a href="#contacto" class="btn btn-accent btn-block">Elegir Plus</a>
-        </div>
-
-        <div class="plan reveal">
-          <span class="plan-tag">Para ocupar todo el espacio</span>
-          <h3>EKHO Total</h3>
-          <p class="plan-price">Desde <strong>$505.000</strong> por mes</p>
-          <ul class="check-list">
-            <li>Hasta 20 publicaciones mensuales.</li>
-            <li>Imágenes únicas o carruseles.</li>
-            <li>Contenido para Instagram y Facebook.</li>
-            <li>Redacción de copys.</li>
-            <li>Calendario mensual de contenido.</li>
-            <li>Ideas de guion adaptadas al rubro.</li>
-            <li>Dos videos cortos mensuales con edición básica.</li>
-            <li>Publicación de posteos.</li>
-            <li>Respuesta a comentarios y mensajes todos los días, de 9 a 18 h.</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline btn-block">Elegir Total</a>
-        </div>
-      </div>
-
-      <div class="notes-block reveal">
-        <h3 class="notes-title">Aclaraciones sobre los planes</h3>
-        <p class="note">¿Preferís publicar y responder los mensajes desde tu cuenta? Todos los planes están disponibles en modalidad solo contenido, con un 15 % de descuento.</p>
-        <p class="note">Los valores publicados corresponden al alcance base de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de cada cuenta.</p>
-        <p class="note">Los cupos de publicaciones se renuevan cada mes y no son acumulables.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- 9. SERVICIOS ADICIONALES -->
   <section id="adicionales" class="section">
@@ -545,6 +439,8 @@
               <label for="f-proyecto">Contanos sobre tu proyecto</label>
               <textarea id="f-proyecto" name="proyecto" rows="4" required></textarea>
             </div>
+            <input type="hidden" id="f-plan" name="plan" value="">
+            <p class="field-note field--full" id="plan-elegido" hidden>Plan seleccionado: <strong></strong></p>
           </div>
 
           <button type="submit" class="btn btn-accent btn-block">Enviar consulta</button>
@@ -566,31 +462,16 @@
           <div class="faq-a"><p>Sí. Nuestros servicios se desarrollan de manera remota, por lo que podemos trabajar con pymes, profesionales y emprendedores de cualquier provincia del país.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Los contenidos se crean específicamente para mi marca?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a"><p>Sí. El calendario, los temas, los copys y las piezas visuales se desarrollan de acuerdo con tu negocio, tu público y tus objetivos.</p></div>
-        </div>
-        <div class="faq-item">
           <button class="faq-q" aria-expanded="false"><span>¿Qué incluye la gestión de redes sociales?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a"><p>El alcance depende del plan contratado. Puede incluir planificación mensual, diseño de publicaciones, redacción de copys, ideas para videos, publicación del contenido y gestión de comentarios y mensajes.</p></div>
+          <div class="faq-a"><p>Todos los planes incluyen planificación mensual, diseño de publicaciones, redacción de copys, ideas de guion y publicación del contenido. La cantidad de publicaciones y la gestión de mensajes dependen del plan elegido.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false"><span>¿Puedo contratar solamente la creación del contenido?</span><i class="faq-i" aria-hidden="true">+</i></button>
           <div class="faq-a"><p>Sí. Todos los planes de EKHO Social tienen una modalidad de solo contenido, sin publicación ni gestión de comentarios y mensajes, con un 15 % de descuento.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Los videos están incluidos?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a"><p>El plan EKHO Total incluye dos videos cortos mensuales con edición básica. También podés contratar filmación y edición como un servicio adicional.</p></div>
-        </div>
-        <div class="faq-item">
           <button class="faq-q" aria-expanded="false"><span>¿La inversión en publicidad está incluida?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a"><p>No. La gestión de la campaña y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se paga directamente a Meta desde la cuenta del cliente.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Los planes de redes sociales tienen un valor fijo?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a">
-            <p>Los valores publicados corresponden al alcance inicial de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de la cuenta.</p>
-            <p>Antes de comenzar, te enviamos una propuesta con el alcance y el valor correspondiente.</p>
-          </div>
+          <div class="faq-a"><p>No. La gestión de la campaña y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se abona directamente a Meta desde la cuenta del cliente.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false"><span>¿Cuánto cuesta una página web?</span><i class="faq-i" aria-hidden="true">+</i></button>
@@ -601,30 +482,12 @@
           <div class="faq-a"><p>No. El dominio y el hosting son contratados y administrados directamente por el cliente. Podemos orientarte durante el proceso.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Desarrollan tiendas online?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a"><p>Las propuestas Web Express y Web Institucional no incluyen ecommerce. Si necesitás una tienda online o funcionalidades especiales, podemos evaluar el proyecto y preparar una cotización personalizada.</p></div>
-        </div>
-        <div class="faq-item">
           <button class="faq-q" aria-expanded="false"><span>¿Qué tareas de comunicación se pueden automatizar?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a">
-            <p>Podemos automatizar respuestas iniciales, envío de información o presupuestos, confirmaciones, recordatorios, registro de contactos, derivación de consultas y seguimientos comerciales simples.</p>
-            <p>Primero analizamos cada caso para definir qué conviene automatizar y qué debería continuar en manos de una persona.</p>
-          </div>
+          <div class="faq-a"><p>Podemos automatizar respuestas iniciales, envío de información o presupuestos, confirmaciones, recordatorios, registro de contactos, derivación de consultas y seguimientos comerciales simples.</p><p>Primero analizamos cada caso para definir qué conviene automatizar y qué debería continuar en manos de una persona.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false"><span>¿EKHO automatiza procesos internos complejos?</span><i class="faq-i" aria-hidden="true">+</i></button>
           <div class="faq-a"><p>No. Nuestras automatizaciones están enfocadas en mejorar la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones administrativas, financieras u operativas complejas.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Una automatización reemplaza la atención humana?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a">
-            <p>No. El objetivo es agilizar las tareas repetitivas y organizar mejor las consultas, no eliminar el contacto humano.</p>
-            <p>Definimos qué respuestas pueden automatizarse y en qué momento la conversación debe continuar con una persona.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span>¿Trabajan únicamente con inteligencia artificial?</span><i class="faq-i" aria-hidden="true">+</i></button>
-          <div class="faq-a"><p>No. La inteligencia artificial es una de las herramientas que incorporamos para agilizar ciertos procesos. La estrategia, la creatividad, la revisión y el acompañamiento están a cargo de personas.</p></div>
         </div>
       </div>
     </div>
@@ -681,116 +544,253 @@
   </div>
 </footer>
 
+<!-- MODAL DE PLANES -->
+<div class="modal" id="modal-planes" hidden>
+  <div class="modal-backdrop" data-close-planes></div>
+
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-planes-titulo" aria-describedby="modal-planes-sub">
+    <div class="modal-head">
+      <div class="modal-head-txt">
+        <h2 id="modal-planes-titulo">Planes de gestión de redes sociales</h2>
+        <p id="modal-planes-sub">Elegí cuánto espacio querés ocupar</p>
+      </div>
+      <button type="button" class="modal-close" data-close-planes aria-label="Cerrar la ventana de planes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lead">Vos elegís el volumen de contenido. Nosotros te ayudamos a definir cómo aprovecharlo.</p>
+
+      <div class="modal-incluye">
+        <h3>Todos los planes incluyen</h3>
+        <ul class="check-list">
+          <li>Contenido para Instagram y Facebook.</li>
+          <li>Diseño de imágenes o carruseles.</li>
+          <li>Redacción de copys.</li>
+          <li>Calendario mensual de contenido.</li>
+          <li>Ideas de guion adaptadas al rubro.</li>
+          <li>Publicación del contenido.</li>
+        </ul>
+      </div>
+
+      <div class="plans">
+        <div class="plan">
+          <span class="plan-tag">Para empezar a hacerte oír</span>
+          <h3>EKHO Basic</h3>
+          <p class="plan-price">Desde <strong>$280.000</strong> por mes</p>
+          <ul class="check-list">
+            <li>Hasta 10 publicaciones mensuales.</li>
+            <li>Gestión de comentarios y mensajes de lunes a viernes, de 9 a 18 h.</li>
+          </ul>
+          <button type="button" class="btn btn-outline btn-block" data-plan="EKHO Basic">Elegir Basic</button>
+        </div>
+
+        <div class="plan plan--featured">
+          <span class="plan-badge">Más elegido</span>
+          <span class="plan-tag">Para sostener el ritmo</span>
+          <h3>EKHO Plus</h3>
+          <p class="plan-price">Desde <strong>$345.000</strong> por mes</p>
+          <ul class="check-list">
+            <li>Hasta 15 publicaciones mensuales.</li>
+            <li>Gestión de comentarios y mensajes de lunes a sábado, de 9 a 18 h.</li>
+          </ul>
+          <button type="button" class="btn btn-accent btn-block" data-plan="EKHO Plus">Elegir Plus</button>
+        </div>
+
+        <div class="plan">
+          <span class="plan-tag">Para ocupar todo el espacio</span>
+          <h3>EKHO Total</h3>
+          <p class="plan-price">Desde <strong>$505.000</strong> por mes</p>
+          <ul class="check-list">
+            <li>Hasta 20 publicaciones mensuales.</li>
+            <li>Dos videos cortos mensuales con edición básica.</li>
+            <li>Gestión de comentarios y mensajes todos los días, de 9 a 18 h.</li>
+          </ul>
+          <button type="button" class="btn btn-outline btn-block" data-plan="EKHO Total">Elegir Total</button>
+        </div>
+      </div>
+
+      <div class="notes-block">
+        <h3 class="notes-title">Aclaraciones</h3>
+        <p class="note">¿Preferís publicar y responder los mensajes desde tu cuenta? Todos los planes están disponibles en modalidad solo contenido, con un 15 % de descuento.</p>
+        <p class="note">Los valores publicados corresponden al alcance base de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de cada cuenta.</p>
+        <p class="note">Los cupos de publicaciones se renuevan cada mes y no son acumulables.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://www.ekhocomunicaciones.com.ar/#organizacion",
-      "name": "EKHO Comunicaciones",
-      "description": "Agencia de comunicación digital para pymes, profesionales y emprendedores de toda Argentina. Gestión de redes sociales, diseño de páginas web y automatización de comunicaciones.",
-      "url": "https://www.ekhocomunicaciones.com.ar/",
-      "logo": "https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png",
-      "image": "https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png",
-      "email": "info@ekho.com.ar",
-      "telephone": "+5491149154309",
-      "slogan": "Ideas con criterio. Soluciones que hacen avanzar tu negocio.",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Buenos Aires",
-        "addressCountry": "AR"
-      },
-      "areaServed": { "@type": "Country", "name": "Argentina" },
-      "sameAs": ["https://www.instagram.com/ekhocomunicaciones"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de comunicación digital",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "EKHO Social — Gestión de redes sociales",
-              "description": "Gestión de redes sociales para empresas y emprendedores: calendario mensual, diseño de publicaciones, redacción de copys, publicación y gestión de comentarios y mensajes."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "EKHO Design — Diseño de páginas web",
-              "description": "Diseño de landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "EKHO Automatización — Automatización de comunicaciones",
-              "description": "Automatizaciones aplicadas a la comunicación: respuestas iniciales, envío de información, derivación de consultas y seguimiento de potenciales clientes."
-            }
-          }
-        ]
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://www.ekhocomunicaciones.com.ar/#organizacion",
+   "name": "EKHO Comunicaciones",
+   "description": "Agencia de comunicación digital para pymes, profesionales y emprendedores de toda Argentina. Gestión de redes sociales, diseño de páginas web y automatización de comunicaciones.",
+   "url": "https://www.ekhocomunicaciones.com.ar/",
+   "logo": "https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png",
+   "image": "https://www.ekhocomunicaciones.com.ar/assets/ekho-logo-oscuro.png",
+   "email": "info@ekho.com.ar",
+   "telephone": "+5491149154309",
+   "slogan": "Ideas con criterio. Soluciones que hacen avanzar tu negocio.",
+   "priceRange": "$$",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Buenos Aires",
+    "addressCountry": "AR"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Argentina"
+   },
+   "sameAs": [
+    "https://www.instagram.com/ekhocomunicaciones"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de comunicación digital",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "EKHO Social — Gestión de redes sociales",
+       "description": "Gestión de redes sociales para empresas y emprendedores: calendario mensual, diseño de publicaciones, redacción de copys, publicación y gestión de comentarios y mensajes."
       }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "EKHO Design — Diseño de páginas web",
+       "description": "Diseño de landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "EKHO Automatización — Automatización de comunicaciones",
+       "description": "Automatizaciones aplicadas a la comunicación: respuestas iniciales, envío de información, derivación de consultas y seguimiento de potenciales clientes."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "Service",
+   "name": "Gestión de redes sociales para empresas y emprendedores",
+   "serviceType": "Gestión de redes sociales",
+   "provider": {
+    "@id": "https://www.ekhocomunicaciones.com.ar/#organizacion"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Argentina"
+   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "EKHO Basic",
+     "description": "Hasta 10 publicaciones mensuales para Instagram y Facebook, redacción de copys, calendario mensual, publicación de posteos y respuesta a comentarios y mensajes de lunes a viernes, de 9 a 18 h.",
+     "price": "280000",
+     "priceCurrency": "ARS",
+     "availability": "https://schema.org/InStock"
     },
     {
-      "@type": "Service",
-      "name": "Gestión de redes sociales para empresas y emprendedores",
-      "serviceType": "Gestión de redes sociales",
-      "provider": { "@id": "https://www.ekhocomunicaciones.com.ar/#organizacion" },
-      "areaServed": { "@type": "Country", "name": "Argentina" },
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "EKHO Basic",
-          "description": "Hasta 10 publicaciones mensuales para Instagram y Facebook, redacción de copys, calendario mensual, publicación de posteos y respuesta a comentarios y mensajes de lunes a viernes, de 9 a 18 h.",
-          "price": "280000",
-          "priceCurrency": "ARS",
-          "availability": "https://schema.org/InStock"
-        },
-        {
-          "@type": "Offer",
-          "name": "EKHO Plus",
-          "description": "Hasta 15 publicaciones mensuales para Instagram y Facebook, redacción de copys, calendario mensual, publicación de posteos y respuesta a comentarios y mensajes de lunes a sábado, de 9 a 18 h.",
-          "price": "345000",
-          "priceCurrency": "ARS",
-          "availability": "https://schema.org/InStock"
-        },
-        {
-          "@type": "Offer",
-          "name": "EKHO Total",
-          "description": "Hasta 20 publicaciones mensuales para Instagram y Facebook, dos videos cortos mensuales con edición básica, publicación de posteos y respuesta a comentarios y mensajes todos los días, de 9 a 18 h.",
-          "price": "505000",
-          "priceCurrency": "ARS",
-          "availability": "https://schema.org/InStock"
-        }
-      ]
+     "@type": "Offer",
+     "name": "EKHO Plus",
+     "description": "Hasta 15 publicaciones mensuales para Instagram y Facebook, redacción de copys, calendario mensual, publicación de posteos y respuesta a comentarios y mensajes de lunes a sábado, de 9 a 18 h.",
+     "price": "345000",
+     "priceCurrency": "ARS",
+     "availability": "https://schema.org/InStock"
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "¿Trabajan con clientes de toda Argentina?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nuestros servicios se desarrollan de manera remota, por lo que podemos trabajar con pymes, profesionales y emprendedores de cualquier provincia del país." } },
-        { "@type": "Question", "name": "¿Los contenidos se crean específicamente para mi marca?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. El calendario, los temas, los copys y las piezas visuales se desarrollan de acuerdo con tu negocio, tu público y tus objetivos." } },
-        { "@type": "Question", "name": "¿Qué incluye la gestión de redes sociales?", "acceptedAnswer": { "@type": "Answer", "text": "El alcance depende del plan contratado. Puede incluir planificación mensual, diseño de publicaciones, redacción de copys, ideas para videos, publicación del contenido y gestión de comentarios y mensajes." } },
-        { "@type": "Question", "name": "¿Puedo contratar solamente la creación del contenido?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todos los planes de EKHO Social tienen una modalidad de solo contenido, sin publicación ni gestión de comentarios y mensajes, con un 15 % de descuento." } },
-        { "@type": "Question", "name": "¿Los videos están incluidos?", "acceptedAnswer": { "@type": "Answer", "text": "El plan EKHO Total incluye dos videos cortos mensuales con edición básica. También podés contratar filmación y edición como un servicio adicional." } },
-        { "@type": "Question", "name": "¿La inversión en publicidad está incluida?", "acceptedAnswer": { "@type": "Answer", "text": "No. La gestión de la campaña y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se paga directamente a Meta desde la cuenta del cliente." } },
-        { "@type": "Question", "name": "¿Los planes de redes sociales tienen un valor fijo?", "acceptedAnswer": { "@type": "Answer", "text": "Los valores publicados corresponden al alcance inicial de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de la cuenta. Antes de comenzar, te enviamos una propuesta con el alcance y el valor correspondiente." } },
-        { "@type": "Question", "name": "¿Cuánto cuesta una página web?", "acceptedAnswer": { "@type": "Answer", "text": "Cada proyecto se cotiza de manera personalizada según la cantidad de secciones, el contenido y las funcionalidades necesarias." } },
-        { "@type": "Question", "name": "¿Las páginas web incluyen dominio y hosting?", "acceptedAnswer": { "@type": "Answer", "text": "No. El dominio y el hosting son contratados y administrados directamente por el cliente. Podemos orientarte durante el proceso." } },
-        { "@type": "Question", "name": "¿Desarrollan tiendas online?", "acceptedAnswer": { "@type": "Answer", "text": "Las propuestas Web Express y Web Institucional no incluyen ecommerce. Si necesitás una tienda online o funcionalidades especiales, podemos evaluar el proyecto y preparar una cotización personalizada." } },
-        { "@type": "Question", "name": "¿Qué tareas de comunicación se pueden automatizar?", "acceptedAnswer": { "@type": "Answer", "text": "Podemos automatizar respuestas iniciales, envío de información o presupuestos, confirmaciones, recordatorios, registro de contactos, derivación de consultas y seguimientos comerciales simples. Primero analizamos cada caso para definir qué conviene automatizar y qué debería continuar en manos de una persona." } },
-        { "@type": "Question", "name": "¿EKHO automatiza procesos internos complejos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Nuestras automatizaciones están enfocadas en mejorar la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones administrativas, financieras u operativas complejas." } },
-        { "@type": "Question", "name": "¿Una automatización reemplaza la atención humana?", "acceptedAnswer": { "@type": "Answer", "text": "No. El objetivo es agilizar las tareas repetitivas y organizar mejor las consultas, no eliminar el contacto humano. Definimos qué respuestas pueden automatizarse y en qué momento la conversación debe continuar con una persona." } },
-        { "@type": "Question", "name": "¿Trabajan únicamente con inteligencia artificial?", "acceptedAnswer": { "@type": "Answer", "text": "No. La inteligencia artificial es una de las herramientas que incorporamos para agilizar ciertos procesos. La estrategia, la creatividad, la revisión y el acompañamiento están a cargo de personas." } }
-      ]
+     "@type": "Offer",
+     "name": "EKHO Total",
+     "description": "Hasta 20 publicaciones mensuales para Instagram y Facebook, dos videos cortos mensuales con edición básica, publicación de posteos y respuesta a comentarios y mensajes todos los días, de 9 a 18 h.",
+     "price": "505000",
+     "priceCurrency": "ARS",
+     "availability": "https://schema.org/InStock"
     }
-  ]
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Trabajan con clientes de toda Argentina?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Nuestros servicios se desarrollan de manera remota, por lo que podemos trabajar con pymes, profesionales y emprendedores de cualquier provincia del país."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué incluye la gestión de redes sociales?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Todos los planes incluyen planificación mensual, diseño de publicaciones, redacción de copys, ideas de guion y publicación del contenido. La cantidad de publicaciones y la gestión de mensajes dependen del plan elegido."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo contratar solamente la creación del contenido?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Todos los planes de EKHO Social tienen una modalidad de solo contenido, sin publicación ni gestión de comentarios y mensajes, con un 15 % de descuento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿La inversión en publicidad está incluida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. La gestión de la campaña y la inversión publicitaria son conceptos diferentes. El presupuesto de pauta se abona directamente a Meta desde la cuenta del cliente."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánto cuesta una página web?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cada proyecto se cotiza de manera personalizada según la cantidad de secciones, el contenido y las funcionalidades necesarias."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Las páginas web incluyen dominio y hosting?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. El dominio y el hosting son contratados y administrados directamente por el cliente. Podemos orientarte durante el proceso."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué tareas de comunicación se pueden automatizar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Podemos automatizar respuestas iniciales, envío de información o presupuestos, confirmaciones, recordatorios, registro de contactos, derivación de consultas y seguimientos comerciales simples. Primero analizamos cada caso para definir qué conviene automatizar y qué debería continuar en manos de una persona."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿EKHO automatiza procesos internos complejos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Nuestras automatizaciones están enfocadas en mejorar la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones administrativas, financieras u operativas complejas."
+     }
+    }
+   ]
+  }
+ ]
 }
 </script>
 
-<script src="script.js?v=2" defer></script>
+<script src="script.js?v=5" defer></script>
 </body>
 </html>
