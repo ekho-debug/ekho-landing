@@ -212,6 +212,8 @@ section[id]{scroll-margin-top:104px}
 .panel-head{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:end;margin-bottom:40px}
 .panel-head h2{font-size:clamp(26px,3.2vw,40px);font-weight:700}
 .panel-head p{font-size:15px;line-height:1.65}
+/* Los dos párrafos van en una sola celda de la grilla, no como items sueltos */
+.panel-head-txt{display:flex;flex-direction:column;gap:12px}
 
 .section-title{text-align:center;max-width:900px;margin:0 auto;font-size:clamp(26px,3.4vw,42px);font-weight:700}
 .section-sub{text-align:center;margin:16px auto 0;max-width:720px;font-size:16px;line-height:1.65}
