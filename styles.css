@@ -224,8 +224,10 @@ section[id]{scroll-margin-top:104px}
 .notes-title{font-size:17px;margin-bottom:4px}
 
 /* ---------- PRESENTACIÓN ---------- */
-/* Sin tope propio: ocupa el mismo ancho que el hero (el del .container) */
-.intro{max-width:none;margin:0;text-align:center;display:flex;flex-direction:column;gap:18px}
+/* Dos columnas: texto a la izquierda, ilustración a la derecha */
+.intro-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.intro{max-width:none;margin:0;text-align:left;display:flex;flex-direction:column;gap:18px}
+.intro-visual img{width:100%;height:auto}
 .intro h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;margin-bottom:6px}
 .intro p{font-size:16px;line-height:1.7}
 /* `.intro p` es más específico: hay que repetir el tamaño del kicker */
@@ -233,8 +235,13 @@ section[id]{scroll-margin-top:104px}
 /* Justificado, con guionado para que no queden huecos grandes entre palabras */
 .intro-text{text-align:justify;hyphens:auto}
 .intro-claim{
-  font-family:var(--display);font-size:clamp(18px,2.2vw,24px);font-weight:600;
-  color:var(--accent);margin-top:10px;
+  font-family:var(--display);font-size:clamp(16px,1.7vw,19px);font-weight:700;
+  color:var(--ink);margin-top:12px;
+}
+/* Subrayado magenta debajo del eslogan */
+.intro-claim::after{
+  content:"";display:block;width:108px;height:4px;border-radius:99px;
+  background:var(--accent);margin-top:16px;
 }
 
 /* ---------- PROPUESTA DE VALOR ---------- */
@@ -545,6 +552,9 @@ body.modal-open{overflow:hidden}
   .panel-head{grid-template-columns:1fr;gap:16px;align-items:start}
   .svc-grid,.plans,.duo-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
   .why,.form-panel{grid-template-columns:1fr;gap:34px}
+  /* La ilustración pasa debajo del texto */
+  .intro-grid{grid-template-columns:1fr;gap:34px}
+  .intro-visual{max-width:560px;margin-inline:auto}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-panel{padding:44px 34px 30px}
   .footer-bottom span:last-child{text-align:left}
