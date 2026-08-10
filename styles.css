@@ -361,30 +361,37 @@ section[id]{scroll-margin-top:104px}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ---------- PLANES ---------- */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start;margin-top:48px}
+/* Exclusivas del modal de planes */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;margin-top:26px}
 .plan{
-  position:relative;border:1px solid rgba(15,6,16,.1);border-radius:var(--r-card);
-  padding:32px 26px;display:flex;flex-direction:column;
-  transition:transform .3s ease,box-shadow .3s ease;
+  position:relative;height:100%;
+  border:1px solid rgba(15,6,16,.12);border-radius:var(--r-card);background:var(--white);
+  padding:30px 24px 26px;display:flex;flex-direction:column;
+  transition:box-shadow .3s ease,border-color .3s ease;
 }
-.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.plan--featured{background:var(--ink);border-color:transparent;box-shadow:var(--shadow)}
-.plan--featured h3{color:#fff}
-.plan--featured .check-list li{color:rgba(255,255,255,.78)}
-.plan--featured .plan-tag{color:var(--accent-pale)}
-.plan--featured .plan-price{color:#fff}
+.plan:hover{box-shadow:var(--shadow)}
+/* Plan destacado: borde rosa y un tinte muy leve, sin cambiar de tamaño */
+.plan--featured{
+  border-color:var(--accent);
+  background:linear-gradient(180deg,rgba(255,0,145,.05),rgba(255,0,145,.015));
+  box-shadow:0 18px 44px -26px rgba(255,0,145,.45);
+}
 .plan-badge{
-  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
   background:var(--accent);color:#fff;font-family:var(--display);
-  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
   padding:7px 18px;border-radius:999px;white-space:nowrap;
 }
-.plan-tag{font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
-.plan h3{font-size:26px;margin:8px 0 12px}
-.plan-price{font-size:14px;color:var(--graphite);margin-bottom:22px}
-.plan-price strong{font-family:var(--display);font-size:28px;color:var(--ink)}
-.plan--featured .plan-price strong{color:#fff}
-.plan .check-list{flex:1;margin-bottom:28px}
+.plan-tag{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.3}
+.plan h3{font-size:26px;margin:10px 0 0}
+/* "Desde" y "por mes" en tamaño secundario; el importe manda */
+.plan-price{
+  display:flex;align-items:baseline;flex-wrap:wrap;gap:7px;
+  margin:12px 0 20px;font-size:14px;color:var(--graphite);
+}
+.plan-price strong{font-family:var(--display);font-size:30px;line-height:1;color:var(--ink)}
+.plan .check-list{flex:1;gap:13px;margin-bottom:26px}
+.plan .check-list li{font-size:14px}
 
 /* ---------- DUO (adicionales / web) ---------- */
 .duo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
@@ -479,9 +486,47 @@ body.modal-open{overflow:hidden}
 .modal-incluye{
   margin-top:22px;padding:22px 24px;border-radius:var(--r-card);background:var(--mist);
 }
-.modal-incluye h3{font-size:16px;margin-bottom:14px}
-.modal-incluye .check-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 22px}
+.modal-incluye h3{font-size:16px;margin-bottom:16px}
+/* Tres columnas por dos filas, como la referencia */
+.modal-incluye .check-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 26px}
+
+/* Botón de cierre del modal de planes: círculo con borde rosa */
+#modal-planes .modal-close{border-color:rgba(255,0,145,.55);color:var(--accent)}
+#modal-planes .modal-close:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* Aclaraciones: ícono y título a la izquierda, textos a la derecha */
+.aclaraciones{
+  margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;
+  padding:24px 28px;border:1px solid rgba(255,0,145,.22);border-radius:var(--r-card);
+  background:rgba(255,0,145,.045);
+}
+.aclaraciones-head{display:flex;align-items:center;gap:12px;min-width:170px}
+.aclaraciones-icono{
+  width:34px;height:34px;flex-shrink:0;border-radius:50%;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
+}
+.aclaraciones-icono svg{width:19px;height:19px}
+.aclaraciones-head h3{font-size:17px}
+.aclaraciones-txt{
+  display:flex;flex-direction:column;gap:14px;
+  padding-left:28px;border-left:1px solid rgba(255,0,145,.25);
+}
+.aclaraciones-txt p{font-size:14px;line-height:1.65;color:var(--graphite)}
 .modal .plans{margin-top:26px;grid-template-columns:repeat(3,1fr);max-width:none;margin-inline:0}
+
+/* Subgrid: etiquetas, nombres, precios, beneficios y botones quedan alineados
+   entre las tres tarjetas sin recurrir a alturas fijas. */
+@media (min-width:1025px){
+  @supports (grid-template-rows:subgrid){
+    .modal .plans{grid-template-rows:auto auto auto 1fr auto;row-gap:0}
+    .plan{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+  }
+}
+/* Tablet: dos columnas y la tercera abajo, sin estirarse */
+@media (min-width:861px) and (max-width:1024px){
+  .modal .plans{grid-template-columns:repeat(2,1fr)}
+  .modal-incluye .check-list{grid-template-columns:repeat(2,1fr)}
+}
 .modal .notes-block{margin-top:30px;text-align:left}
 .modal .notes-title{font-size:16px}
 
@@ -514,6 +559,11 @@ body.modal-open{overflow:hidden}
   .modal-body{padding:22px 20px 40px}
   .modal .plans{grid-template-columns:1fr;max-width:none}
   .modal .plan .btn{padding:16px 26px;font-size:15px}
+  /* Un beneficio por línea para que no se comprima */
+  .modal-incluye .check-list{grid-template-columns:1fr}
+  /* La línea divisoria vertical pasa a ser horizontal */
+  .aclaraciones{grid-template-columns:1fr;gap:18px;padding:22px 20px}
+  .aclaraciones-txt{padding-left:0;padding-top:18px;border-left:0;border-top:1px solid rgba(255,0,145,.25)}
 }
 
 /* ---------- FAQ ---------- */

@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=18">
+<link rel="stylesheet" href="styles.css?v=19">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -490,7 +490,7 @@
         <h2 id="modal-planes-titulo">Planes de gestión de redes sociales</h2>
         <p id="modal-planes-sub">Elegí cuánto espacio querés ocupar</p>
       </div>
-      <button type="button" class="modal-close" data-close aria-label="Cerrar la ventana de planes">
+      <button type="button" class="modal-close" data-close aria-label="Cerrar planes de redes sociales">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
@@ -514,7 +514,7 @@
         <div class="plan">
           <span class="plan-tag">Para empezar a hacerte oír</span>
           <h3>EKHO Basic</h3>
-          <p class="plan-price">Desde <strong>$280.000</strong> por mes</p>
+          <p class="plan-price"><span>Desde</span><strong>$280.000</strong><span>por mes</span></p>
           <ul class="check-list">
             <li>Hasta 10 publicaciones mensuales.</li>
             <li>Gestión de comentarios y mensajes de lunes a viernes, de 9 a 18 h.</li>
@@ -526,7 +526,7 @@
           <span class="plan-badge">Más elegido</span>
           <span class="plan-tag">Para sostener el ritmo</span>
           <h3>EKHO Plus</h3>
-          <p class="plan-price">Desde <strong>$345.000</strong> por mes</p>
+          <p class="plan-price"><span>Desde</span><strong>$345.000</strong><span>por mes</span></p>
           <ul class="check-list">
             <li>Hasta 15 publicaciones mensuales.</li>
             <li>Gestión de comentarios y mensajes de lunes a sábado, de 9 a 18 h.</li>
@@ -537,7 +537,7 @@
         <div class="plan">
           <span class="plan-tag">Para ocupar todo el espacio</span>
           <h3>EKHO Total</h3>
-          <p class="plan-price">Desde <strong>$505.000</strong> por mes</p>
+          <p class="plan-price"><span>Desde</span><strong>$505.000</strong><span>por mes</span></p>
           <ul class="check-list">
             <li>Hasta 20 publicaciones mensuales.</li>
             <li>Dos videos cortos mensuales con edición básica.</li>
@@ -547,11 +547,18 @@
         </div>
       </div>
 
-      <div class="notes-block">
-        <h3 class="notes-title">Aclaraciones</h3>
-        <p class="note">¿Preferís publicar y responder los mensajes desde tu cuenta? Todos los planes están disponibles en modalidad solo contenido, con un 15 % de descuento.</p>
-        <p class="note">Los valores publicados corresponden al alcance base de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de cada cuenta.</p>
-        <p class="note">Los cupos de publicaciones se renuevan cada mes y no son acumulables.</p>
+      <div class="aclaraciones">
+        <div class="aclaraciones-head">
+          <span class="aclaraciones-icono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.01"/></svg>
+          </span>
+          <h3>Aclaraciones</h3>
+        </div>
+        <div class="aclaraciones-txt">
+          <p>¿Preferís publicar y responder los mensajes desde tu cuenta? Todos los planes están disponibles en modalidad solo contenido, con un 15 % de descuento.</p>
+          <p>Los valores publicados corresponden al alcance base de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de cada cuenta.</p>
+          <p>Los cupos de publicaciones se renuevan cada mes y no son acumulables.</p>
+        </div>
       </div>
     </div>
   </div>
