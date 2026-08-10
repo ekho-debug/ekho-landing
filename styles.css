@@ -235,24 +235,6 @@ section[id]{scroll-margin-top:104px}
 /* Justificado sin guionado: ninguna palabra se parte al final de la línea */
 .intro-text{text-align:justify;hyphens:none}
 
-/* ---------- PROPUESTA DE VALOR ---------- */
-.why{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.why-visual{position:relative;display:grid;place-items:center;min-height:280px}
-.why-disc{
-  width:240px;height:240px;border-radius:50%;
-  background:linear-gradient(150deg,var(--accent-dark),var(--accent) 60%,var(--accent-soft));
-  display:grid;place-items:center;box-shadow:0 26px 60px -26px rgba(255,0,145,.6);
-}
-.why-disc img{width:44%;filter:brightness(0) invert(1)}
-.dots{position:absolute;width:64px;height:64px;opacity:.5;
-  background-image:radial-gradient(var(--accent) 1.8px,transparent 1.8px);background-size:11px 11px}
-.dots--a{top:8%;right:6%}
-.dots--b{bottom:8%;left:4%}
-.why-copy h2{font-size:clamp(24px,3vw,38px);font-weight:700}
-.why-copy>p{margin-top:16px;font-size:15.5px;line-height:1.7}
-.why-kicker{font-weight:600;color:var(--ink)}
-.why-copy .check-list{margin-top:18px}
-.why-copy .btn{margin-top:28px}
 
 .check-list{display:flex;flex-direction:column;gap:11px}
 .check-list li{position:relative;padding-left:30px;font-size:14.5px;line-height:1.55}
@@ -542,7 +524,7 @@ body.modal-open{overflow:hidden}
   .panel{padding:44px 34px}
   .panel-head{grid-template-columns:1fr;gap:16px;align-items:start}
   .svc-grid,.plans,.duo-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
-  .why,.form-panel{grid-template-columns:1fr;gap:34px}
+  .form-panel{grid-template-columns:1fr;gap:34px}
   /* La ilustración pasa debajo del texto */
   .intro-grid{grid-template-columns:1fr;gap:34px}
   .intro-visual{max-width:560px;margin-inline:auto}
