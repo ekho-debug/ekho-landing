@@ -73,25 +73,26 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-// --- Modal de planes ---
-const modal = document.getElementById("modal-planes");
+// --- Modales de servicios (planes, diseño web y automatización) ---
+const SELECTOR_FOCO =
+  "a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex='-1'])";
 
-if (modal) {
-  const modalBox = modal.querySelector(".modal-box");
-  const foco = "a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex='-1'])";
+// Devuelve el foco al botón que abrió el modal y libera el scroll de la landing
+function prepararModal(modal) {
+  const caja = modal.querySelector(".modal-box");
   let disparador = null;
 
-  const abrirModal = (trigger) => {
+  const abrir = (trigger) => {
     disparador = trigger;
     // Compensa el ancho de la barra de scroll para que la landing no salte
     const barra = window.innerWidth - document.documentElement.clientWidth;
     if (barra > 0) document.body.style.paddingRight = barra + "px";
     document.body.classList.add("modal-open");
     modal.hidden = false;
-    (modalBox.querySelector(".modal-close") || modalBox).focus();
+    (caja.querySelector(".modal-close") || caja).focus();
   };
 
-  const cerrarModal = () => {
+  const cerrar = () => {
     modal.hidden = true;
     document.body.classList.remove("modal-open");
     document.body.style.paddingRight = "";
@@ -99,25 +100,25 @@ if (modal) {
     disparador = null;
   };
 
-  document.querySelectorAll("[data-open-planes]").forEach((btn) => {
-    btn.addEventListener("click", () => abrirModal(btn));
-  });
+  document
+    .querySelectorAll(`[data-open="${modal.id}"]`)
+    .forEach((btn) => btn.addEventListener("click", () => abrir(btn)));
 
-  modal.querySelectorAll("[data-close-planes]").forEach((btn) => {
-    btn.addEventListener("click", cerrarModal);
-  });
+  modal
+    .querySelectorAll("[data-close]")
+    .forEach((btn) => btn.addEventListener("click", cerrar));
 
   document.addEventListener("keydown", (e) => {
     if (modal.hidden) return;
 
     if (e.key === "Escape") {
-      cerrarModal();
+      cerrar();
       return;
     }
 
     // Mantiene el foco dentro del modal
     if (e.key === "Tab") {
-      const focusables = [...modalBox.querySelectorAll(foco)].filter(
+      const focusables = [...caja.querySelectorAll(SELECTOR_FOCO)].filter(
         (el) => el.offsetParent !== null
       );
       if (!focusables.length) return;
@@ -134,26 +135,42 @@ if (modal) {
     }
   });
 
-  // Elegir un plan: lo guarda, cierra y lleva al formulario
-  modal.querySelectorAll("[data-plan]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const plan = btn.dataset.plan;
-      const campoPlan = document.getElementById("f-plan");
-      const servicio = document.getElementById("f-servicio");
-      const aviso = document.getElementById("plan-elegido");
+  return { abrir, cerrar };
+}
 
-      if (campoPlan) campoPlan.value = plan;
-      if (servicio) servicio.value = "Gestión de redes sociales";
+const modales = new Map();
+document.querySelectorAll(".modal").forEach((m) => {
+  modales.set(m.id, prepararModal(m));
+});
+
+// Botones que eligen un servicio: guardan la opción, cierran y van al formulario.
+// Nunca limpian lo que la persona ya escribió.
+document.querySelectorAll(".modal [data-servicio]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const { servicio, detalle, campo, etiqueta } = btn.dataset;
+
+    const selectServicio = document.getElementById("f-servicio");
+    if (selectServicio && servicio) selectServicio.value = servicio;
+
+    if (campo && detalle) {
+      const oculto = document.getElementById(campo);
+      if (oculto) oculto.value = detalle;
+
+      // Un solo aviso visible: el último servicio elegido
+      const aviso = document.getElementById("seleccion");
       if (aviso) {
-        aviso.querySelector("strong").textContent = plan;
+        aviso.querySelector("span").textContent = `${etiqueta || "Seleccionaste"}:`;
+        aviso.querySelector("strong").textContent = detalle;
         aviso.hidden = false;
       }
+    }
 
-      cerrarModal();
-      document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    modales.get(btn.closest(".modal").id)?.cerrar();
+    document
+      .getElementById("contacto")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
-}
+});
 
 // --- Formulario: sin backend todavía, confirma en pantalla ---
 const contactForm = document.getElementById("contact-form");

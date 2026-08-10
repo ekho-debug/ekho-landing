@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -42,7 +42,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
-      <button type="button" class="nav-link-btn" data-open-planes>Planes</button>
+      <button type="button" class="nav-link-btn" data-open="modal-planes">Planes</button>
       <a href="#faq">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
       <a class="btn btn-accent nav-cta-mobile" href="#contacto">Contanos qué necesitás</a>
@@ -174,7 +174,7 @@
             <p class="svc-sub">Gestión de redes sociales</p>
             <p>Planificamos y creamos contenido alineado con tu marca, tu público y tus objetivos.</p>
             <p>El servicio puede incluir diseño, redacción de copys, publicación, gestión de consultas y edición de videos, según el plan elegido.</p>
-            <button type="button" class="btn btn-light btn-block" data-open-planes>Ver planes de redes sociales</button>
+            <button type="button" class="btn btn-light btn-block" data-open="modal-planes">Ver planes de redes sociales</button>
           </article>
 
           <article class="svc-card svc-card--featured">
@@ -185,7 +185,7 @@
             <p class="svc-sub">Diseño de páginas web</p>
             <p>Diseñamos landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca.</p>
             <p>Trabajamos la estructura, el diseño y los textos para que tus clientes entiendan qué ofrecés y cómo contactarte.</p>
-            <a href="#web" class="btn btn-light btn-block">Conocer las opciones web</a>
+            <button type="button" class="btn btn-light btn-block" data-open="modal-web">Conocer las opciones web</button>
           </article>
 
           <article class="svc-card">
@@ -196,7 +196,7 @@
             <p class="svc-sub">Automatizaciones de comunicación</p>
             <p>Creamos soluciones simples para responder consultas, enviar información y organizar el seguimiento de potenciales clientes.</p>
             <p>Integramos canales como WhatsApp, formularios y correo electrónico sin perder el trato humano.</p>
-            <a href="#automatizaciones" class="btn btn-light btn-block">Mejorar mi atención</a>
+            <button type="button" class="btn btn-light btn-block" data-open="modal-auto">Mejorar mi atención</button>
           </article>
         </div>
       </div>
@@ -305,70 +305,6 @@
     </div>
   </section>
 
-  <!-- 10. DISEÑO DE PÁGINAS WEB -->
-  <section id="web" class="section">
-    <div class="container">
-      <h2 class="section-title reveal">Una página web adaptada al <span class="accent">momento de tu negocio</span></h2>
-
-      <div class="duo-grid">
-        <article class="duo-card reveal">
-          <h3>Web Express</h3>
-          <p>Una landing page de una sola página para presentar tu negocio, explicar tus servicios y centralizar las consultas.</p>
-          <p>Es ideal si necesitás una presencia digital clara, rápida y profesional.</p>
-          <a href="#contacto" class="btn btn-outline">Consultar por Web Express</a>
-        </article>
-
-        <article class="duo-card reveal">
-          <h3>Web Institucional</h3>
-          <p>Una web de hasta dos páginas para desarrollar con mayor profundidad tu propuesta, tus servicios y la información de contacto.</p>
-          <p>Es ideal para marcas que necesitan una presentación institucional más completa.</p>
-          <a href="#contacto" class="btn btn-outline">Consultar por Web Institucional</a>
-        </article>
-      </div>
-
-      <div class="notes-block reveal">
-        <p class="note">Cada página web se cotiza de manera personalizada según su alcance, cantidad de secciones y funcionalidades.</p>
-        <p class="note">Los valores no incluyen dominio ni hosting. Los proyectos con ecommerce, más páginas o funcionalidades especiales se cotizan por separado.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. AUTOMATIZACIONES -->
-  <section id="automatizaciones" class="section">
-    <div class="container">
-      <div class="panel panel--dark reveal">
-        <div class="panel-head">
-          <h2>La tecnología acompaña la conversación. No la reemplaza.</h2>
-          <p>Analizamos cómo ingresan, se responden y se organizan las consultas de tu negocio para detectar oportunidades de mejora.</p>
-        </div>
-
-        <div class="auto-grid">
-          <article class="auto-card">
-            <span class="auto-num" aria-hidden="true">01</span>
-            <h3>Diagnóstico</h3>
-            <p>Revisamos los canales que utilizás, las consultas que recibís y las tareas repetitivas que forman parte de la atención y el seguimiento comercial.</p>
-          </article>
-          <article class="auto-card">
-            <span class="auto-num" aria-hidden="true">02</span>
-            <h3>Desarrollo</h3>
-            <p>Implementamos automatizaciones simples para responder consultas iniciales, enviar información, derivar mensajes, registrar contactos o realizar seguimientos.</p>
-          </article>
-          <article class="auto-card">
-            <span class="auto-num" aria-hidden="true">03</span>
-            <h3>Acompañamiento</h3>
-            <p>Probamos el funcionamiento, realizamos los ajustes necesarios y ofrecemos mantenimiento cuando la solución lo requiere.</p>
-          </article>
-        </div>
-
-        <div class="auto-foot">
-          <p class="note note--onDark">Cada proyecto se cotiza de manera personalizada según los canales, las integraciones y el alcance de la automatización.</p>
-          <p class="note note--onDark">Nuestras soluciones están enfocadas en la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones operativas complejas.</p>
-          <a href="#contacto" class="btn btn-accent">Contanos qué querés automatizar</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- 12. CTA DE CIERRE -->
   <section id="cierre" class="section">
     <div class="container">
@@ -440,7 +376,8 @@
               <textarea id="f-proyecto" name="proyecto" rows="4" required></textarea>
             </div>
             <input type="hidden" id="f-plan" name="plan" value="">
-            <p class="field-note field--full" id="plan-elegido" hidden>Plan seleccionado: <strong></strong></p>
+            <input type="hidden" id="f-web" name="tipo_web" value="">
+            <p class="field-note field--full" id="seleccion" hidden><span></span> <strong></strong></p>
           </div>
 
           <button type="submit" class="btn btn-accent btn-block">Enviar consulta</button>
@@ -510,8 +447,8 @@
           <h2 class="footer-h">Servicios</h2>
           <ul>
             <li><a href="#servicios">Gestión de redes sociales</a></li>
-            <li><a href="#web">Diseño de páginas web</a></li>
-            <li><a href="#automatizaciones">Automatización de comunicaciones</a></li>
+            <li><button type="button" class="footer-link-btn" data-open="modal-web">Diseño de páginas web</button></li>
+            <li><button type="button" class="footer-link-btn" data-open="modal-auto">Automatización de comunicaciones</button></li>
           </ul>
         </div>
 
@@ -546,7 +483,7 @@
 
 <!-- MODAL DE PLANES -->
 <div class="modal" id="modal-planes" hidden>
-  <div class="modal-backdrop" data-close-planes></div>
+  <div class="modal-backdrop" data-close></div>
 
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-planes-titulo" aria-describedby="modal-planes-sub">
     <div class="modal-head">
@@ -554,7 +491,7 @@
         <h2 id="modal-planes-titulo">Planes de gestión de redes sociales</h2>
         <p id="modal-planes-sub">Elegí cuánto espacio querés ocupar</p>
       </div>
-      <button type="button" class="modal-close" data-close-planes aria-label="Cerrar la ventana de planes">
+      <button type="button" class="modal-close" data-close aria-label="Cerrar la ventana de planes">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
@@ -583,7 +520,7 @@
             <li>Hasta 10 publicaciones mensuales.</li>
             <li>Gestión de comentarios y mensajes de lunes a viernes, de 9 a 18 h.</li>
           </ul>
-          <button type="button" class="btn btn-outline btn-block" data-plan="EKHO Basic">Elegir Basic</button>
+          <button type="button" class="btn btn-outline btn-block" data-servicio="Gestión de redes sociales" data-campo="f-plan" data-etiqueta="Plan seleccionado" data-detalle="EKHO Basic">Elegir Basic</button>
         </div>
 
         <div class="plan plan--featured">
@@ -595,7 +532,7 @@
             <li>Hasta 15 publicaciones mensuales.</li>
             <li>Gestión de comentarios y mensajes de lunes a sábado, de 9 a 18 h.</li>
           </ul>
-          <button type="button" class="btn btn-accent btn-block" data-plan="EKHO Plus">Elegir Plus</button>
+          <button type="button" class="btn btn-accent btn-block" data-servicio="Gestión de redes sociales" data-campo="f-plan" data-etiqueta="Plan seleccionado" data-detalle="EKHO Plus">Elegir Plus</button>
         </div>
 
         <div class="plan">
@@ -607,7 +544,7 @@
             <li>Dos videos cortos mensuales con edición básica.</li>
             <li>Gestión de comentarios y mensajes todos los días, de 9 a 18 h.</li>
           </ul>
-          <button type="button" class="btn btn-outline btn-block" data-plan="EKHO Total">Elegir Total</button>
+          <button type="button" class="btn btn-outline btn-block" data-servicio="Gestión de redes sociales" data-campo="f-plan" data-etiqueta="Plan seleccionado" data-detalle="EKHO Total">Elegir Total</button>
         </div>
       </div>
 
@@ -616,6 +553,111 @@
         <p class="note">¿Preferís publicar y responder los mensajes desde tu cuenta? Todos los planes están disponibles en modalidad solo contenido, con un 15 % de descuento.</p>
         <p class="note">Los valores publicados corresponden al alcance base de cada plan. La propuesta final puede variar según las necesidades, el volumen de trabajo y las características de cada cuenta.</p>
         <p class="note">Los cupos de publicaciones se renuevan cada mes y no son acumulables.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE DISEÑO WEB -->
+<div class="modal" id="modal-web" hidden>
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-web-titulo" aria-describedby="modal-web-sub">
+    <div class="modal-head">
+      <div class="modal-head-txt">
+        <h2 id="modal-web-titulo">Diseño de páginas web</h2>
+        <p id="modal-web-sub">Una página web adaptada al momento de tu negocio</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Cerrar la ventana de diseño web">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lead">Diseñamos sitios claros, modernos y alineados con la identidad de cada marca.</p>
+
+      <div class="duo-grid">
+        <article class="duo-card">
+          <h3>Web Express</h3>
+          <p class="duo-sub">Una presencia digital clara, rápida y profesional</p>
+          <p>Una landing page de una sola página para presentar tu negocio, explicar tus servicios y centralizar las consultas.</p>
+          <p>Es ideal si necesitás empezar a mostrar tu propuesta de manera profesional sin desarrollar un sitio de gran extensión.</p>
+          <button type="button" class="btn btn-outline btn-block" data-servicio="Diseño de página web" data-detalle="Web Express" data-campo="f-web" data-etiqueta="Opción seleccionada">Consultar por Web Express</button>
+        </article>
+
+        <article class="duo-card">
+          <h3>Web Institucional</h3>
+          <p class="duo-sub">Una presentación más completa para tu marca</p>
+          <p>Una web de hasta dos páginas para desarrollar con mayor profundidad tu propuesta, tus servicios y la información de contacto.</p>
+          <p>Es ideal para marcas que necesitan una presencia institucional más completa y organizada.</p>
+          <button type="button" class="btn btn-accent btn-block" data-servicio="Diseño de página web" data-detalle="Web Institucional" data-campo="f-web" data-etiqueta="Opción seleccionada">Consultar por Web Institucional</button>
+        </article>
+      </div>
+
+      <div class="notes-block">
+        <h3 class="notes-title">Aclaraciones</h3>
+        <p class="note">Cada página web se cotiza de manera personalizada según su alcance, cantidad de secciones y funcionalidades.</p>
+        <p class="note">Los valores no incluyen dominio ni hosting. Los proyectos con ecommerce, más páginas o funcionalidades especiales se cotizan por separado.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE AUTOMATIZACIÓN -->
+<div class="modal" id="modal-auto" hidden>
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-auto-titulo" aria-describedby="modal-auto-sub">
+    <div class="modal-head">
+      <div class="modal-head-txt">
+        <h2 id="modal-auto-titulo">Automatizaciones de comunicación y atención</h2>
+        <p id="modal-auto-sub">La tecnología acompaña la conversación. No la reemplaza.</p>
+      </div>
+      <button type="button" class="modal-close" data-close aria-label="Cerrar la ventana de automatizaciones">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-lead">Analizamos cómo ingresan, se responden y se organizan las consultas de tu negocio para detectar oportunidades de mejora.</p>
+
+      <div class="pasos-grid">
+        <article class="paso-card">
+          <span class="paso-num" aria-hidden="true">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Revisamos los canales que utilizás, las consultas que recibís y las tareas repetitivas que forman parte de la atención y el seguimiento comercial.</p>
+        </article>
+
+        <article class="paso-card">
+          <span class="paso-num" aria-hidden="true">02</span>
+          <h3>Desarrollo</h3>
+          <p>Implementamos automatizaciones simples para:</p>
+          <ul class="check-list">
+            <li>Responder consultas iniciales.</li>
+            <li>Enviar información o presupuestos.</li>
+            <li>Derivar mensajes.</li>
+            <li>Registrar contactos.</li>
+            <li>Enviar confirmaciones o recordatorios.</li>
+            <li>Realizar seguimientos comerciales simples.</li>
+          </ul>
+        </article>
+
+        <article class="paso-card">
+          <span class="paso-num" aria-hidden="true">03</span>
+          <h3>Acompañamiento</h3>
+          <p>Probamos el funcionamiento, realizamos los ajustes necesarios y ofrecemos mantenimiento cuando la solución lo requiere.</p>
+        </article>
+      </div>
+
+      <div class="notes-block">
+        <h3 class="notes-title">Aclaraciones</h3>
+        <p class="note">Cada proyecto se cotiza de manera personalizada según los canales, las integraciones y el alcance de la automatización.</p>
+        <p class="note">Nuestras soluciones están enfocadas en la comunicación, la atención y el seguimiento de consultas. No desarrollamos sistemas de gestión ni automatizaciones administrativas, financieras u operativas complejas.</p>
+        <p class="note">Definimos qué tareas pueden automatizarse y en qué momento la conversación debe continuar con una persona.</p>
+      </div>
+
+      <div class="modal-action">
+        <button type="button" class="btn btn-accent" data-servicio="Automatización de comunicaciones">Contanos qué querés automatizar</button>
       </div>
     </div>
   </div>
@@ -791,6 +833,6 @@
 }
 </script>
 
-<script src="script.js?v=5" defer></script>
+<script src="script.js?v=6" defer></script>
 </body>
 </html>
