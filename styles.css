@@ -225,15 +225,15 @@ section[id]{scroll-margin-top:104px}
 
 /* ---------- PRESENTACIÓN ---------- */
 /* Dos columnas: texto a la izquierda, ilustración a la derecha */
-.intro-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.intro-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
 .intro{max-width:none;margin:0;text-align:left;display:flex;flex-direction:column;gap:18px}
-.intro-visual img{width:80%;height:auto;margin-inline:auto}
+.intro-visual img{width:60%;height:auto;margin-inline:auto}
 .intro h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;margin-bottom:6px}
 .intro p{font-size:16px;line-height:1.7}
 /* `.intro p` es más específico: hay que repetir el tamaño del kicker */
 .intro .section-kicker{font-size:clamp(13px,1.25vw,15px);line-height:1.35}
-/* Justificado, con guionado para que no queden huecos grandes entre palabras */
-.intro-text{text-align:justify;hyphens:auto}
+/* Justificado sin guionado: ninguna palabra se parte al final de la línea */
+.intro-text{text-align:justify;hyphens:none}
 
 /* ---------- PROPUESTA DE VALOR ---------- */
 .why{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
@@ -572,6 +572,11 @@ body.modal-open{overflow:hidden}
   .section{padding:52px 0}
   .fields{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
+}
+
+@media (max-width:700px){
+  /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
+  .intro-text{text-align:left}
 }
 
 @media (max-width:640px){
