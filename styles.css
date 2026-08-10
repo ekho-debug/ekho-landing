@@ -106,8 +106,9 @@ section[id]{scroll-margin-top:104px}
 .hero-copy{max-width:560px}
 
 .hero-kicker{
-  font-family:var(--display);font-size:clamp(17px,1.7vw,21px);font-weight:600;
-  color:var(--accent-dark);line-height:1.35;letter-spacing:0;
+  font-family:var(--display);font-size:clamp(13px,1.25vw,15px);font-weight:600;
+  color:var(--accent-dark);line-height:1.35;
+  text-transform:uppercase;letter-spacing:.14em;
 }
 .hero-title{
   margin-top:16px;font-family:var(--display);color:var(--ink);
@@ -139,13 +140,21 @@ section[id]{scroll-margin-top:104px}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
 @keyframes floatGem{0%,100%{transform:rotate(26deg) translateY(0)}50%{transform:rotate(26deg) translateY(-13px)}}
 
-.laptop{position:relative;z-index:1;width:88%;max-width:530px;transform:perspective(1500px) rotateY(-9deg) rotateX(3deg)}
+/* Escena 3D: la tapa queda casi vertical y el teclado se acuesta en fuga */
+.laptop{position:relative;z-index:1;width:88%;max-width:520px;padding-bottom:72px}
+.laptop-body{
+  position:relative;
+  transform-style:preserve-3d;
+  transform:perspective(1700px) rotateX(14deg) rotateY(-15deg);
+}
 
 /* Tapa: canto de aluminio claro + cuerpo oscuro, marco fino y mentón más alto */
 .laptop-lid{
   position:relative;
+  transform-origin:bottom center;
+  transform:rotateX(-5deg);
   background:linear-gradient(168deg,#4a4a55 0%,#26262e 14%,#17171d 55%,#0e0e13 100%);
-  border-radius:13px 13px 5px 5px;
+  border-radius:13px 13px 4px 4px;
   padding:9px 9px 17px;
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,.10),
@@ -164,32 +173,41 @@ section[id]{scroll-margin-top:104px}
 }
 /* Sombra de contacto contra el piso */
 .laptop-shadow{
-  position:absolute;left:5%;right:5%;bottom:-14px;height:26px;z-index:-1;
-  background:radial-gradient(ellipse at 50% 40%,rgba(15,6,16,.36),rgba(15,6,16,0) 72%);
-  filter:blur(7px);
+  position:absolute;left:0;right:0;bottom:6px;height:34px;z-index:-1;
+  background:radial-gradient(ellipse at 48% 45%,rgba(15,6,16,.34),rgba(15,6,16,0) 70%);
+  filter:blur(9px);
 }
 /* container-type + unidades cqw: el mockup escala igual a cualquier ancho */
 .laptop-screen{position:relative;container-type:inline-size;aspect-ratio:16/10;border-radius:7px;overflow:hidden;background:var(--ink)}
-/* Base: trapecio (más ancha al frente) con brillo de aluminio y canto delantero */
-.laptop-base{
-  position:relative;width:116%;margin-left:-8%;height:17px;
-  background:linear-gradient(180deg,#f0f2f5 0%,#d3d7de 26%,#b0b5bf 58%,#8d939e 88%,#787e89 100%);
-  clip-path:polygon(6.9% 0,93.1% 0,100% 100%,0 100%);
+/* Teclado: plano acostado hacia atrás, es lo que da la sensación de notebook real */
+.laptop-deck{
+  position:absolute;top:100%;left:-1.5%;width:103%;height:210px;
+  transform-origin:top center;
+  transform:rotateX(72deg);
+  background:linear-gradient(180deg,#b9bec7 0%,#dee1e7 12%,#eef0f4 42%,#dcdfe5 72%,#c2c7d0 100%);
+  border-radius:3px 3px 12px 12px;
+  box-shadow:0 0 0 1px rgba(15,6,16,.10), inset 0 1px 0 rgba(255,255,255,.7);
 }
-.laptop-base::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
-  background:linear-gradient(180deg,rgba(15,6,16,0),rgba(15,6,16,.3));
+/* Bisagra: franja oscura donde el teclado se une a la tapa */
+.laptop-deck::before{
+  content:"";position:absolute;left:6%;right:6%;top:0;height:9px;
+  background:linear-gradient(180deg,#6d727c,rgba(109,114,124,0));
+  border-radius:3px 3px 0 0;
 }
-/* Muesca para abrir la tapa */
-.laptop-notch{
-  position:absolute;left:50%;top:0;transform:translateX(-50%);
-  width:13%;height:6px;border-radius:0 0 8px 8px;
-  background:linear-gradient(180deg,#6f757f,#9ba1ab);
+.deck-keys{
+  position:absolute;left:6.5%;right:6.5%;top:12%;height:44%;
+  border-radius:5px;
+  background:#23262c;
+  background-image:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.22) 0 5.1%,transparent 5.1% 6.25%),
+    repeating-linear-gradient(180deg,rgba(255,255,255,.20) 0 13.5%,transparent 13.5% 16.6%);
+  box-shadow:inset 0 0 0 1px rgba(15,6,16,.45);
 }
-.laptop-foot{
-  display:block;width:116%;margin-left:-8%;height:3px;
-  background:linear-gradient(180deg,rgba(15,6,16,.32),rgba(15,6,16,0));
-  border-radius:0 0 7px 7px;
+.deck-pad{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:12%;
+  width:29%;height:30%;border-radius:7px;
+  background:linear-gradient(180deg,#e9ebef,#d3d7de);
+  box-shadow:inset 0 0 0 1px rgba(15,6,16,.13);
 }
 
 /* --- Mini sitio dentro de la pantalla --- */
@@ -536,7 +554,10 @@ section[id]{scroll-margin-top:104px}
   /* Los adornos flotantes compiten con la notebook en pantallas chicas */
   .orb,.gem{display:none}
   .hero-visual{min-height:0}
-  .laptop{width:100%;transform:none}
+  /* De frente en mobile: el giro lateral achica demasiado el texto de la pantalla */
+  .laptop{width:93%;padding-bottom:58px}
+  .laptop-body{transform:perspective(1400px) rotateX(7deg)}
+  .laptop-deck{height:170px}
 }
 
 @media (max-width:520px){
