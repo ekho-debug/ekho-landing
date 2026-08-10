@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -103,7 +103,7 @@
 
                 <div class="mini-cards">
                   <span class="mini-card"><i></i>Social</span>
-                  <span class="mini-card"><i></i>Design</span>
+                  <span class="mini-card"><i></i>Diseño</span>
                   <span class="mini-card"><i></i>Automatización</span>
                 </div>
               </div>
@@ -140,7 +140,7 @@
     <div class="container">
       <div class="panel panel--dark reveal">
         <div class="panel-head">
-          <h2>Soluciones digitales para comunicar mejor tu negocio</h2>
+          <h2>Soluciones digitales para comunicar mejor <span class="accent">tu negocio</span></h2>
           <div class="panel-head-txt">
             <p>Trabajamos distintas áreas de la comunicación digital para ayudarte a fortalecer tu presencia, presentar mejor tus servicios y facilitar la relación con tus clientes.</p>
             <p>Podés contratar cada servicio por separado o combinarlos según las necesidades de tu negocio.</p>
@@ -149,36 +149,63 @@
 
         <div class="svc-grid">
           <article class="svc-card">
-            <div class="svc-top">
-              <h3>EKHO Social</h3>
-              <span class="circle-btn" aria-hidden="true">↗</span>
+            <span class="svc-mark" aria-hidden="true">↗</span>
+            <div class="svc-head">
+              <div class="svc-titles">
+                <h3>EKHO Social</h3>
+                <p class="svc-sub">Gestión de redes sociales</p>
+              </div>
+              <span class="svc-icon"><img src="assets/icono-social.png" alt="" loading="lazy"></span>
             </div>
-            <p class="svc-sub">Gestión de redes sociales</p>
-            <p>Planificamos y creamos contenido alineado con tu marca, tu público y tus objetivos.</p>
-            <p>El servicio puede incluir diseño, redacción de copys, publicación, gestión de consultas y edición de videos, según el plan elegido.</p>
-            <button type="button" class="btn btn-light btn-block" data-open="modal-planes">Ver planes de redes sociales</button>
-          </article>
-
-          <article class="svc-card svc-card--featured">
-            <div class="svc-top">
-              <h3>EKHO Design</h3>
-              <span class="circle-btn" aria-hidden="true">↗</span>
+            <span class="svc-divider" aria-hidden="true"></span>
+            <div class="svc-body">
+              <p>Planificamos y creamos contenido alineado con tu marca, tu público y tus objetivos.</p>
+              <p>El servicio puede incluir diseño, redacción de copys, publicación, gestión de consultas y edición de videos, según el plan elegido.</p>
             </div>
-            <p class="svc-sub">Diseño de páginas web</p>
-            <p>Diseñamos landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca.</p>
-            <p>Trabajamos la estructura, el diseño y los textos para que tus clientes entiendan qué ofrecés y cómo contactarte.</p>
-            <button type="button" class="btn btn-light btn-block" data-open="modal-web">Conocer las opciones web</button>
+            <button type="button" class="svc-btn" data-open="modal-planes">
+              <span>Ver planes de redes sociales</span>
+              <span class="svc-btn-arrow" aria-hidden="true">↗</span>
+            </button>
           </article>
 
           <article class="svc-card">
-            <div class="svc-top">
-              <h3>EKHO Automatización</h3>
-              <span class="circle-btn" aria-hidden="true">↗</span>
+            <span class="svc-mark" aria-hidden="true">↗</span>
+            <div class="svc-head">
+              <div class="svc-titles">
+                <h3>EKHO Diseño</h3>
+                <p class="svc-sub">Diseño de páginas web</p>
+              </div>
+              <span class="svc-icon"><img src="assets/icono-diseno.png" alt="" loading="lazy"></span>
             </div>
-            <p class="svc-sub">Automatizaciones de comunicación</p>
-            <p>Creamos soluciones simples para responder consultas, enviar información y organizar el seguimiento de potenciales clientes.</p>
-            <p>Integramos canales como WhatsApp, formularios y correo electrónico sin perder el trato humano.</p>
-            <button type="button" class="btn btn-light btn-block" data-open="modal-auto">Mejorar mi atención</button>
+            <span class="svc-divider" aria-hidden="true"></span>
+            <div class="svc-body">
+              <p>Diseñamos landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca.</p>
+              <p>Trabajamos la estructura, el diseño y los textos para que tus clientes entiendan qué ofrecés y cómo contactarte.</p>
+            </div>
+            <button type="button" class="svc-btn" data-open="modal-web">
+              <span>Conocer las opciones web</span>
+              <span class="svc-btn-arrow" aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+          <article class="svc-card">
+            <span class="svc-mark" aria-hidden="true">↗</span>
+            <div class="svc-head">
+              <div class="svc-titles">
+                <h3>EKHO Automatización</h3>
+                <p class="svc-sub">Automatizaciones de comunicación</p>
+              </div>
+              <span class="svc-icon"><img src="assets/icono-automatizacion.png" alt="" loading="lazy"></span>
+            </div>
+            <span class="svc-divider" aria-hidden="true"></span>
+            <div class="svc-body">
+              <p>Creamos soluciones simples para responder consultas, enviar información y organizar el seguimiento de potenciales clientes.</p>
+              <p>Integramos canales como WhatsApp, formularios y correo electrónico sin perder el trato humano.</p>
+            </div>
+            <button type="button" class="svc-btn" data-open="modal-auto">
+              <span>Mejorar mi atención</span>
+              <span class="svc-btn-arrow" aria-hidden="true">↗</span>
+            </button>
           </article>
         </div>
       </div>
@@ -664,7 +691,7 @@
       "@type": "Offer",
       "itemOffered": {
        "@type": "Service",
-       "name": "EKHO Design — Diseño de páginas web",
+       "name": "EKHO Diseño — Diseño de páginas web",
        "description": "Diseño de landing pages y webs institucionales claras, modernas y adaptadas a la identidad de tu marca."
       }
      },

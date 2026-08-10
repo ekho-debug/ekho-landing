@@ -77,13 +77,6 @@ section[id]{scroll-margin-top:104px}
 .btn-outline:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
 .btn-block{width:100%}
 
-.circle-btn{
-  width:42px;height:42px;border-radius:50%;flex-shrink:0;
-  display:inline-flex;align-items:center;justify-content:center;
-  background:var(--accent);color:#fff;font-size:17px;line-height:1;
-}
-.svc-card--featured .circle-btn{background:#fff;color:var(--accent)}
-
 .center-action{display:flex;justify-content:center;margin-top:38px}
 
 /* ---------- NAV ---------- */
@@ -209,11 +202,22 @@ section[id]{scroll-margin-top:104px}
 }
 .panel--mist{background:var(--mist)}
 
-.panel-head{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:end;margin-bottom:40px}
-.panel-head h2{font-size:clamp(26px,3.2vw,40px);font-weight:700}
-.panel-head p{font-size:15px;line-height:1.65}
+/* Encabezado: título a la izquierda, texto a la derecha, separados por una línea rosa */
+.panel-head{
+  position:relative;display:grid;grid-template-columns:1.1fr 1fr;
+  gap:56px;align-items:start;margin-bottom:48px;
+}
+.panel-head h2{font-size:clamp(26px,3.4vw,44px);font-weight:700;line-height:1.1}
+.panel-head p{font-size:15.5px;line-height:1.7}
 /* Los dos párrafos van en una sola celda de la grilla, no como items sueltos */
-.panel-head-txt{display:flex;flex-direction:column;gap:12px}
+.panel-head-txt{
+  position:relative;display:flex;flex-direction:column;gap:18px;
+  padding-left:56px;max-width:520px;
+}
+.panel-head-txt::before{
+  content:"";position:absolute;left:0;top:4px;bottom:4px;width:1.5px;
+  background:linear-gradient(180deg,var(--accent),rgba(255,0,145,.25));
+}
 
 .section-title{text-align:center;max-width:900px;margin:0 auto;font-size:clamp(26px,3.4vw,42px);font-weight:700}
 .section-sub{text-align:center;margin:16px auto 0;max-width:720px;font-size:16px;line-height:1.65}
@@ -248,22 +252,65 @@ section[id]{scroll-margin-top:104px}
 }
 
 /* ---------- SERVICIOS ---------- */
-.svc-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+/* `stretch` + flex interno: las tres tarjetas comparten alto y todo queda nivelado */
+.svc-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
 .svc-card{
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
-  border-radius:var(--r-card);padding:28px;
-  display:flex;flex-direction:column;gap:14px;text-align:left;
-  transition:transform .3s ease,border-color .3s ease;
+  position:relative;height:100%;
+  background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--r-card);padding:26px 26px 28px;
+  display:flex;flex-direction:column;text-align:left;
+  transition:transform .3s ease,border-color .3s ease,background .3s ease;
 }
-.svc-card:hover{transform:translateY(-6px);border-color:rgba(255,0,145,.5)}
-.svc-card--featured{background:var(--accent);border-color:transparent;color:rgba(255,255,255,.95)}
-.svc-card--featured:hover{border-color:transparent}
-.svc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
-.svc-card h3{font-size:22px}
-.svc-sub{font-family:var(--display);font-weight:600;font-size:15px;color:var(--accent-pale);line-height:1.35}
-.svc-card--featured .svc-sub{color:#fff}
-.svc-card p{font-size:14px;line-height:1.6}
-.svc-card--featured .svc-card .btn{margin-top:6px}
+.svc-card:hover{transform:translateY(-6px);border-color:rgba(255,0,145,.55);background:rgba(255,255,255,.055)}
+
+/* Marca decorativa arriba a la izquierda */
+.svc-mark{
+  width:34px;height:34px;border-radius:50%;flex-shrink:0;
+  border:1.4px solid rgba(255,0,145,.55);color:var(--accent);
+  display:grid;place-items:center;font-size:14px;line-height:1;margin-bottom:22px;
+}
+
+/* Encabezado con alto mínimo común: "EKHO Automatización" ocupa dos líneas */
+.svc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.svc-titles{display:flex;flex-direction:column;gap:8px;min-height:5.6em;flex:1;min-width:0}
+.svc-card h3{font-size:21px;line-height:1.2;color:#fff}
+.svc-sub{font-family:var(--display);font-weight:600;font-size:14px;color:var(--accent);line-height:1.35}
+/* Contenedor fijo: los tres íconos pesan igual aunque tengan proporciones distintas */
+.svc-icon{width:78px;height:78px;flex-shrink:0;display:grid;place-items:center}
+.svc-icon img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+
+.svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:20px 0 20px}
+
+/* Ocupa el espacio sobrante: empuja los tres botones a la misma línea */
+.svc-body{flex:1;display:flex;flex-direction:column;gap:14px}
+.svc-card p{font-size:14.5px;line-height:1.65}
+
+.svc-btn{
+  margin-top:24px;width:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  min-height:56px;padding:12px 12px 12px 22px;
+  background:transparent;border:1.4px solid rgba(255,0,145,.6);border-radius:999px;
+  font-family:var(--display);font-weight:600;font-size:14px;color:#fff;text-align:left;
+  transition:background .22s ease,border-color .22s ease,transform .22s ease;
+}
+.svc-btn:hover{background:rgba(255,0,145,.14);border-color:var(--accent);transform:translateY(-2px)}
+.svc-btn-arrow{
+  width:32px;height:32px;flex-shrink:0;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-size:14px;line-height:1;
+  transition:transform .22s ease;
+}
+.svc-btn:hover .svc-btn-arrow{transform:translate(2px,-2px)}
+
+/* Con subgrid las tres tarjetas comparten las mismas filas: encabezados,
+   divisores, descripciones y botones quedan alineados sin medidas fijas. */
+@media (min-width:1041px){
+  @supports (grid-template-rows:subgrid){
+    .svc-grid{grid-template-rows:auto auto auto 1fr auto;row-gap:0}
+    .svc-card{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+    .svc-titles{min-height:0}
+  }
+}
 
 /* ---------- DIFERENCIAL ---------- */
 .diff-grid{
@@ -524,8 +571,14 @@ body.modal-open{overflow:hidden}
   .hero-visual{width:100%;max-width:600px;min-height:340px}
   .laptop{transform:perspective(1500px) rotateX(2deg)}
   .panel{padding:44px 34px}
-  .panel-head{grid-template-columns:1fr;gap:16px;align-items:start}
-  .svc-grid,.plans,.duo-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  /* El título pasa arriba: la línea vertical se vuelve horizontal */
+  .panel-head{grid-template-columns:1fr;gap:24px;align-items:start}
+  .panel-head-txt{padding-left:0;padding-top:22px;max-width:none}
+  .panel-head-txt::before{left:0;right:0;top:0;bottom:auto;width:auto;height:1.5px;
+    background:linear-gradient(90deg,var(--accent),rgba(255,0,145,.15))}
+  /* Dos columnas y la tercera abajo, sin estirarse */
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .plans,.duo-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
   .form-panel{grid-template-columns:1fr;gap:34px}
   /* La ilustración pasa debajo del texto */
   .intro-grid{grid-template-columns:1fr;gap:34px}
@@ -561,6 +614,10 @@ body.modal-open{overflow:hidden}
 @media (max-width:700px){
   /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
   .intro-text{text-align:left}
+  /* Una tarjeta por fila, a todo el ancho */
+  .svc-grid{grid-template-columns:1fr}
+  .svc-titles{min-height:0}
+  .svc-icon{width:64px;height:64px}
 }
 
 @media (max-width:640px){
