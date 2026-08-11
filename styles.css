@@ -312,47 +312,35 @@ section[id]{scroll-margin-top:104px}
   }
 }
 
-/* ---------- DIFERENCIAL ---------- */
-.diff-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:14px;margin-top:44px;
-}
-.diff-grid li{
-  position:relative;padding:20px 22px 20px 52px;
-  border:1px solid rgba(15,6,16,.09);border-radius:var(--r-sm);
-  font-size:14.5px;line-height:1.5;color:var(--ink);font-weight:500;
-  transition:border-color .25s ease,transform .25s ease;
-}
-.diff-grid li:hover{border-color:var(--accent);transform:translateY(-3px)}
-.diff-grid li::before{
-  content:"";position:absolute;left:20px;top:21px;width:18px;height:18px;border-radius:50%;
-  background:var(--accent);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm5 7.4-6.1 6.1a1 1 0 0 1-1.4 0L6.9 13a1 1 0 1 1 1.4-1.4l1.9 1.9 5.4-5.5A1 1 0 0 1 17 9.4Z'/%3E%3C/svg%3E") center/contain no-repeat;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm5 7.4-6.1 6.1a1 1 0 0 1-1.4 0L6.9 13a1 1 0 1 1 1.4-1.4l1.9 1.9 5.4-5.5A1 1 0 0 1 17 9.4Z'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-.diff-claim{
-  max-width:720px;margin:38px auto 0;text-align:center;
-  font-family:var(--display);font-size:clamp(17px,2.1vw,23px);font-weight:600;color:var(--ink);line-height:1.4;
-}
+/* ---------- DIFERENCIAL + PROCESO ---------- */
+.dif-grid{display:grid;grid-template-columns:40fr 60fr;gap:48px;align-items:center}
+.dif-copy h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;line-height:1.12;max-width:14ch}
+.dif-linea{display:block;width:132px;height:3px;border-radius:99px;background:var(--accent);margin:22px 0}
+.dif-copy p{max-width:46ch;font-size:15.5px;line-height:1.75;color:var(--graphite)}
+.dif-ilu svg{display:block;width:100%;height:auto}
 
-/* ---------- TIMELINE ---------- */
-.timeline{max-width:860px;margin:48px auto 0;display:flex;flex-direction:column}
-.tl-row{display:grid;grid-template-columns:120px 56px 1fr;align-items:start;gap:12px;padding:22px 0}
-.tl-left{text-align:right}
-.tl-step{
-  font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--accent);
+/* Proceso: los cuatro pasos cuelgan de una única línea horizontal */
+.ruta{margin-top:76px}
+.ruta-titulo{font-size:clamp(20px,2.2vw,26px);font-weight:700}
+.ruta-pasos{
+  position:relative;margin-top:34px;padding-top:34px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:30px;align-items:start;
 }
-.tl-mark{position:relative;display:flex;justify-content:center}
-.tl-mark::before{content:"";position:absolute;top:-30px;bottom:-52px;width:2px;background:rgba(15,6,16,.1)}
-.tl-row:first-child .tl-mark::before{top:8px}
-.tl-row:last-child .tl-mark::before{bottom:auto;height:38px}
-.tl-mark i{
-  position:relative;width:16px;height:16px;border-radius:50%;
-  background:#fff;border:3.5px solid var(--accent);margin-top:2px;
+.ruta-linea{position:absolute;left:0;right:0;top:6px;height:1.5px;background:rgba(255,0,145,.28)}
+.ruta-paso{position:relative}
+/* Nodo de cada etapa, sobre la línea */
+.ruta-paso::before{
+  content:"";position:absolute;left:0;top:-33px;width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2px solid var(--accent);
 }
-.tl-right h3{font-size:19px}
-.tl-right p{font-size:14.5px;line-height:1.6;margin-top:8px}
+.ruta-paso h3{font-size:15px;line-height:1.4;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.ruta-num{font-size:23px;font-weight:700;color:var(--accent);line-height:1}
+.ruta-paso p{margin-top:10px;font-size:13.5px;line-height:1.65;color:var(--graphite)}
+.ruta-cierre{
+  margin-top:52px;text-align:center;
+  font-family:var(--display);font-size:clamp(16px,1.9vw,20px);font-weight:600;color:var(--ink);line-height:1.45;
+}
+.ruta-cierre+.center-action{margin-top:26px}
 
 /* ---------- MARQUEE ---------- */
 .marquee{background:var(--accent);color:#fff;overflow:hidden;transform:rotate(-2deg) scale(1.05);margin:40px 0;padding:16px 0}
@@ -759,6 +747,13 @@ body.modal-open{overflow:hidden}
   .hero-actions{justify-content:center}
   .hero-visual{width:100%;max-width:600px;min-height:340px}
   .laptop{transform:perspective(1500px) rotateX(2deg)}
+  /* La ilustración se achica y los pasos pasan a dos filas de dos */
+  .dif-grid{grid-template-columns:1fr;gap:34px}
+  .dif-copy h2{max-width:none}
+  .dif-ilu{max-width:560px;margin-inline:auto}
+  .ruta-pasos{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .ruta-linea{display:none}
+  .ruta-paso::before{top:-24px}
   .panel{padding:44px 34px}
   /* El título pasa arriba: la línea vertical se vuelve horizontal */
   .panel-head{grid-template-columns:1fr;gap:24px;align-items:start}
@@ -791,10 +786,7 @@ body.modal-open{overflow:hidden}
 }
 
 @media (max-width:860px){
-  .tl-row{grid-template-columns:1fr;gap:6px;padding:20px 0;border-bottom:1px solid rgba(15,6,16,.09)}
-  .tl-left{text-align:left}
-  .tl-mark{display:none}
-
+      
   .section{padding:52px 0}
   .fields{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
@@ -803,6 +795,9 @@ body.modal-open{overflow:hidden}
 @media (max-width:700px){
   /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
   .intro-text{text-align:left}
+  .ruta-pasos{grid-template-columns:1fr;row-gap:34px}
+  .ruta{margin-top:52px}
+  .center-action .btn{width:100%}
   /* Una tarjeta por fila, a todo el ancho */
   .svc-grid{grid-template-columns:1fr}
   .svc-titles{min-height:0}
