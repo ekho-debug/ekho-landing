@@ -406,6 +406,127 @@ section[id]{scroll-margin-top:104px}
 .duo-card .btn{align-self:flex-start;margin-top:6px}
 
 
+/* ---------- MODAL DE AUTOMATIZACIÓN ---------- */
+/* Cabecera sin barra: solo la ✕, que queda fija mientras se recorre el modal */
+#modal-auto .modal-head{border-bottom:0;padding:18px 20px 0;justify-content:flex-end}
+#modal-auto .modal-close{border-color:rgba(15,6,16,.12);box-shadow:0 6px 18px -10px rgba(15,6,16,.35)}
+#modal-auto .modal-close:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+#modal-auto .modal-close:active{transform:scale(.94)}
+#modal-auto .modal-box{max-width:1240px}
+#modal-auto .modal-body{padding:6px 34px 34px}
+
+.auto-grid{display:grid;grid-template-columns:1.3fr 1fr .66fr;gap:36px;align-items:start}
+
+/* --- Presentación --- */
+.auto-intro h2{font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.12;max-width:11ch}
+/* Trazos decorativos: van superpuestos, no empujan el texto */
+.rz-ovalo,.rz-subrayado{position:relative;display:inline-block}
+.rz-ovalo svg{position:absolute;left:-5%;top:50%;width:110%;height:150%;transform:translateY(-50%);overflow:visible;pointer-events:none}
+.rz-subrayado svg{position:absolute;left:0;bottom:-.18em;width:100%;height:.28em;overflow:visible;pointer-events:none}
+.auto-claim{margin-top:22px;font-family:var(--display);font-weight:700;font-size:16px;color:var(--accent);line-height:1.4}
+.auto-texto{margin-top:12px;font-size:15px;line-height:1.65;max-width:42ch}
+
+/* --- Proceso en tres etapas --- */
+.proceso{position:relative;margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.proceso-linea{position:absolute;left:0;top:2px;width:100%;height:52px;pointer-events:none}
+.proceso-paso{position:relative;display:flex;flex-direction:column}
+.proceso-num{
+  width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px;
+  margin-bottom:20px;position:relative;z-index:1;
+}
+.proceso-paso h3{font-size:15px;line-height:1.35;min-height:2.7em}
+.proceso-paso p{margin-top:10px;font-size:13.5px;line-height:1.6}
+
+/* --- Simulación de conversación --- */
+.chat{
+  margin:0;border:1px solid rgba(15,6,16,.1);border-radius:20px;background:#fff;
+  box-shadow:0 14px 40px -28px rgba(15,6,16,.45);overflow:hidden;
+}
+.chat-top{display:flex;align-items:center;gap:11px;padding:14px 16px;border-bottom:1px solid rgba(15,6,16,.08)}
+.chat-avatar{
+  position:relative;width:34px;height:34px;border-radius:50%;flex-shrink:0;
+  background:var(--ink);color:#fff;display:grid;place-items:center;
+  font-family:var(--display);font-weight:700;font-size:13px;
+}
+.chat-avatar::after{content:"";position:absolute;right:-1px;bottom:-1px;width:9px;height:9px;border-radius:50%;background:#22C55E;border:2px solid #fff}
+.chat-avatar--mini{width:24px;height:24px;font-size:10px;align-self:flex-end}
+.chat-avatar--mini::after{width:7px;height:7px}
+.chat-id{display:flex;flex-direction:column;line-height:1.3}
+.chat-id b{font-family:var(--display);font-size:14px;color:var(--ink)}
+.chat-id i{font-style:normal;font-size:11.5px;color:var(--graphite)}
+.chat-menu{margin-left:auto;width:4px;height:18px;flex-shrink:0;
+  background:radial-gradient(circle,rgba(15,6,16,.45) 1.7px,transparent 1.8px) 0 0/4px 6px repeat-y}
+.chat-hilo{display:flex;flex-direction:column;gap:12px;padding:16px 16px 16px 38px;background:#FAFAFA}
+.chat-dia{align-self:center;font-size:11px;color:var(--graphite);background:rgba(15,6,16,.06);padding:4px 12px;border-radius:999px}
+.chat-fila{position:relative;display:flex;align-items:flex-end;gap:8px;max-width:88%}
+.chat-fila--cliente{align-self:flex-end;justify-content:flex-end}
+.chat-fila--archivo{max-width:92%}
+.chat-burbuja{
+  position:relative;background:#F1F1F2;border-radius:14px;padding:11px 13px 20px;
+  font-size:13px;line-height:1.5;color:var(--ink);
+}
+.chat-burbuja--cliente{background:#FCE7F3}
+.chat-burbuja--aviso{display:flex;gap:9px;align-items:flex-start}
+.chat-campana{width:17px;height:17px;flex-shrink:0;color:var(--accent);margin-top:1px}
+.chat-campana svg{width:100%;height:100%}
+.chat-hora{position:absolute;right:11px;bottom:6px;font-size:10px;color:var(--graphite);white-space:nowrap}
+.chat-burbuja--aviso .chat-hora{position:static;display:block;margin-top:6px;text-align:right}
+.chat-archivo{
+  display:flex;align-items:center;gap:11px;width:100%;
+  background:#fff;border:1px solid rgba(15,6,16,.1);border-radius:14px;padding:11px 13px 20px;position:relative;
+}
+.chat-pdf{width:30px;height:30px;flex-shrink:0;border-radius:8px;background:#FCE7F3;color:var(--accent);display:grid;place-items:center}
+.chat-pdf svg{width:17px;height:17px}
+.chat-archivo-txt{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.chat-archivo-txt b{font-size:12.5px;color:var(--ink);word-break:break-word}
+.chat-archivo-txt i{font-style:normal;font-size:11px;color:var(--graphite)}
+/* Flecha punteada decorativa: se ancla al mensaje, así nunca se desalinea */
+.chat-flecha::before{
+  content:"";position:absolute;left:-30px;top:50%;width:22px;height:34px;transform:translateY(-50%);
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 34' fill='none' stroke='%23F472B6' stroke-width='1.6' stroke-linecap='round' stroke-dasharray='3 3'%3E%3Cpath d='M2 2C2 18 8 26 19 30'/%3E%3Cpath d='M14 30.5 19.5 30.5 18 25' stroke-dasharray='0'/%3E%3C/svg%3E") center/contain no-repeat;
+  pointer-events:none;
+}
+
+/* --- Tareas automatizables --- */
+.tareas{position:relative;padding-left:26px}
+/* Línea vertical con nodos que conecta con la conversación */
+.tareas::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:1.5px;background:var(--accent);opacity:.55}
+.tareas-titulo{font-family:var(--display);font-weight:700;font-size:14.5px;color:var(--accent);margin-bottom:20px}
+.tareas-lista{display:flex;flex-direction:column;gap:22px}
+.tareas-lista li{position:relative;display:flex;align-items:center;gap:13px;font-size:13.5px;line-height:1.5}
+.tareas-lista li::before{
+  content:"";position:absolute;left:-26px;top:50%;width:26px;height:1.5px;transform:translateY(-50%);
+  background:repeating-linear-gradient(90deg,var(--accent) 0 4px,transparent 4px 8px);opacity:.6;
+}
+.tareas-lista li::after{content:"";position:absolute;left:-29px;top:50%;width:7px;height:7px;border-radius:50%;background:var(--accent);transform:translateY(-50%)}
+.tarea-icono{width:40px;height:40px;flex-shrink:0;border-radius:50%;background:#FCE7F3;color:var(--accent);display:grid;place-items:center}
+.tarea-icono svg{width:20px;height:20px}
+
+#modal-auto .modal-action{margin-top:38px}
+#modal-auto .modal-action .btn{min-width:320px;min-height:56px;font-size:15px}
+
+/* Tablet: presentación arriba, conversación y tareas debajo */
+@media (max-width:1100px){
+  .auto-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .auto-intro{grid-column:1/-1}
+  .auto-intro h2{max-width:none}
+  .chat-flecha::before{display:none}
+  .tareas{padding-left:0}
+  .tareas::before{display:none}
+  .tareas-lista li::before,.tareas-lista li::after{display:none}
+}
+
+@media (max-width:860px){
+  #modal-auto .modal-body{padding:6px 20px 40px}
+  .auto-grid{grid-template-columns:1fr;gap:28px}
+  .proceso{grid-template-columns:1fr;gap:18px}
+  .proceso-linea{display:none}
+  .proceso-num{margin-bottom:12px}
+  .proceso-paso h3{min-height:0}
+  #modal-auto .modal-action .btn{width:100%;min-width:0}
+}
+
 /* ---------- CTA CIERRE ---------- */
 .cta-block{text-align:center;max-width:780px;margin:0 auto}
 .cta-block h2{font-size:clamp(26px,3.8vw,44px);font-weight:700}
@@ -563,23 +684,11 @@ body.modal-open{overflow:hidden}
 .aclaraciones--gris .aclaraciones-icono{background:transparent;border:1.6px solid var(--accent);color:var(--accent)}
 .aclaraciones--gris .aclaraciones-txt{border-left-color:rgba(15,6,16,.12)}
 
-/* Pasos de automatización dentro del modal */
-.pasos-grid{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
-.paso-card{
-  border:1px solid rgba(15,6,16,.1);border-radius:var(--r-card);padding:26px 24px;
-  transition:border-color .25s ease,transform .25s ease;
-}
-.paso-card:hover{border-color:var(--accent);transform:translateY(-4px)}
-.paso-num{display:block;font-family:var(--display);font-size:30px;font-weight:700;color:var(--accent);line-height:1;margin-bottom:12px}
-.paso-card h3{font-size:19px;margin-bottom:10px}
-.paso-card p{font-size:14.5px;line-height:1.6}
-.paso-card .check-list{margin-top:12px}
 .modal-action{margin-top:30px;display:flex;justify-content:center}
 
 @media (max-width:860px){
   .modal{padding:0}
-  .modal .duo-grid,.pasos-grid{grid-template-columns:1fr}
-  .modal .duo-card .btn,.modal-action .btn{padding:16px 26px;font-size:15px}
+  .modal .duo-grid,  .modal .duo-card .btn,.modal-action .btn{padding:16px 26px;font-size:15px}
   .modal-action .btn{width:100%}
   .modal-box{max-width:none;max-height:100vh;height:100vh;border-radius:0}
   .modal-head{padding:20px 20px 16px}
