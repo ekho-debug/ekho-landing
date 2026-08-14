@@ -14,6 +14,31 @@ navLinks?.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// --- Ilustración del hero ---
+// Mide lo mismo que el bloque que va del título al último renglón del párrafo.
+const heroIlu = document.querySelector(".hero-ilu");
+const heroTitulo = document.querySelector(".hero-title");
+const heroLead = document.querySelector(".hero-lead");
+
+if (heroIlu && heroTitulo && heroLead) {
+  const ajustarIlu = () => {
+    const alto =
+      heroLead.getBoundingClientRect().bottom -
+      heroTitulo.getBoundingClientRect().top;
+    heroIlu.style.setProperty("--alto-ilu", Math.round(alto) + "px");
+  };
+
+  ajustarIlu();
+  // Las tipografías web cambian el alto del texto al terminar de cargar
+  document.fonts?.ready.then(ajustarIlu);
+
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(ajustarIlu).observe(document.querySelector(".hero-copy"));
+  } else {
+    window.addEventListener("resize", ajustarIlu);
+  }
+}
+
 // --- Reveal al scrollear ---
 const revealItems = document.querySelectorAll(".reveal");
 
