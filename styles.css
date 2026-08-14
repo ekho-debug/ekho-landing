@@ -77,7 +77,6 @@ section[id]{scroll-margin-top:104px}
 .btn-outline:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
 .btn-block{width:100%}
 
-.center-action{display:flex;justify-content:center;margin-top:38px}
 
 /* ---------- NAV ---------- */
 .nav-wrap{position:sticky;top:16px;z-index:100;padding:16px 20px 0;display:flex;justify-content:center}
@@ -315,10 +314,12 @@ section[id]{scroll-margin-top:104px}
 /* ---------- DIFERENCIAL + PROCESO ---------- */
 /* Mismas columnas y anchos que la sección Nosotros, para que alineen */
 .dif-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+/* Mismo estilo que el kicker de Nosotros (`.dif-copy p` es más específico) */
+.dif-copy .section-kicker{font-size:clamp(13px,1.25vw,15px);line-height:1.35;margin-bottom:18px}
 .dif-copy h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;line-height:1.12}
 .dif-linea{display:block;width:132px;height:3px;border-radius:99px;background:var(--accent);margin:22px 0}
 .dif-copy p{font-size:16px;line-height:1.7;color:var(--graphite)}
-.dif-ilu img,.dif-ilu svg{display:block;width:60%;height:auto;margin-inline:auto}
+.dif-ilu img{display:block;width:100%;max-width:430px;height:auto;margin-inline:auto}
 
 /* Proceso: los cuatro pasos cuelgan de una única línea horizontal */
 .ruta{margin-top:76px}
@@ -337,11 +338,6 @@ section[id]{scroll-margin-top:104px}
 .ruta-paso h3{font-size:15px;line-height:1.4;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
 .ruta-num{font-size:23px;font-weight:700;color:var(--accent);line-height:1}
 .ruta-paso p{margin-top:10px;font-size:13.5px;line-height:1.65;color:var(--graphite)}
-.ruta-cierre{
-  margin-top:52px;text-align:center;
-  font-family:var(--display);font-size:clamp(16px,1.9vw,20px);font-weight:600;color:var(--ink);line-height:1.45;
-}
-.ruta-cierre+.center-action{margin-top:26px}
 
 @keyframes slide{to{transform:translateX(-50%)}}
 
@@ -513,9 +509,9 @@ section[id]{scroll-margin-top:104px}
 }
 
 /* ---------- CTA CIERRE ---------- */
-.cta-block{text-align:center;max-width:780px;margin:0 auto}
+.cta-block{text-align:center;max-width:1000px;margin:0 auto}
 .cta-block h2{font-size:clamp(26px,3.8vw,44px);font-weight:700}
-.cta-block>p{margin:20px auto 0;max-width:600px;font-size:16px;line-height:1.65}
+.cta-block>p{margin:20px auto 0;font-size:16px;line-height:1.65}
 .cta-sub{font-size:14.5px;color:var(--graphite)}
 .cta-block .hero-actions{justify-content:center;margin-top:32px}
 
@@ -793,7 +789,6 @@ body.modal-open{overflow:hidden}
   .intro-text{text-align:left}
   .ruta-pasos{grid-template-columns:1fr;row-gap:34px}
   .ruta{margin-top:52px}
-  .center-action .btn{width:100%}
   /* Una tarjeta por fila, a todo el ancho */
   .svc-grid{grid-template-columns:1fr}
   .svc-titles{min-height:0}
@@ -809,6 +804,6 @@ body.modal-open{overflow:hidden}
 @media (max-width:520px){
   .panel{padding:32px 20px}
   .footer-panel{padding:32px 20px 26px}
-  .hero-actions .btn,.center-action .btn,.duo-card .btn{width:100%}
+  .hero-actions .btn,.duo-card .btn{width:100%}
   .duo-card .btn{align-self:stretch}
 }
