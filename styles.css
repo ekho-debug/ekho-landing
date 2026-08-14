@@ -216,13 +216,6 @@ section[id]{scroll-margin-top:104px}
 }
 .svc-card:hover{transform:translateY(-6px);border-color:rgba(255,0,145,.55);background:rgba(255,255,255,.055)}
 
-/* Marca decorativa arriba a la izquierda */
-.svc-mark{
-  width:34px;height:34px;border-radius:50%;flex-shrink:0;
-  border:1.4px solid rgba(255,0,145,.55);color:var(--accent);
-  display:grid;place-items:center;font-size:14px;line-height:1;margin-bottom:22px;
-}
-
 /* Encabezado con alto mínimo común: "EKHO Automatización" ocupa dos líneas */
 .svc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
 .svc-titles{display:flex;flex-direction:column;gap:8px;min-height:5.6em;flex:1;min-width:0}
@@ -259,8 +252,8 @@ section[id]{scroll-margin-top:104px}
    divisores, descripciones y botones quedan alineados sin medidas fijas. */
 @media (min-width:1041px){
   @supports (grid-template-rows:subgrid){
-    .svc-grid{grid-template-rows:auto auto auto 1fr auto;row-gap:0}
-    .svc-card{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0}
+    .svc-grid{grid-template-rows:auto auto 1fr auto;row-gap:0}
+    .svc-card{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:0}
     .svc-titles{min-height:0}
   }
 }
