@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=24">
+<link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -239,76 +239,10 @@
         </div>
 
         <div class="dif-ilu reveal" aria-hidden="true">
-          <svg viewBox="0 0 620 460" role="presentation" focusable="false">
-            <defs>
-              <radialGradient id="dg-fondo" cx="52%" cy="42%" r="62%">
-                <stop offset="0" stop-color="#FDEAF3"/><stop offset="1" stop-color="#FCE7F3"/>
-              </radialGradient>
-              <radialGradient id="dg-rosa" cx="34%" cy="28%" r="78%">
-                <stop offset="0" stop-color="#FF5CAE"/><stop offset="0.55" stop-color="#EC4899"/><stop offset="1" stop-color="#BE185D"/>
-              </radialGradient>
-              <radialGradient id="dg-blanco" cx="34%" cy="28%" r="78%">
-                <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#F7DCEA"/>
-              </radialGradient>
-              <linearGradient id="dg-flecha" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0" stop-color="#F9C7DF"/><stop offset="1" stop-color="#fff"/>
-              </linearGradient>
-              <linearGradient id="dg-arco" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#FF5CAE"/><stop offset="1" stop-color="#D6246F"/>
-              </linearGradient>
-              <filter id="dg-sombra" x="-30%" y="-30%" width="160%" height="160%">
-                <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#BE185D" flood-opacity=".22"/>
-              </filter>
-              <filter id="dg-sombrita" x="-40%" y="-40%" width="180%" height="180%">
-                <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#BE185D" flood-opacity=".2"/>
-              </filter>
-            </defs>
-
-            <path d="M312 22c118-14 236 26 268 118 32 92-18 176-88 226-70 50-160 76-246 66-86-10-168-56-196-138-28-82 14-176 92-224 78-48 52-34 170-48Z" fill="url(#dg-fondo)"/>
-
-            <path d="M120 300c58 34 96-24 154-6" stroke="#F472B6" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <path d="M352 138c46-30 92 4 118-18" stroke="#F472B6" stroke-width="4" fill="none" stroke-linecap="round"/>
-
-            <g filter="url(#dg-sombra)">
-              <circle cx="352" cy="222" r="132" fill="url(#dg-rosa)"/>
-              <circle cx="352" cy="222" r="98" fill="url(#dg-blanco)"/>
-              <circle cx="352" cy="222" r="64" fill="url(#dg-rosa)"/>
-              <circle cx="352" cy="222" r="30" fill="url(#dg-blanco)"/>
-              <circle cx="352" cy="222" r="12" fill="url(#dg-rosa)"/>
-            </g>
-            <ellipse cx="316" cy="168" rx="52" ry="30" fill="#fff" opacity=".16" transform="rotate(-28 316 168)"/>
-
-            <g filter="url(#dg-sombrita)">
-              <path d="M352 222 505 62" stroke="url(#dg-flecha)" stroke-width="15" stroke-linecap="round"/>
-              <path d="M470 52c14-6 30-8 44-6-2 14-4 30-10 44-10-14-22-28-34-38Z" fill="#EC4899"/>
-            </g>
-
-            <g filter="url(#dg-sombrita)">
-              <path d="M556 268c0-30-24-54-54-54s-54 24-54 54v46h30v-46a24 24 0 0 1 48 0v46h30z" fill="url(#dg-arco)"/>
-            </g>
-
-            <g filter="url(#dg-sombrita)">
-              <rect x="452" y="300" width="132" height="106" rx="16" fill="#fff"/>
-              <circle cx="486" cy="332" r="14" fill="#EC4899"/>
-              <rect x="510" y="325" width="56" height="9" rx="4.5" fill="#F9A8D4"/>
-              <rect x="470" y="360" width="96" height="8" rx="4" fill="#F1D7E4"/>
-              <rect x="470" y="378" width="96" height="8" rx="4" fill="#F1D7E4"/>
-            </g>
-
-            <g filter="url(#dg-sombrita)">
-              <rect x="150" y="220" width="86" height="72" rx="14" fill="#fff"/>
-              <rect x="168" y="240" width="50" height="34" rx="7" fill="none" stroke="#EC4899" stroke-width="5"/>
-              <path d="M168 252h50" stroke="#EC4899" stroke-width="5"/>
-            </g>
-
-            <g filter="url(#dg-sombrita)">
-              <circle cx="146" cy="312" r="30" fill="#fff"/>
-              <circle cx="228" cy="196" r="15" fill="#1F1B24"/>
-              <circle cx="272" cy="316" r="16" fill="#EC4899"/>
-              <circle cx="200" cy="146" r="12" fill="#F9A8D4"/>
-              <circle cx="566" cy="180" r="13" fill="#F472B6"/>
-            </g>
-          </svg>
+          <picture>
+            <source srcset="assets/icono-estrategia.webp" type="image/webp">
+            <img src="assets/icono-estrategia.png" width="900" height="603" loading="lazy" decoding="async" alt="">
+          </picture>
         </div>
       </div>
 
