@@ -20,12 +20,15 @@ const heroIlu = document.querySelector(".hero-ilu");
 const heroTitulo = document.querySelector(".hero-title");
 const heroLead = document.querySelector(".hero-lead");
 
+// Un 10% más alta que ese bloque
+const ESCALA_ILU = 1.1;
+
 if (heroIlu && heroTitulo && heroLead) {
   const ajustarIlu = () => {
     const alto =
       heroLead.getBoundingClientRect().bottom -
       heroTitulo.getBoundingClientRect().top;
-    heroIlu.style.setProperty("--alto-ilu", Math.round(alto) + "px");
+    heroIlu.style.setProperty("--alto-ilu", Math.round(alto * ESCALA_ILU) + "px");
   };
 
   ajustarIlu();
