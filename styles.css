@@ -22,7 +22,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-/* `clip` en vez de `hidden`: recorta el marquee rotado sin romper el nav sticky */
+/* `clip` en vez de `hidden`: contiene desbordes sin romper el nav sticky */
 html,body{overflow-x:clip}
 body{
   margin:0;
@@ -57,7 +57,7 @@ section[id]{scroll-margin-top:104px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
-  .marquee-track,.orb,.gem{animation:none!important}
+  .orb,.gem{animation:none!important}
 }
 
 /* ---------- BUTTONS ---------- */
@@ -313,11 +313,12 @@ section[id]{scroll-margin-top:104px}
 }
 
 /* ---------- DIFERENCIAL + PROCESO ---------- */
-.dif-grid{display:grid;grid-template-columns:40fr 60fr;gap:48px;align-items:center}
-.dif-copy h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;line-height:1.12;max-width:14ch}
+/* Mismas columnas y anchos que la sección Nosotros, para que alineen */
+.dif-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.dif-copy h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;line-height:1.12}
 .dif-linea{display:block;width:132px;height:3px;border-radius:99px;background:var(--accent);margin:22px 0}
-.dif-copy p{max-width:46ch;font-size:15.5px;line-height:1.75;color:var(--graphite)}
-.dif-ilu svg{display:block;width:100%;height:auto}
+.dif-copy p{font-size:16px;line-height:1.7;color:var(--graphite)}
+.dif-ilu img,.dif-ilu svg{display:block;width:60%;height:auto;margin-inline:auto}
 
 /* Proceso: los cuatro pasos cuelgan de una única línea horizontal */
 .ruta{margin-top:76px}
@@ -342,10 +343,6 @@ section[id]{scroll-margin-top:104px}
 }
 .ruta-cierre+.center-action{margin-top:26px}
 
-/* ---------- MARQUEE ---------- */
-.marquee{background:var(--accent);color:#fff;overflow:hidden;transform:rotate(-2deg) scale(1.05);margin:40px 0;padding:16px 0}
-.marquee-track{display:flex;width:max-content;animation:slide 34s linear infinite}
-.marquee-track span{font-family:var(--display);font-size:19px;font-weight:600;padding-right:26px;white-space:nowrap}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ---------- PLANES ---------- */
@@ -749,7 +746,6 @@ body.modal-open{overflow:hidden}
   .laptop{transform:perspective(1500px) rotateX(2deg)}
   /* La ilustración se achica y los pasos pasan a dos filas de dos */
   .dif-grid{grid-template-columns:1fr;gap:34px}
-  .dif-copy h2{max-width:none}
   .dif-ilu{max-width:560px;margin-inline:auto}
   .ruta-pasos{grid-template-columns:repeat(2,1fr);row-gap:40px}
   .ruta-linea{display:none}
