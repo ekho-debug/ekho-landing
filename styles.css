@@ -94,8 +94,8 @@ section[id]{scroll-margin-top:104px}
 .nav-toggle span{width:20px;height:2px;background:#fff;border-radius:2px}
 
 /* ---------- HERO ---------- */
-.hero{padding:44px 0 60px}
-.hero-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center}
+.hero{padding:84px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
 .hero-copy{max-width:560px}
 
 .hero-kicker,.section-kicker{
