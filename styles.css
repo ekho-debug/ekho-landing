@@ -133,62 +133,16 @@ section[id]{scroll-margin-top:104px}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
 @keyframes floatGem{0%,100%{transform:rotate(26deg) translateY(0)}50%{transform:rotate(26deg) translateY(-13px)}}
 
-/* Mockup real: la pantalla del PNG es un hueco transparente y el sitio se
-   proyecta detrás con la homografía medida sobre esas 4 esquinas. */
-.laptop{position:relative;z-index:1;width:100%;max-width:600px;aspect-ratio:1080/712}
-.laptop-stage{
-  position:absolute;top:0;left:0;
-  width:1080px;height:712px;
-  transform-origin:0 0;
-  transform:scale(var(--k,1));
+/* Ilustración del hero. `container-type` deja que el sello escale con la imagen. */
+.hero-ilu{position:relative;width:100%;max-width:600px;container-type:inline-size}
+.hero-ilu img{width:100%;height:auto}
+/* Se ubica sobre el círculo blanco que ya trae la ilustración */
+.hero-sello{
+  position:absolute;left:86.4%;top:17.9%;transform:translate(-50%,-50%);
+  width:17cqw;text-align:center;
+  font-family:var(--display);font-weight:700;font-size:clamp(9px,2.2cqw,15px);line-height:1.28;
+  color:var(--ink);letter-spacing:-.01em;
 }
-.laptop-img{
-  position:absolute;left:0;top:-318px;
-  width:1080px;height:1350px;max-width:none;
-  pointer-events:none;
-}
-/* Sombra de contacto contra el piso */
-.laptop-shadow{
-  position:absolute;left:4%;right:16%;bottom:2%;height:34px;z-index:-1;
-  background:radial-gradient(ellipse at 50% 50%,rgba(15,6,16,.3),rgba(15,6,16,0) 70%);
-  filter:blur(10px);
-}
-/* container-type + unidades cqw: el contenido escala con la pantalla */
-.laptop-screen{
-  position:absolute;top:0;left:0;
-  width:1000px;height:625px;
-  container-type:inline-size;
-  overflow:hidden;background:var(--ink);
-  transform-origin:0 0;
-  transform:matrix3d(0.365463,0.049591,0,-0.000135,-0.179813,0.663381,0,-0.000001,0,0,1,0,540,17,0,1);
-}
-
-/* --- Mini sitio dentro de la pantalla --- */
-.mini{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--ink)}
-.mini::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 80% at 28% 12%,rgba(255,0,145,.5),transparent 70%)}
-.mini-nav{position:relative;display:flex;align-items:center;gap:2cqw;padding:1.8cqw 2.8cqw;border-bottom:1px solid rgba(255,255,255,.09)}
-.mini-logo{height:2.2cqw;width:auto}
-.mini-links{display:flex;gap:1.4cqw;margin-left:auto}
-.mini-links i{display:block;width:3.6cqw;height:.6cqw;border-radius:2px;background:rgba(255,255,255,.32)}
-.mini-cta{width:7.6cqw;height:2.6cqw;border-radius:99px;background:var(--accent)}
-.mini-hero{position:relative;flex:1;padding:4cqw 3.2cqw 2.8cqw}
-.mini-eyebrow{
-  display:inline-block;font-family:var(--display);font-size:1.3cqw;font-weight:600;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--accent-pale);
-  background:rgba(255,255,255,.13);padding:.8cqw 1.8cqw;border-radius:99px;
-}
-.mini-title{margin-top:2cqw;max-width:76%;font-family:var(--display);font-size:3.4cqw;font-weight:700;color:#fff;line-height:1.12}
-.mini-sub{margin-top:1.4cqw;max-width:62%;font-size:1.6cqw;line-height:1.5;color:rgba(255,255,255,.62)}
-.mini-btns{display:flex;gap:1.2cqw;margin-top:2.6cqw}
-.mini-btns i{display:block;width:8.8cqw;height:2.8cqw;border-radius:99px;background:rgba(255,255,255,.16)}
-.mini-btns i.on{width:10.4cqw;background:var(--accent)}
-.mini-cards{position:relative;display:flex;gap:1.4cqw;padding:2cqw 2.8cqw 2.4cqw;background:#fff}
-.mini-card{
-  flex:1;display:flex;align-items:center;gap:1cqw;
-  font-family:var(--display);font-size:1.4cqw;font-weight:600;color:var(--ink);
-  background:var(--mist);border-radius:6px;padding:1.6cqw 1.4cqw;
-}
-.mini-card i{width:1.8cqw;height:1.8cqw;border-radius:3px;background:var(--accent);flex-shrink:0}
 
 /* ---------- PANELS / TITULOS ---------- */
 .panel{border-radius:var(--r-panel);padding:56px}
@@ -738,8 +692,7 @@ body.modal-open{overflow:hidden}
   .hero-copy{max-width:660px}
   .hero-lead{margin-inline:auto}
   .hero-actions{justify-content:center}
-  .hero-visual{width:100%;max-width:600px;min-height:340px}
-  .laptop{transform:perspective(1500px) rotateX(2deg)}
+  .hero-visual{width:100%;max-width:600px;min-height:0}
   /* La ilustración se achica y los pasos pasan a dos filas de dos */
   .dif-grid{grid-template-columns:1fr;gap:34px}
   .dif-ilu{max-width:560px;margin-inline:auto}

@@ -14,24 +14,6 @@ navLinks?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-// --- Mockup de la notebook ---
-// La escena se dibuja en las coordenadas del PNG (1080px de ancho) y se escala
-// al ancho real del contenedor, para que la pantalla proyectada calce siempre.
-const laptop = document.querySelector(".laptop");
-const laptopStage = document.querySelector(".laptop-stage");
-
-if (laptop && laptopStage) {
-  const fitLaptop = () => {
-    laptopStage.style.setProperty("--k", laptop.clientWidth / 1080);
-  };
-  fitLaptop();
-  if ("ResizeObserver" in window) {
-    new ResizeObserver(fitLaptop).observe(laptop);
-  } else {
-    window.addEventListener("resize", fitLaptop);
-  }
-}
-
 // --- Reveal al scrollear ---
 const revealItems = document.querySelectorAll(".reveal");
 
