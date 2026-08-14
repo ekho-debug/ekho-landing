@@ -57,7 +57,7 @@ section[id]{scroll-margin-top:104px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
-  .orb,.gem{animation:none!important}
+  .orb,.gem,.cohete-nave,.cohete-humo{animation:none!important}
 }
 
 /* ---------- BUTTONS ---------- */
@@ -134,8 +134,16 @@ section[id]{scroll-margin-top:104px}
 @keyframes floatGem{0%,100%{transform:rotate(26deg) translateY(0)}50%{transform:rotate(26deg) translateY(-13px)}}
 
 /* Ilustración del hero. `container-type` deja que el sello escale con la imagen. */
-.hero-ilu{position:relative;width:100%;max-width:600px;container-type:inline-size}
-.hero-ilu img{width:100%;height:auto}
+.hero-ilu{position:relative;width:100%;max-width:468px;container-type:inline-size}
+.cohete{position:relative}
+.cohete-capa{width:100%;height:auto;display:block}
+.cohete-nave,.cohete-humo{position:absolute;inset:0}
+/* El cohete despega una sola vez y se queda arriba; el humo sigue moviéndose */
+.cohete-nave{animation:despegue 3.2s cubic-bezier(.16,1,.3,1) .8s both}
+.cohete-humo{transform-origin:39% 68%;animation:humo 4.5s ease-in-out 1s infinite alternate}
+@keyframes despegue{from{transform:translateY(0)}to{transform:translateY(-2%)}}
+/* Nunca baja de scale(1): así el humo siempre tapa la base de la estela */
+@keyframes humo{from{transform:scale(1) translate(0,0)}to{transform:scale(1.04) translate(-.5%,-.6%)}}
 /* Se ubica sobre el círculo blanco que ya trae la ilustración */
 .hero-sello{
   position:absolute;left:86.4%;top:17.9%;transform:translate(-50%,-50%);

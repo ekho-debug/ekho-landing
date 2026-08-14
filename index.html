@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=33">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -84,10 +84,11 @@
         <span class="gem"></span>
 
         <div class="hero-ilu">
-          <picture>
-            <source srcset="assets/hero-cohete.webp" type="image/webp">
-            <img src="assets/hero-cohete.png" width="1300" height="1212" fetchpriority="high" decoding="async" alt="">
-          </picture>
+          <div class="cohete">
+            <img class="cohete-capa" src="assets/hero-fondo.webp" width="1300" height="1212" fetchpriority="high" decoding="async" alt="">
+            <img class="cohete-capa cohete-nave" src="assets/hero-nave.webp" width="1300" height="1212" decoding="async" alt="">
+            <img class="cohete-capa cohete-humo" src="assets/hero-humo.webp" width="1300" height="1212" decoding="async" alt="">
+          </div>
           <p class="hero-sello">Creamos soluciones con impacto</p>
         </div>
       </div>
