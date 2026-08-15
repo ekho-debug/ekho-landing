@@ -263,23 +263,57 @@ section[id]{scroll-margin-top:104px}
 .dif-copy p{font-size:16px;line-height:1.7;color:var(--graphite)}
 .dif-ilu img{display:block;width:100%;max-width:430px;height:auto;margin-inline:auto}
 
-/* Proceso: los cuatro pasos cuelgan de una única línea horizontal */
-.ruta{margin-top:76px}
+/* Proceso: recorrido en zigzag de tres etapas */
+.ruta{margin-top:76px;--tinta-proceso:#0f1c2e;--salto:96px;--modulo:132px}
 .ruta-titulo{font-size:clamp(20px,2.2vw,26px);font-weight:700}
-.ruta-pasos{
-  position:relative;margin-top:34px;padding-top:34px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:30px;align-items:start;
+
+.ruta-zig{
+  position:relative;margin-top:44px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:34px;align-items:start;
+  padding-bottom:8px;
 }
-.ruta-linea{position:absolute;left:0;right:0;top:6px;height:1.5px;background:rgba(255,0,145,.28)}
-.ruta-paso{position:relative}
-/* Nodo de cada etapa, sobre la línea */
-.ruta-paso::before{
-  content:"";position:absolute;left:0;top:-33px;width:10px;height:10px;border-radius:50%;
-  background:#fff;border:2px solid var(--accent);
+/* El trazo ocupa solo la banda de los módulos y queda por detrás */
+/* Va del centro del módulo alto al centro del bajo: así calza en cualquier breakpoint */
+.ruta-trazo{
+  position:absolute;left:0;right:0;z-index:0;pointer-events:none;width:100%;
+  top:calc(var(--modulo) / 2);
+  height:var(--salto);
 }
-.ruta-paso h3{font-size:15px;line-height:1.4;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
-.ruta-num{font-size:23px;font-weight:700;color:var(--accent);line-height:1}
-.ruta-paso p{margin-top:10px;font-size:13.5px;line-height:1.65;color:var(--graphite)}
+.ruta-trazo path{
+  fill:none;stroke:#ECECEC;stroke-width:15;
+  stroke-linecap:round;stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+
+.ruta-paso{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+/* La segunda etapa baja: de ahí el zigzag */
+.ruta-paso--bajo{margin-top:var(--salto)}
+
+.ruta-modulo{position:relative;width:var(--modulo);height:var(--modulo)}
+/* Pieza inclinada con volumen; el ícono se endereza aparte */
+.ruta-pieza{
+  position:absolute;inset:0;display:grid;place-items:center;
+  border-radius:34px;transform:rotate(-8deg);
+  background:linear-gradient(150deg,#fff 40%,#FFEFF8);
+  border:1px solid rgba(255,0,145,.14);
+  box-shadow:0 20px 34px -16px rgba(255,0,145,.45),
+             0 2px 0 rgba(255,255,255,.9) inset,
+             0 0 0 8px rgba(255,0,145,.045);
+}
+.ruta-icono{
+  width:46px;height:46px;transform:rotate(8deg);
+  fill:none;stroke:var(--accent);stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.ruta-num{
+  position:absolute;top:-20px;left:-16px;z-index:2;
+  font-family:var(--display);font-size:38px;font-weight:700;line-height:1;
+  color:var(--accent);letter-spacing:-.02em;
+}
+
+.ruta-texto{margin-top:22px}
+.ruta-paso h3{font-size:16px;line-height:1.35;color:var(--tinta-proceso)}
+.ruta-paso p{margin-top:10px;max-width:30ch;margin-inline:auto;font-size:13.5px;line-height:1.65;color:var(--graphite)}
 
 @keyframes slide{to{transform:translateX(-50%)}}
 
@@ -684,9 +718,9 @@ body.modal-open{overflow:hidden}
   /* La ilustración se achica y los pasos pasan a dos filas de dos */
   .dif-grid{grid-template-columns:1fr;gap:34px}
   .dif-ilu{max-width:560px;margin-inline:auto}
-  .ruta-pasos{grid-template-columns:repeat(2,1fr);row-gap:40px}
-  .ruta-linea{display:none}
-  .ruta-paso::before{top:-24px}
+  /* Se achica el desnivel para no estirar la sección */
+  .ruta{--salto:60px;--modulo:116px}
+  .ruta-zig{gap:24px}
   .panel{padding:44px 34px}
   /* El título pasa arriba: la línea vertical se vuelve horizontal */
   .panel-head{grid-template-columns:1fr;gap:24px;align-items:start}
@@ -728,8 +762,22 @@ body.modal-open{overflow:hidden}
 @media (max-width:700px){
   /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
   .intro-text{text-align:left}
-  .ruta-pasos{grid-template-columns:1fr;row-gap:34px}
-  .ruta{margin-top:52px}
+  /* En celular el recorrido pasa a ser una vertical discreta */
+  .ruta{margin-top:52px;--salto:0px;--modulo:104px}
+  .ruta-zig{grid-template-columns:1fr;gap:34px;padding-left:14px}
+  .ruta-num{top:-16px;left:-12px;font-size:32px}
+  .ruta-trazo{display:none}
+  .ruta-paso{flex-direction:row;align-items:flex-start;gap:20px;text-align:left}
+  .ruta-paso--bajo{margin-top:0}
+  .ruta-modulo{flex-shrink:0}
+  /* Une cada módulo con el siguiente */
+  .ruta-paso:not(:last-child)::after{
+    content:"";position:absolute;z-index:0;
+    left:calc(var(--modulo) / 2 - 1.5px);top:var(--modulo);
+    width:3px;height:34px;border-radius:99px;background:#ECECEC;
+  }
+  .ruta-texto{margin-top:0;padding-top:4px}
+  .ruta-paso p{max-width:none;margin-inline:0}
   /* Una tarjeta por fila, a todo el ancho */
   .svc-grid{grid-template-columns:1fr}
   .svc-titles{min-height:0}
