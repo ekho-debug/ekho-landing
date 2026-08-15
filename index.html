@@ -26,29 +26,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-blanco.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=40">
+<link rel="stylesheet" href="styles.css?v=41">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
 <!-- NAV -->
-<header class="nav-wrap">
+<header class="nav-wrap" id="nav-wrap">
   <div class="nav">
     <a href="#inicio" class="nav-logo" aria-label="EKHO Comunicaciones — ir al inicio">
-      <img src="assets/ekho-logo-blanco.png" width="1226" height="367" alt="EKHO Comunicaciones, agencia de comunicación digital">
+      <img src="assets/ekho-logo-oscuro.png" width="1226" height="367" alt="EKHO Comunicaciones, agencia de comunicación digital">
     </a>
 
     <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
-      <a href="#proceso">Cómo trabajamos</a>
-      <button type="button" class="nav-link-btn" data-open="modal-planes">Planes</button>
+      <a href="#diferencial">Cómo trabajamos</a>
       <a href="#faq">Preguntas frecuentes</a>
-      <a href="#contacto">Contacto</a>
-      <a class="btn btn-accent nav-cta-mobile" href="#contacto">Contanos qué necesitás</a>
+      <a class="btn btn-accent nav-cta nav-cta--movil" href="#contacto">Contanos qué necesitás</a>
     </nav>
 
-    <a class="btn btn-accent nav-cta" href="#contacto">Contanos qué necesitás <span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="btn btn-accent nav-cta nav-cta--escritorio" href="#contacto">Contanos qué necesitás</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>

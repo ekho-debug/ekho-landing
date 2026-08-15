@@ -14,6 +14,65 @@ navLinks?.querySelectorAll("a").forEach((link) => {
   });
 });
 
+// --- Navegación activa según la sección visible ---
+// Se elige la última sección cuyo comienzo ya pasó la línea de detección.
+// Al depender de una única línea no oscila entre dos opciones en los límites.
+const navWrap = document.getElementById("nav-wrap");
+const enlacesNav = [...document.querySelectorAll("#nav-links a[href^='#'], .nav-cta")];
+
+const seccionesNav = [
+  ...new Set(enlacesNav.map((a) => a.getAttribute("href"))),
+]
+  .map((id) => ({ id, el: document.querySelector(id) }))
+  .filter((s) => s.el)
+  .sort((a, b) => a.el.getBoundingClientRect().top - b.el.getBoundingClientRect().top);
+
+if (navWrap && seccionesNav.length) {
+  let activa = null;
+  let pendiente = false;
+
+  const marcar = (id) => {
+    if (id === activa) return;
+    activa = id;
+    enlacesNav.forEach((a) => {
+      const suya = a.getAttribute("href") === id;
+      a.classList.toggle("is-active", suya);
+      if (suya) a.setAttribute("aria-current", "location");
+      else a.removeAttribute("aria-current");
+    });
+  };
+
+  const revisar = () => {
+    pendiente = false;
+    const alturaNav = navWrap.getBoundingClientRect().bottom;
+    const linea = window.scrollY + alturaNav + 40;
+
+    let elegida = seccionesNav[0];
+    for (const s of seccionesNav) {
+      if (s.el.getBoundingClientRect().top + window.scrollY <= linea) elegida = s;
+    }
+    // Al final de la página siempre gana la última sección
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
+      elegida = seccionesNav[seccionesNav.length - 1];
+    }
+
+    navWrap.classList.toggle("is-scrolled", window.scrollY > 8);
+    marcar(elegida.id);
+  };
+
+  const pedirRevision = () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(revisar);
+  };
+
+  revisar();
+  window.addEventListener("scroll", pedirRevision, { passive: true });
+  window.addEventListener("resize", pedirRevision);
+  // El scroll suave sigue emitiendo eventos, así que el estado se corrige solo al llegar
+  enlacesNav.forEach((a) => a.addEventListener("click", () => setTimeout(pedirRevision, 60)));
+}
+
 // --- Ilustración del hero ---
 // Mide lo mismo que el bloque que va del título al último renglón del párrafo.
 const heroIlu = document.querySelector(".hero-ilu");
