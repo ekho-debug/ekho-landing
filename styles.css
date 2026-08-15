@@ -709,7 +709,8 @@ body.modal-open{overflow:hidden}
 }
 
 /* ---------- FAQ ---------- */
-.faq{max-width:860px;margin:44px auto 0}
+/* Ocupa todo el ancho de la sección, igual que el título */
+.faq{margin:44px 0 0}
 .faq-item{border:1px solid rgba(15,6,16,.1);border-radius:var(--r-sm);margin-bottom:12px;overflow:hidden;transition:border-color .25s ease}
 .faq-item:has(.faq-q[aria-expanded="true"]){border-color:var(--accent)}
 .faq-q{
