@@ -726,7 +726,8 @@ body.modal-open{overflow:hidden}
 }
 .faq-q[aria-expanded="true"] .faq-i{transform:rotate(45deg);background:var(--accent);color:#fff}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
-.faq-a p{padding:0 24px 20px;font-size:14.5px;line-height:1.65;max-width:680px}
+/* Llega hasta poco antes del botón: 24 de margen + 32 del círculo + 18 de aire */
+.faq-a p{padding:0 74px 20px 24px;font-size:14.5px;line-height:1.65}
 .faq-a p+p{padding-top:0;margin-top:-8px}
 
 /* ---------- FOOTER ---------- */
