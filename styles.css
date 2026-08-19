@@ -271,7 +271,9 @@ section[id]{scroll-margin-top:104px}
 .svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:10px 0 12px}
 
 /* Ocupa el espacio sobrante: empuja los tres botones a la misma línea */
-.svc-body{flex:1;display:flex;flex-direction:column;gap:14px;text-align:center}
+.svc-body{flex:1;display:flex;flex-direction:column;gap:14px}
+/* Solo los dos párrafos: títulos y botón conservan su alineación */
+.svc-body p{text-align:justify;hyphens:none}
 .svc-card p{font-size:14.5px;line-height:1.65}
 
 .svc-btn{
