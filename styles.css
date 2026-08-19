@@ -203,6 +203,11 @@ section[id]{scroll-margin-top:104px}
   text-align:left;margin:0;
   font-size:clamp(26px,3.4vw,42px);font-weight:700;
 }
+/* En tablet y escritorio entra en un renglón: el texto mide 27,1 veces el cuerpo
+   de la letra, así que se lo ata al ancho disponible con un margen de seguridad. */
+@media (min-width:701px){
+  .section-title{font-size:min(41px, calc((100vw - 70px) / 27.3))}
+}
 .section-sub{text-align:center;margin:16px auto 0;max-width:720px;font-size:16px;line-height:1.65}
 .section-sub+.section-sub{margin-top:12px}
 .section-title+.section-sub{margin-top:18px}
