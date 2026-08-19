@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-oscuro.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=74">
+<link rel="stylesheet" href="styles.css?v=75">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -364,12 +364,18 @@
             </div>
             <input type="hidden" id="f-plan" name="plan" value="">
             <input type="hidden" id="f-web" name="tipo_web" value="">
+            <input type="hidden" name="access_key" value="23a6e3e3-49cc-4141-802f-6c3969574880">
+            <input type="hidden" name="subject" value="Nueva consulta desde la web de EKHO">
+            <input type="hidden" name="from_name" value="Web EKHO Comunicaciones">
+            <!-- Trampa antispam: invisible y fuera del foco; solo la completan los robots -->
+            <input type="checkbox" name="botcheck" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
             <p class="field-note field--full" id="seleccion" hidden><span></span> <strong></strong></p>
           </div>
 
           <button type="submit" class="btn btn-accent btn-block">Enviar consulta</button>
           <p class="microcopy">Al enviar el formulario, aceptás que nos comuniquemos con vos para responder tu consulta.</p>
           <p class="form-msg" id="form-msg" role="status">¡Gracias! Recibimos tu consulta y nos vamos a comunicar con vos a la brevedad.</p>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
         </form>
       </div>
     </div>
@@ -919,6 +925,6 @@
 }
 </script>
 
-<script src="script.js?v=10" defer></script>
+<script src="script.js?v=11" defer></script>
 </body>
 </html>

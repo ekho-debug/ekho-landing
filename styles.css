@@ -542,6 +542,13 @@ section[id]{scroll-margin-top:104px}
 body.modal-open{overflow:hidden}
 .form-msg{display:none;margin-top:18px;padding:16px;border-radius:14px;background:var(--accent-pale);
   font-size:14px;font-weight:600;color:var(--accent-dark);text-align:center}
+/* Aviso de error: solo aparece si el envío falló de verdad */
+.form-error{margin-top:14px;padding:14px 16px;border-radius:14px;
+  background:#FDECEC;border:1px solid #F5B5B5;
+  font-size:14px;font-weight:600;color:#A32020;text-align:center}
+.contact-form button[type="submit"]:disabled{opacity:.65;cursor:progress;transform:none}
+/* Trampa antispam: invisible para las personas y para los lectores de pantalla */
+.trampa{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px}
 .contact-form.is-sent .fields,
 .contact-form.is-sent button[type="submit"],
 .contact-form.is-sent .microcopy{display:none}

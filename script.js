@@ -241,14 +241,46 @@ document.querySelectorAll(".modal [data-servicio]").forEach((btn) => {
   });
 });
 
-// --- Formulario: sin backend todavía, confirma en pantalla ---
+// --- Formulario de contacto ---
+// Envía a Web3Forms, que reenvía la consulta a info@ekho.com.ar.
 const contactForm = document.getElementById("contact-form");
+const formError = document.getElementById("form-error");
 
-contactForm?.addEventListener("submit", (e) => {
+contactForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   if (!contactForm.checkValidity()) {
     contactForm.reportValidity();
     return;
   }
-  contactForm.classList.add("is-sent");
+
+  const boton = contactForm.querySelector("button[type=submit]");
+  const textoOriginal = boton.textContent;
+
+  // Evita el doble envío mientras viaja la consulta
+  boton.disabled = true;
+  boton.textContent = "Enviando…";
+  formError.hidden = true;
+
+  try {
+    const respuesta = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(contactForm),
+    });
+    const datos = await respuesta.json();
+
+    if (!respuesta.ok || !datos.success) {
+      throw new Error(datos.message || "El envío no se completó");
+    }
+
+    // Solo acá se muestra el agradecimiento: cuando el envío se confirmó
+    contactForm.classList.add("is-sent");
+  } catch (error) {
+    formError.textContent =
+      "No pudimos enviar tu consulta. Probá de nuevo, o escribinos a info@ekho.com.ar.";
+    formError.hidden = false;
+    boton.disabled = false;
+    boton.textContent = textoOriginal;
+  }
 });
