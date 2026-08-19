@@ -224,7 +224,11 @@ section[id]{scroll-margin-top:104px}
 /* `.intro p` es más específico: hay que repetir el tamaño del kicker */
 .intro .section-kicker{font-size:clamp(13px,1.25vw,15px);line-height:1.35}
 /* Justificado sin guionado: ninguna palabra se parte al final de la línea */
-.intro-text{text-align:justify;hyphens:none}
+/* Título y párrafos centrados; el kicker se queda a la izquierda */
+.intro h2{text-align:center}
+.intro-text{text-align:center;hyphens:none}
+.intro .section-kicker{text-align:left}
+.intro-cierre{font-weight:700;font-style:italic;color:var(--accent)}
 
 
 .check-list{display:flex;flex-direction:column;gap:11px}
@@ -821,7 +825,9 @@ body.modal-open{overflow:hidden}
   .hero-actions{flex-direction:column;align-items:stretch}
   .hero-actions .btn{width:100%}
   /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
-  .intro-text,.panel-head-txt p{text-align:left}
+  .panel-head-txt p{text-align:left}
+  /* Los saltos fijos estorban en columna angosta */
+  .intro-text br{display:none}
   /* En celular el recorrido pasa a ser una vertical discreta */
   .ruta{margin-top:46px;--salto:0px;--modulo:88px}
   .ruta-zig{grid-template-columns:1fr;gap:34px;padding-left:14px}
