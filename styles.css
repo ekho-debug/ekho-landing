@@ -283,7 +283,7 @@ section[id]{scroll-margin-top:104px}
   transition:background .22s ease,border-color .22s ease,transform .22s ease;
 }
 .svc-btn:hover{background:rgba(255,0,145,.14);border-color:var(--accent);transform:translateY(-2px)}
-.svc-btn:hover 
+
 /* Con subgrid las tres tarjetas comparten las mismas filas: encabezados,
    divisores, descripciones y botones quedan alineados sin medidas fijas. */
 @media (min-width:1041px){
