@@ -405,10 +405,10 @@ section[id]{scroll-margin-top:104px}
 #modal-auto .modal-box{max-width:1240px}
 #modal-auto .modal-body{padding:6px 34px 34px}
 
-.auto-grid{display:grid;grid-template-columns:1.3fr 1fr .66fr;gap:36px;align-items:start}
+.auto-grid{display:grid;grid-template-columns:1.2fr 1.15fr .85fr;gap:34px;align-items:start}
 
 /* --- Presentación --- */
-.auto-intro h2{font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.12;max-width:11ch}
+.auto-intro h2{font-size:clamp(26px,2.9vw,38px);font-weight:700;line-height:1.14}
 /* Trazos decorativos: van superpuestos, no empujan el texto */
 .rz-ovalo,.rz-subrayado{position:relative;display:inline-block}
 .rz-ovalo svg{position:absolute;left:-5%;top:50%;width:110%;height:150%;transform:translateY(-50%);overflow:visible;pointer-events:none}
@@ -418,14 +418,15 @@ section[id]{scroll-margin-top:104px}
 
 /* --- Proceso en tres etapas --- */
 .proceso{position:relative;margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
-.proceso-linea{position:absolute;left:0;top:2px;width:100%;height:52px;pointer-events:none}
+/* Recta y por detrás de los círculos */
+.proceso-linea{position:absolute;left:17px;right:17px;top:17px;height:1.5px;background:var(--accent);opacity:.45;pointer-events:none}
 .proceso-paso{position:relative;display:flex;flex-direction:column}
 .proceso-num{
   width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
   display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px;
-  margin-bottom:20px;position:relative;z-index:1;
+  margin-bottom:18px;position:relative;z-index:1;
 }
-.proceso-paso h3{font-size:15px;line-height:1.35;min-height:2.7em}
+.proceso-paso h3{font-size:14.5px;line-height:1.35;min-height:2.7em}
 .proceso-paso p{margin-top:10px;font-size:13.5px;line-height:1.6}
 
 /* --- Simulación de conversación --- */
@@ -447,7 +448,7 @@ section[id]{scroll-margin-top:104px}
 .chat-id i{font-style:normal;font-size:11.5px;color:var(--graphite)}
 .chat-menu{margin-left:auto;width:4px;height:18px;flex-shrink:0;
   background:radial-gradient(circle,rgba(15,6,16,.45) 1.7px,transparent 1.8px) 0 0/4px 6px repeat-y}
-.chat-hilo{display:flex;flex-direction:column;gap:12px;padding:16px 16px 16px 38px;background:#FAFAFA}
+.chat-hilo{display:flex;flex-direction:column;gap:12px;padding:16px;background:#FAFAFA}
 .chat-dia{align-self:center;font-size:11px;color:var(--graphite);background:rgba(15,6,16,.06);padding:4px 12px;border-radius:999px}
 .chat-fila{position:relative;display:flex;align-items:flex-end;gap:8px;max-width:88%}
 .chat-fila--cliente{align-self:flex-end;justify-content:flex-end}
@@ -457,11 +458,13 @@ section[id]{scroll-margin-top:104px}
   font-size:13px;line-height:1.5;color:var(--ink);
 }
 .chat-burbuja--cliente{background:#FCE7F3}
-.chat-burbuja--aviso{display:flex;gap:9px;align-items:flex-start}
-.chat-campana{width:17px;height:17px;flex-shrink:0;color:var(--accent);margin-top:1px}
-.chat-campana svg{width:100%;height:100%}
+/* El recordatorio va fuera de la burbuja, en un círculo */
+.chat-campana{
+  width:30px;height:30px;flex-shrink:0;align-self:flex-end;border-radius:50%;
+  background:#FCE7F3;color:var(--accent);display:grid;place-items:center;
+}
+.chat-campana svg{width:16px;height:16px}
 .chat-hora{position:absolute;right:11px;bottom:6px;font-size:10px;color:var(--graphite);white-space:nowrap}
-.chat-burbuja--aviso .chat-hora{position:static;display:block;margin-top:6px;text-align:right}
 .chat-archivo{
   display:flex;align-items:center;gap:11px;width:100%;
   background:#fff;border:1px solid rgba(15,6,16,.1);border-radius:14px;padding:11px 13px 20px;position:relative;
@@ -471,25 +474,18 @@ section[id]{scroll-margin-top:104px}
 .chat-archivo-txt{display:flex;flex-direction:column;line-height:1.35;min-width:0}
 .chat-archivo-txt b{font-size:12.5px;color:var(--ink);word-break:break-word}
 .chat-archivo-txt i{font-style:normal;font-size:11px;color:var(--graphite)}
-/* Flecha punteada decorativa: se ancla al mensaje, así nunca se desalinea */
-.chat-flecha::before{
-  content:"";position:absolute;left:-30px;top:50%;width:22px;height:34px;transform:translateY(-50%);
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 34' fill='none' stroke='%23F472B6' stroke-width='1.6' stroke-linecap='round' stroke-dasharray='3 3'%3E%3Cpath d='M2 2C2 18 8 26 19 30'/%3E%3Cpath d='M14 30.5 19.5 30.5 18 25' stroke-dasharray='0'/%3E%3C/svg%3E") center/contain no-repeat;
-  pointer-events:none;
-}
 
 /* --- Tareas automatizables --- */
-.tareas{position:relative;padding-left:26px}
-/* Línea vertical con nodos que conecta con la conversación */
-.tareas::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:1.5px;background:var(--accent);opacity:.55}
+.tareas{position:relative}
 .tareas-titulo{font-family:var(--display);font-weight:700;font-size:14.5px;color:var(--accent);margin-bottom:20px}
-.tareas-lista{display:flex;flex-direction:column;gap:22px}
-.tareas-lista li{position:relative;display:flex;align-items:center;gap:13px;font-size:13.5px;line-height:1.5}
-.tareas-lista li::before{
-  content:"";position:absolute;left:-26px;top:50%;width:26px;height:1.5px;transform:translateY(-50%);
-  background:repeating-linear-gradient(90deg,var(--accent) 0 4px,transparent 4px 8px);opacity:.6;
+.tareas-lista{display:flex;flex-direction:column}
+/* Una línea separa cada tarea, salvo la última */
+.tareas-lista li{
+  display:flex;align-items:center;gap:13px;
+  padding:14px 0;font-size:13.5px;line-height:1.5;
+  border-bottom:1px solid rgba(15,6,16,.1);
 }
-.tareas-lista li::after{content:"";position:absolute;left:-29px;top:50%;width:7px;height:7px;border-radius:50%;background:var(--accent);transform:translateY(-50%)}
+.tareas-lista li:last-child{border-bottom:0}
 .tarea-icono{width:40px;height:40px;flex-shrink:0;border-radius:50%;background:#FCE7F3;color:var(--accent);display:grid;place-items:center}
 .tarea-icono svg{width:20px;height:20px}
 
@@ -498,13 +494,10 @@ section[id]{scroll-margin-top:104px}
 
 /* Tablet: presentación arriba, conversación y tareas debajo */
 @media (max-width:1100px){
-  .auto-grid{grid-template-columns:1fr 1fr;gap:30px}
+  /* La conversación pesa más que la lista */
+  .auto-grid{grid-template-columns:1.3fr 1fr;gap:30px}
   .auto-intro{grid-column:1/-1}
   .auto-intro h2{max-width:none}
-  .chat-flecha::before{display:none}
-  .tareas{padding-left:0}
-  .tareas::before{display:none}
-  .tareas-lista li::before,.tareas-lista li::after{display:none}
 }
 
 @media (max-width:860px){
@@ -716,8 +709,8 @@ body.modal-open{overflow:hidden}
   #modal-web .web-nota{align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){
-  #modal-web .modal-box{animation:none}
-  #modal-web .modal-backdrop{animation:none}
+  #modal-web .modal-box,#modal-auto .modal-box{animation:none}
+  #modal-web .modal-backdrop,#modal-auto .modal-backdrop{animation:none}
 }
 
 

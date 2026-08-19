@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/ekho-logo-oscuro.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=53">
+<link rel="stylesheet" href="styles.css?v=56">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -660,7 +660,7 @@
 
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-auto-titulo" aria-describedby="modal-auto-sub">
     <div class="modal-head">
-      <button type="button" class="modal-close" data-close aria-label="Cerrar automatizaciones">
+      <button type="button" class="modal-close" data-close aria-label="Cerrar opciones de automatización">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
@@ -674,38 +674,33 @@
           <p class="auto-texto">Analizamos cómo gestionás tus consultas y detectamos qué tareas pueden simplificarse.</p>
 
           <div class="proceso">
-            <svg class="proceso-linea" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M40 30c70-34 150 34 220 0s150-34 250 6" fill="none" stroke="#F9A8D4" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 0"/>
-              <path d="M498 26l14 10-15 9" fill="none" stroke="#F9A8D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="proceso-linea" aria-hidden="true"></span>
             <div class="proceso-paso">
               <span class="proceso-num" aria-hidden="true">01</span>
-              <h3>— Entendemos tu proceso</h3>
+              <h3>01 — Entendemos tu proceso</h3>
               <p>Revisamos tus canales, consultas frecuentes y formas de seguimiento.</p>
             </div>
             <div class="proceso-paso">
               <span class="proceso-num" aria-hidden="true">02</span>
-              <h3>— Diseñamos la solución</h3>
+              <h3>02 — Diseñamos la solución</h3>
               <p>Creamos una automatización adaptada a tu manera de trabajar.</p>
             </div>
             <div class="proceso-paso">
               <span class="proceso-num" aria-hidden="true">03</span>
-              <h3>— La ponemos en marcha</h3>
+              <h3>03 — La ponemos en marcha</h3>
               <p>Probamos, ajustamos y te acompañamos en la implementación.</p>
             </div>
           </div>
         </div>
 
-        <figure class="chat" role="img" aria-label="Ejemplo visual de una conversación automatizada: saludo inicial, consulta del cliente por un presupuesto, envío de una propuesta en PDF, derivación al equipo de Cuentas y mensaje de seguimiento.">
+        <figure class="chat" role="img" aria-label="Ejemplo visual de una conversación automatizada: saludo inicial, consulta del cliente por un presupuesto, envío de una propuesta en PDF y mensaje de seguimiento.">
           <div class="chat-top">
             <span class="chat-avatar" aria-hidden="true">E.</span>
             <span class="chat-id"><b>EKHO Comunicaciones</b><i>En línea</i></span>
             <span class="chat-menu" aria-hidden="true"></span>
           </div>
           <div class="chat-hilo">
-            <span class="chat-dia">Hoy</span>
-
-            <div class="chat-fila chat-flecha">
+            <div class="chat-fila">
               <span class="chat-avatar chat-avatar--mini" aria-hidden="true">E.</span>
               <p class="chat-burbuja">¡Hola! Gracias por escribirnos.<br>¿En qué podemos ayudarte?<span class="chat-hora">10:01</span></p>
             </div>
@@ -714,12 +709,12 @@
               <p class="chat-burbuja chat-burbuja--cliente">Hola, necesito presupuesto para <b>manejo de redes sociales.</b><span class="chat-hora">10:02 ✓✓</span></p>
             </div>
 
-            <div class="chat-fila chat-flecha">
+            <div class="chat-fila">
               <span class="chat-avatar chat-avatar--mini" aria-hidden="true">E.</span>
               <p class="chat-burbuja">¡Gracias! Te enviamos la información detallada.<span class="chat-hora">10:02</span></p>
             </div>
 
-            <div class="chat-fila chat-fila--archivo chat-flecha">
+            <div class="chat-fila chat-fila--archivo">
               <p class="chat-archivo">
                 <span class="chat-pdf" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
@@ -729,17 +724,15 @@
               </p>
             </div>
 
-            <div class="chat-fila chat-flecha">
-              <p class="chat-burbuja chat-burbuja--cliente">Tu consulta fue derivada a nuestro equipo de Cuentas.<span class="chat-hora">10:03</span></p>
+            <div class="chat-fila chat-fila--cliente">
+              <p class="chat-burbuja chat-burbuja--cliente">OK, muchas gracias!<span class="chat-hora">10:40 ✓✓</span></p>
             </div>
 
-            <div class="chat-fila chat-flecha">
-              <p class="chat-burbuja chat-burbuja--aviso">
-                <span class="chat-campana" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
-                </span>
-                <span>Te escribimos para hacer seguimiento. ¿Pudiste revisar la propuesta?<span class="chat-hora">10:20</span></span>
-              </p>
+            <div class="chat-fila">
+              <span class="chat-campana" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+              </span>
+              <p class="chat-burbuja">Te escribimos para hacer seguimiento. ¿Pudiste revisar la propuesta?<span class="chat-hora">18:30</span></p>
             </div>
           </div>
         </figure>
@@ -751,25 +744,25 @@
               <span class="tarea-icono" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5.2A8 8 0 1 1 21 12Z"/><path d="M9 12h.01M12 12h.01M15 12h.01"/></svg>
               </span>
-              <span>Respuestas frecuentes.</span>
+              <span>Respuestas frecuentes</span>
             </li>
             <li>
               <span class="tarea-icono" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 3.5 2.8 10.4l6.6 2.6 2.6 6.6z"/><path d="m9.4 13 4.6-4.6"/></svg>
               </span>
-              <span>Envío de información y presupuestos.</span>
+              <span>Envío de información y presupuestos</span>
             </li>
             <li>
               <span class="tarea-icono" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg>
               </span>
-              <span>Registro y derivación de consultas.</span>
+              <span>Registro y derivación de consultas</span>
             </li>
             <li>
               <span class="tarea-icono" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
               </span>
-              <span>Seguimientos y recordatorios.</span>
+              <span>Seguimientos y recordatorios</span>
             </li>
           </ul>
         </div>
