@@ -258,37 +258,33 @@ section[id]{scroll-margin-top:104px}
 .svc-card:hover{transform:translateY(-6px);border-color:rgba(255,0,145,.55);background:rgba(255,255,255,.055)}
 
 /* Encabezado con alto mínimo común: "EKHO Automatización" ocupa dos líneas */
-.svc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.svc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .svc-titles{display:flex;flex-direction:column;gap:8px;min-height:5.6em;flex:1;min-width:0}
 .svc-card h3{font-size:21px;line-height:1.2;color:#fff}
-.svc-sub{font-family:var(--display);font-weight:600;font-size:14px;color:var(--accent);line-height:1.35}
+/* 13.5px: lo justo para que los tres subtítulos entren en un renglón */
+.svc-sub{font-family:var(--display);font-weight:600;font-size:13.5px;color:var(--accent);line-height:1.35}
 /* Contenedor fijo: los tres íconos pesan igual aunque tengan proporciones distintas */
 .svc-icon{width:78px;height:78px;flex-shrink:0;display:grid;place-items:center}
+/* "EKHO Automatización" es el nombre más largo: su ícono cede el ancho que falta */
+.svc-card:nth-child(3) .svc-icon{width:42px;height:42px}
 .svc-icon img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 
-.svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:20px 0 20px}
+.svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:20px 0 12px}
 
 /* Ocupa el espacio sobrante: empuja los tres botones a la misma línea */
-.svc-body{flex:1;display:flex;flex-direction:column;gap:14px}
+.svc-body{flex:1;display:flex;flex-direction:column;gap:14px;text-align:center}
 .svc-card p{font-size:14.5px;line-height:1.65}
 
 .svc-btn{
   margin-top:24px;width:100%;
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  min-height:56px;padding:12px 12px 12px 22px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  min-height:56px;padding:12px 22px;
   background:transparent;border:1.4px solid rgba(255,0,145,.6);border-radius:999px;
-  font-family:var(--display);font-weight:600;font-size:14px;color:#fff;text-align:left;
+  font-family:var(--display);font-weight:600;font-size:14px;color:#fff;
   transition:background .22s ease,border-color .22s ease,transform .22s ease;
 }
 .svc-btn:hover{background:rgba(255,0,145,.14);border-color:var(--accent);transform:translateY(-2px)}
-.svc-btn-arrow{
-  width:32px;height:32px;flex-shrink:0;border-radius:50%;
-  background:var(--accent);color:#fff;
-  display:grid;place-items:center;font-size:14px;line-height:1;
-  transition:transform .22s ease;
-}
-.svc-btn:hover .svc-btn-arrow{transform:translate(2px,-2px)}
-
+.svc-btn:hover 
 /* Con subgrid las tres tarjetas comparten las mismas filas: encabezados,
    divisores, descripciones y botones quedan alineados sin medidas fijas. */
 @media (min-width:1041px){
