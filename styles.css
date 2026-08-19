@@ -197,6 +197,7 @@ section[id]{scroll-margin-top:104px}
 }
 .panel-head h2{font-size:clamp(26px,3.4vw,44px);font-weight:700;line-height:1.1}
 .panel-head p{font-size:15.5px;line-height:1.7}
+.panel-head-txt p{text-align:justify;hyphens:none}
 /* Los dos párrafos van en una sola celda de la grilla, no como items sueltos */
 .panel-head-txt{
   position:relative;display:flex;flex-direction:column;gap:18px;
@@ -267,7 +268,7 @@ section[id]{scroll-margin-top:104px}
 .svc-icon{width:42px;height:42px;flex-shrink:0;display:grid;place-items:center}
 .svc-icon img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 
-.svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:20px 0 12px}
+.svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:10px 0 12px}
 
 /* Ocupa el espacio sobrante: empuja los tres botones a la misma línea */
 .svc-body{flex:1;display:flex;flex-direction:column;gap:14px;text-align:center}
@@ -809,7 +810,7 @@ body.modal-open{overflow:hidden}
 
 @media (max-width:700px){
   /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
-  .intro-text{text-align:left}
+  .intro-text,.panel-head-txt p{text-align:left}
   /* En celular el recorrido pasa a ser una vertical discreta */
   .ruta{margin-top:46px;--salto:0px;--modulo:88px}
   .ruta-zig{grid-template-columns:1fr;gap:34px;padding-left:14px}
