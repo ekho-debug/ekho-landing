@@ -216,10 +216,12 @@ section[id]{scroll-margin-top:104px}
 
 /* ---------- PRESENTACIÓN ---------- */
 /* Dos columnas: texto a la izquierda, ilustración a la derecha */
-.intro-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+/* Una sola columna: el texto ocupa el mismo ancho que el panel de Servicios */
+.intro-grid{display:block}
 .intro{max-width:none;margin:0;text-align:left;display:flex;flex-direction:column;gap:18px}
-.intro-visual img{width:60%;height:auto;margin-inline:auto}
 .intro h2{font-size:clamp(26px,3.4vw,42px);font-weight:700;margin-bottom:6px}
+/* Fuerza los dos renglones pedidos */
+.intro h2 .accent{display:block}
 .intro p{font-size:16px;line-height:1.7}
 /* `.intro p` es más específico: hay que repetir el tamaño del kicker */
 .intro .section-kicker{font-size:clamp(13px,1.25vw,15px);line-height:1.35}
@@ -788,8 +790,6 @@ body.modal-open{overflow:hidden}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .plans,  .form-panel{grid-template-columns:1fr;gap:34px}
   /* La ilustración pasa debajo del texto */
-  .intro-grid{grid-template-columns:1fr;gap:34px}
-  .intro-visual{max-width:560px;margin-inline:auto}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-panel{padding:44px 34px 30px}
   }
