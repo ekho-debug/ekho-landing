@@ -58,7 +58,7 @@ section[id]{scroll-margin-top:104px}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
   .nav-links>a:not(.btn)::after{transition:none}
-  .orb,.gem{animation:none!important}
+  .hero-actions .btn,.hero-actions .arrow{transition:none}
 }
 
 /* ---------- BUTTONS ---------- */
@@ -122,50 +122,35 @@ section[id]{scroll-margin-top:104px}
 .nav-toggle span{width:20px;height:2px;background:#0f1c2e;border-radius:2px}
 
 /* ---------- HERO ---------- */
-.hero{padding:84px 0 60px}
-.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero{padding:58px 0 32px}
+/* 48/52 entre texto e ilustración, con el texto centrado en vertical */
+.hero-grid{display:grid;grid-template-columns:48fr 52fr;gap:40px;align-items:center}
 .hero-copy{max-width:none}
 
 .hero-kicker,.section-kicker{
-  font-family:var(--display);font-size:clamp(13px,1.25vw,15px);font-weight:600;
-  color:var(--accent-dark);line-height:1.35;
-  text-transform:uppercase;letter-spacing:.14em;
+  font-family:var(--display);font-size:clamp(13px,1.25vw,15px);font-weight:700;
+  color:var(--accent);line-height:1.35;
+  text-transform:uppercase;letter-spacing:.16em;
 }
 .hero-title{
-  margin-top:16px;font-family:var(--display);color:var(--ink);
-  font-size:clamp(30px,3.9vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1.06;
+  margin-top:20px;font-family:var(--display);color:#0f1c2e;
+  font-size:clamp(30px,4.1vw,54px);font-weight:700;letter-spacing:-.02em;line-height:1.07;
 }
-.hero-lead{margin-top:20px;font-size:15.5px;line-height:1.7}
-.hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+/* La segunda frase arranca en su propio renglón, como en la referencia */
+.hero-title .accent{display:block}
+.hero-lead{margin-top:24px;font-size:16px;line-height:1.75;color:var(--graphite)}
+.hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.hero-actions .btn{min-height:52px;padding:14px 28px;font-size:14.5px}
+/* Resplandor rosa suave, más liviano que el del resto de la landing */
+.hero-actions .btn-accent{box-shadow:0 12px 30px -14px rgba(255,0,145,.5)}
+/* Secundario: fondo blanco y borde gris fino */
+.hero-actions .btn-outline{background:#fff;color:#0f1c2e;border:1.4px solid rgba(15,28,46,.16)}
 .btn .arrow{transition:transform .22s ease}
 .btn:hover .arrow{transform:translateX(3px)}
 
-/* --- Escena de la notebook --- */
-.hero-visual{position:relative;display:grid;place-items:center;min-height:400px}
-
-
-/* Los adornos flotan por delante de la notebook, como en la referencia */
-.orb,.gem{position:absolute;z-index:2;pointer-events:none}
-.orb{border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff,var(--accent-soft) 42%,var(--accent-dark));box-shadow:0 12px 26px -8px rgba(214,29,132,.6)}
-.orb--1{width:54px;height:54px;left:-3%;top:20%;animation:float 7s ease-in-out infinite}
-.orb--2{width:32px;height:32px;right:-1%;bottom:24%;animation:float 9s ease-in-out infinite .9s}
-.gem{
-  width:46px;height:46px;left:-3%;bottom:14%;border-radius:13px;
-  background:linear-gradient(140deg,var(--accent-pale),var(--accent));
-  box-shadow:0 14px 28px -10px rgba(214,29,132,.55);
-  animation:floatGem 8s ease-in-out infinite .4s;
-}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
-@keyframes floatGem{0%,100%{transform:rotate(26deg) translateY(0)}50%{transform:rotate(26deg) translateY(-13px)}}
-
-/* Ilustración del hero */
-.hero-ilu{position:relative;width:100%;max-width:600px}
-.hero-ilu img{width:100%;height:auto;margin-inline:auto}
-@media (min-width:1041px){
-  /* Alto exacto: del comienzo del título al último renglón del párrafo (lo mide script.js) */
-  .hero-ilu{width:auto;max-width:100%;display:flex;justify-content:center}
-  .hero-ilu img{width:auto;height:var(--alto-ilu,auto);max-width:100%}
-}
+/* La ilustración se apoya en la base del hero y llena su columna */
+.hero-visual{align-self:end;display:block}
+.hero-visual img{width:100%;height:auto;display:block}
 
 /* ---------- PANELS / TITULOS ---------- */
 .panel{border-radius:var(--r-panel);padding:56px}
@@ -779,7 +764,6 @@ body.modal-open{overflow:hidden}
   .hero-copy{max-width:660px}
   .hero-lead{margin-inline:auto}
   .hero-actions{justify-content:center}
-  .hero-visual{width:100%;max-width:600px;min-height:0}
   /* La ilustración se achica y los pasos pasan a dos filas de dos */
   .dif-grid{grid-template-columns:1fr;gap:34px}
   .section-title{max-width:none}
@@ -829,6 +813,9 @@ body.modal-open{overflow:hidden}
 }
 
 @media (max-width:700px){
+  /* En celular los botones del hero se apilan a todo el ancho */
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
   /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
   .intro-text,.panel-head-txt p{text-align:left}
   /* En celular el recorrido pasa a ser una vertical discreta */
@@ -852,13 +839,7 @@ body.modal-open{overflow:hidden}
   .svc-titles{min-height:0}
 }
 
-@media (max-width:640px){
-  /* Los adornos flotantes compiten con la notebook en pantallas chicas */
-  .orb,.gem{display:none}
-  .hero-visual{min-height:0}
-}
-
 @media (max-width:520px){
   .panel{padding:32px 20px}
   .footer-panel{padding:32px 20px 26px}
-  .hero-actions .btn,  }
+}
