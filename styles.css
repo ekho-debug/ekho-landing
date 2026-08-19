@@ -754,8 +754,10 @@ body.modal-open{overflow:hidden}
 /* ---------- FOOTER ---------- */
 .footer{padding:0 0 28px}
 .footer-panel{padding:52px 56px 30px}
-.footer-grid{position:relative;display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:40px;padding-bottom:28px}
-.footer-brand img{height:34px;width:auto}
+/* Las dos columnas de enlaces miden lo que su texto y quedan contra el borde derecho:
+   el enlace más largo termina justo donde termina la línea gris. */
+.footer-grid{position:relative;display:grid;grid-template-columns:1fr auto auto;gap:40px;padding-bottom:28px}
+.footer-brand img{height:41px;width:auto}
 .footer-brand p{margin-top:18px;max-width:340px;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.6)}
 .footer-h{font-family:var(--display);font-size:14px;font-weight:600;color:#fff;margin-bottom:16px}
 .footer-col ul{display:flex;flex-direction:column;gap:11px}
