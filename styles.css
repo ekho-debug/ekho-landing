@@ -83,13 +83,13 @@ section[id]{scroll-margin-top:104px}
 .nav-wrap{position:sticky;top:16px;z-index:100;padding:16px 20px 0;display:flex;justify-content:center}
 .nav{
   position:relative;width:100%;max-width:1120px;display:flex;align-items:center;gap:16px;
-  background:#FFFDFE;border-radius:999px;padding:8px 8px 8px 26px;
+  background:#FFFDFE;border-radius:15px;padding:8px 8px 8px 26px;
   box-shadow:0 8px 26px -20px rgba(15,28,46,.45);
   transition:box-shadow .3s ease;
 }
 /* Al scrollear despega del contenido con algo más de sombra */
 .nav-wrap.is-scrolled .nav{box-shadow:0 16px 36px -22px rgba(15,28,46,.6)}
-.nav-logo img{height:29px;width:auto}
+.nav-logo img{height:35px;width:auto}
 
 .nav-links{display:flex;align-items:center;gap:4px;margin-left:auto}
 .nav-links>a:not(.btn){
