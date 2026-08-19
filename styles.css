@@ -826,10 +826,23 @@ body.modal-open{overflow:hidden}
   /* En celular los botones del hero se apilan a todo el ancho */
   .hero-actions{flex-direction:column;align-items:stretch}
   .hero-actions .btn{width:100%}
-  /* Columna angosta: justificar sin guionado abriría huecos entre palabras */
-  .panel-head-txt p{text-align:left}
-  /* Los saltos fijos estorban en columna angosta */
+  /* --- Ajustes propios de celular --- */
+  /* Inicio: sin la ilustración */
+  .hero-visual{display:none}
+  /* Nosotros: título a la izquierda y en dos renglones, con el corte natural */
+  .intro h2{text-align:left;font-size:23px}
+  .intro h2 .accent{display:inline}
+  .intro-text{text-align:justify}
   .intro-text br{display:none}
+  /* Soluciones digitales: solo los dos párrafos del encabezado */
+  .panel-head-txt p{text-align:justify}
+  /* Cómo trabajamos: párrafo justificado y sin la ilustración */
+  .dif-copy p{text-align:justify}
+  .dif-ilu{display:none}
+  /* "Tu negocio ya tiene una voz." en un solo renglón */
+  .cta-block h2{font-size:23px}
+  /* Preguntas frecuentes: el texto llega hasta donde termina la cruz */
+  .faq-a p{text-align:justify;padding-right:24px}
   /* En celular el recorrido pasa a ser una vertical discreta */
   .ruta{margin-top:46px;--salto:0px;--modulo:88px}
   .ruta-zig{grid-template-columns:1fr;gap:34px;padding-left:14px}
