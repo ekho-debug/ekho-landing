@@ -264,9 +264,7 @@ section[id]{scroll-margin-top:104px}
 /* 13.5px: lo justo para que los tres subtítulos entren en un renglón */
 .svc-sub{font-family:var(--display);font-weight:600;font-size:13.5px;color:var(--accent);line-height:1.35}
 /* Contenedor fijo: los tres íconos pesan igual aunque tengan proporciones distintas */
-.svc-icon{width:78px;height:78px;flex-shrink:0;display:grid;place-items:center}
-/* "EKHO Automatización" es el nombre más largo: su ícono cede el ancho que falta */
-.svc-card:nth-child(3) .svc-icon{width:42px;height:42px}
+.svc-icon{width:42px;height:42px;flex-shrink:0;display:grid;place-items:center}
 .svc-icon img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 
 .svc-divider{display:block;height:1px;background:rgba(255,255,255,.14);margin:20px 0 12px}
@@ -831,7 +829,6 @@ body.modal-open{overflow:hidden}
   /* Una tarjeta por fila, a todo el ancho */
   .svc-grid{grid-template-columns:1fr}
   .svc-titles{min-height:0}
-  .svc-icon{width:64px;height:64px}
 }
 
 @media (max-width:640px){
