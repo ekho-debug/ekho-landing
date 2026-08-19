@@ -394,16 +394,6 @@ section[id]{scroll-margin-top:104px}
 .plan .check-list li{font-size:14px}
 
 /* ---------- DUO (adicionales / web) ---------- */
-.duo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
-.duo-card{
-  border:1px solid rgba(15,6,16,.1);border-radius:var(--r-card);padding:32px;
-  display:flex;flex-direction:column;gap:14px;
-  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
-}
-.duo-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
-.duo-card h3{font-size:22px}
-.duo-card p{font-size:15px;line-height:1.65}
-.duo-card .btn{align-self:flex-start;margin-top:6px}
 
 
 /* ---------- MODAL DE AUTOMATIZACIÓN ---------- */
@@ -651,21 +641,6 @@ body.modal-open{overflow:hidden}
 .modal .notes-block{margin-top:30px;text-align:left}
 .modal .notes-title{font-size:16px}
 
-/* Opciones web dentro del modal */
-.modal .duo-grid{margin-top:24px;grid-template-columns:repeat(2,1fr);gap:22px;max-width:none;margin-inline:0;align-items:stretch}
-.duo-sub{font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--accent);line-height:1.35}
-.modal .duo-card{
-  height:100%;gap:12px;padding:22px;
-  border:1px solid rgba(15,6,16,.1);border-radius:var(--r-card);
-  box-shadow:0 10px 30px -24px rgba(15,6,16,.4);
-}
-.modal .duo-card:hover{transform:none;box-shadow:0 16px 36px -24px rgba(15,6,16,.45)}
-/* El botón queda al fondo aunque los textos midan distinto */
-.modal .duo-card .btn{align-self:stretch;margin-top:auto}
-/* Ilustración decorativa: misma altura en las dos tarjetas, sin recortes */
-.duo-ilu{display:block;border-radius:var(--r-sm);overflow:hidden;margin-bottom:6px}
-.duo-ilu svg{display:block;width:100%;height:auto}
-
 /* Emblema del encabezado */
 .modal-emblema{
   width:56px;height:56px;flex-shrink:0;border-radius:16px;
@@ -679,16 +654,76 @@ body.modal-open{overflow:hidden}
 #modal-web .modal-close{border-color:rgba(255,0,145,.55);color:var(--accent)}
 #modal-web .modal-close:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 
-/* Variante gris del bloque de aclaraciones, con el ícono en contorno */
-.aclaraciones--gris{background:var(--mist);border-color:rgba(15,6,16,.1)}
-.aclaraciones--gris .aclaraciones-icono{background:transparent;border:1.6px solid var(--accent);color:var(--accent)}
-.aclaraciones--gris .aclaraciones-txt{border-left-color:rgba(15,6,16,.12)}
 
 .modal-action{margin-top:30px;display:flex;justify-content:center}
 
+/* ---------- MODAL DE OPCIONES WEB ---------- */
+#modal-web .modal-box{max-width:1180px}
+#modal-web .modal-head{gap:16px}
+#modal-web .modal-head-txt{margin-right:auto}
+#modal-web .modal-close{border-color:rgba(15,6,16,.12);color:var(--accent);box-shadow:0 6px 18px -10px rgba(15,6,16,.35)}
+#modal-web .modal-close:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+#modal-web .modal-close:active{transform:scale(.94)}
+#modal-web .modal-lead{font-size:16px;color:var(--ink)}
+
+#modal-web .web-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:26px;align-items:stretch}
+/* Fila 1 en 1fr: las dos tarjetas igualan alto y los botones caen a la misma línea */
+#modal-web .web-card{
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-rows:1fr auto;
+  column-gap:22px;row-gap:20px;padding:22px;
+  background:#FFF6FA;border:1px solid rgba(255,0,145,.16);border-radius:24px;
+}
+#modal-web .web-ilu{grid-column:1;grid-row:1;align-self:start;display:block}
+#modal-web .web-ilu svg{display:block;width:100%;height:auto}
+#modal-web .web-txt{grid-column:2;grid-row:1;min-width:0}
+#modal-web .web-txt h3{font-size:22px;line-height:1.2}
+#modal-web .web-sub{margin-top:8px;font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--accent);line-height:1.35}
+#modal-web .web-desc{margin-top:12px;font-size:15px;line-height:1.6;color:var(--graphite)}
+
+#modal-web .web-tags{margin-top:18px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+#modal-web .web-tags li{
+  display:inline-flex;align-items:center;gap:10px;
+  min-height:38px;padding:0 16px;border-radius:999px;
+  background:#FDE7F3;color:var(--ink);font-size:14px;line-height:1.3;
+}
+#modal-web .web-tag-i{flex-shrink:0;display:grid;place-items:center;color:var(--accent)}
+#modal-web .web-tag-i svg{width:17px;height:17px}
+
+#modal-web .web-cta{grid-column:1/-1;grid-row:2;width:100%;min-height:54px;font-weight:700;font-size:15px}
+
+#modal-web .web-nota{
+  margin-top:26px;padding-top:20px;border-top:1px solid rgba(15,6,16,.1);
+  display:flex;align-items:center;gap:14px;
+}
+#modal-web .web-nota-icono{
+  flex-shrink:0;width:34px;height:34px;border-radius:50%;
+  border:1.6px solid var(--accent);color:var(--accent);display:grid;place-items:center;
+}
+#modal-web .web-nota-icono svg{width:18px;height:18px}
+#modal-web .web-nota p{font-size:14px;line-height:1.55;color:var(--graphite)}
+
+/* Dos columnas solo mientras cada tarjeta mantenga un ancho cómodo */
+@media (max-width:1000px){
+  #modal-web .web-grid{grid-template-columns:1fr}
+  #modal-web .web-card{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}
+}
+@media (max-width:700px){
+  /* La ilustración pasa arriba y el contenido debajo */
+  #modal-web .web-card{grid-template-columns:1fr;grid-template-rows:auto auto auto;row-gap:16px}
+  #modal-web .web-ilu{grid-column:1;grid-row:1;max-width:260px;margin-inline:auto}
+  #modal-web .web-txt{grid-column:1;grid-row:2}
+  #modal-web .web-cta{grid-column:1;grid-row:3}
+  #modal-web .web-nota{align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  #modal-web .modal-box{animation:none}
+  #modal-web .modal-backdrop{animation:none}
+}
+
+
 @media (max-width:860px){
   .modal{padding:0}
-  .modal .duo-grid,  .modal .duo-card .btn,.modal-action .btn{padding:16px 26px;font-size:15px}
+  .modal-action .btn{padding:16px 26px;font-size:15px}
   .modal-action .btn{width:100%}
   .modal-box{max-width:none;max-height:100vh;height:100vh;border-radius:0}
   .modal-head{padding:20px 20px 16px}
@@ -775,8 +810,7 @@ body.modal-open{overflow:hidden}
     background:linear-gradient(90deg,var(--accent),rgba(255,0,145,.15))}
   /* Dos columnas y la tercera abajo, sin estirarse */
   .svc-grid{grid-template-columns:repeat(2,1fr)}
-  .plans,.duo-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
-  .form-panel{grid-template-columns:1fr;gap:34px}
+  .plans,  .form-panel{grid-template-columns:1fr;gap:34px}
   /* La ilustración pasa debajo del texto */
   .intro-grid{grid-template-columns:1fr;gap:34px}
   .intro-visual{max-width:560px;margin-inline:auto}
@@ -843,6 +877,4 @@ body.modal-open{overflow:hidden}
 @media (max-width:520px){
   .panel{padding:32px 20px}
   .footer-panel{padding:32px 20px 26px}
-  .hero-actions .btn,.duo-card .btn{width:100%}
-  .duo-card .btn{align-self:stretch}
-}
+  .hero-actions .btn,  }
