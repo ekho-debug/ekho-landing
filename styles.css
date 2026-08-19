@@ -595,6 +595,8 @@ body.modal-open{overflow:hidden}
 .modal-incluye .check-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 26px}
 
 /* Botón de cierre del modal de planes: círculo con borde rosa */
+/* Sin el tope de 640px la frase entra en un renglón (necesita 648) */
+#modal-planes .modal-lead{max-width:none}
 #modal-planes .modal-close{border-color:rgba(255,0,145,.55);color:var(--accent)}
 #modal-planes .modal-close:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 
