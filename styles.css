@@ -759,29 +759,19 @@ body.modal-open{overflow:hidden}
 
 /* ---------- FOOTER ---------- */
 .footer{padding:0 0 28px}
-.footer-panel{padding:52px 56px 34px}
-.footer-grid{position:relative;display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:40px;padding-bottom:36px}
+.footer-panel{padding:52px 56px 30px}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:40px;padding-bottom:28px}
 .footer-brand img{height:34px;width:auto}
 .footer-brand p{margin-top:18px;max-width:340px;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.6)}
-.footer-claim{color:var(--accent-pale)!important;font-family:var(--display);font-weight:600}
 .footer-h{font-family:var(--display);font-size:14px;font-weight:600;color:#fff;margin-bottom:16px}
 .footer-col ul{display:flex;flex-direction:column;gap:11px}
 .footer-col li,.footer-col a,.footer-link-btn{font-size:13.5px;color:rgba(255,255,255,.6)}
 .footer-col a:hover,.footer-link-btn:hover{color:var(--accent)}
 .footer-link-btn{background:none;border:0;padding:0;font-family:var(--body);text-align:left;transition:color .2s}
-.socials{display:flex;gap:10px;margin-top:20px}
-.socials a{
-  width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.2);
-  display:grid;place-items:center;color:rgba(255,255,255,.8);transition:.22s;
-}
-.socials svg{width:16px;height:16px}
-.socials a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 .footer-bottom{
-  position:relative;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
-  padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
+  position:relative;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
   font-size:12.5px;color:rgba(255,255,255,.45);
 }
-.footer-bottom span:last-child{max-width:520px;text-align:right}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:1040px){
@@ -811,8 +801,7 @@ body.modal-open{overflow:hidden}
   .intro-visual{max-width:560px;margin-inline:auto}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-panel{padding:44px 34px 30px}
-  .footer-bottom span:last-child{text-align:left}
-}
+  }
 
 /* El menú horizontal se parte en dos líneas por debajo de ~1080px */
 @media (max-width:1080px){
