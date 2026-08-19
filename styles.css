@@ -80,9 +80,9 @@ section[id]{scroll-margin-top:104px}
 
 
 /* ---------- NAV ---------- */
-.nav-wrap{position:sticky;top:16px;z-index:100;padding:16px 20px 0;display:flex;justify-content:center}
+.nav-wrap{position:sticky;top:16px;z-index:100;padding:16px 24px 0;display:flex;justify-content:center}
 .nav{
-  position:relative;width:100%;max-width:1120px;display:flex;align-items:center;gap:16px;
+  position:relative;width:100%;max-width:1132px;display:flex;align-items:center;gap:16px;
   background:#FFFDFE;border-radius:15px;padding:8px 8px 8px 26px;
   box-shadow:0 8px 26px -20px rgba(15,28,46,.45);
   transition:box-shadow .3s ease;
@@ -198,11 +198,9 @@ section[id]{scroll-margin-top:104px}
   background:linear-gradient(180deg,var(--accent),rgba(255,0,145,.25));
 }
 
-/* Mismo ancho y borde izquierdo que los títulos de Nosotros y Cómo trabajamos:
-   reproduce la columna 1.25fr de esas grillas (1.25fr 1fr con 48px de separación). */
+/* Ocupa el ancho completo de la sección, igual que la lista de preguntas */
 .section-title{
   text-align:left;margin:0;
-  max-width:calc((100% - 48px) * 1.25 / 2.25);
   font-size:clamp(26px,3.4vw,42px);font-weight:700;
 }
 .section-sub{text-align:center;margin:16px auto 0;max-width:720px;font-size:16px;line-height:1.65}
@@ -503,7 +501,7 @@ section[id]{scroll-margin-top:104px}
 }
 
 /* ---------- CTA CIERRE ---------- */
-.cta-block{text-align:center;max-width:1000px;margin:0 auto}
+.cta-block{text-align:center;margin:0}
 .cta-block h2{font-size:clamp(26px,3.8vw,44px);font-weight:700}
 .cta-block>p{margin:20px auto 0;font-size:16px;line-height:1.65}
 .cta-sub{font-size:14.5px;color:var(--graphite)}
@@ -775,7 +773,6 @@ body.modal-open{overflow:hidden}
   .hero-actions{justify-content:center}
   /* La ilustración se achica y los pasos pasan a dos filas de dos */
   .dif-grid{grid-template-columns:1fr;gap:34px}
-  .section-title{max-width:none}
   .dif-ilu{max-width:560px;margin-inline:auto}
   /* Se achica el desnivel para no estirar la sección */
   .ruta{--salto:52px;--modulo:99px}
