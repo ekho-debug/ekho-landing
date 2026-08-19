@@ -123,8 +123,8 @@ section[id]{scroll-margin-top:104px}
 
 /* ---------- HERO ---------- */
 .hero{padding:84px 0 60px}
-.hero-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
-.hero-copy{max-width:560px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero-copy{max-width:none}
 
 .hero-kicker,.section-kicker{
   font-family:var(--display);font-size:clamp(13px,1.25vw,15px);font-weight:600;
@@ -135,7 +135,7 @@ section[id]{scroll-margin-top:104px}
   margin-top:16px;font-family:var(--display);color:var(--ink);
   font-size:clamp(30px,3.9vw,52px);font-weight:700;letter-spacing:-.02em;line-height:1.06;
 }
-.hero-lead{margin-top:20px;max-width:520px;font-size:15.5px;line-height:1.7}
+.hero-lead{margin-top:20px;font-size:15.5px;line-height:1.7}
 .hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 .btn .arrow{transition:transform .22s ease}
 .btn:hover .arrow{transform:translateX(3px)}
